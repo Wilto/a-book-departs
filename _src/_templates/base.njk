@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" class="fonts">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta property="og:site_name" content="{{ data.title }}">
+		<link rel="canonical" href="{{ data.url }}">
+
+		<title>{{ data.title }}</title>
+		<meta name="description" content="{{ data.description }}">
+
+		<meta name="application-name" content="{{ data.title }}">
+		<link rel="manifest" href="/webappmanifest.json">
+
+		<!-- Icons, platform-specific theme stuff, etc.: -->
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/_assets/img/icon-152.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/_assets/img/icon-144.png">
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/_assets/img/icon-120.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/_assets/img/icon-114.png">
+
+		<meta name="msapplication-TileImage" content="/_assets/img/icon-144.png">
+		<meta name="theme-color" content="#12073f">
+		<link rel="icon" type="image/png" href="/_assets/img/icon-32.png" sizes="32x32">
+
+		<!-- Half my site’s transfer is in `meta` nonsense. -->
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "Organization",
+				"url": "{{ data.url }}",
+				"title": "{{ data.title }}",
+				"author_name": "{{ data.author.name }}",
+				"logo": "{{ data.url }}/_assets/img/card.gif",
+				"sameAs" : [
+					"https://twitter.com/wilto"
+				] 
+			}
+		</script>
+
+		<!-- Twitter/Slack cards: -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@wilto">
+		<meta name="twitter:creator" content="@wilto">
+		<meta property="og:site_name" content="{{ data.name }}">
+		<meta name="twitter:title" content="{{ data.title }}">
+		<meta property="og:title" content="{{ data.title }}">
+		<meta property="og:url" content="{{ data.url }}">
+
+		<meta name="twitter:description" content="{{ lede }}">
+		<meta property="og:description" content="{{ lede }}">
+
+		<meta name="twitter:image" content="{{ data.url }}/_assets/img/card.gif">
+		<meta name="twitter:image:alt" content="{{ data.description }}">
+		<meta property="og:image" content="{{ data.url }}/_assets/img/card.gif">
+		<meta property="og:image:alt" content="{{ data.description }}">
+
+		<meta name="author" content="{{ data.author.name }}">
+		{% set css %}
+			{% include "../_assets/css/globals.css" %}
+			{% include "../_assets/css/layout.css" %}
+			{% include "../_assets/css/type.css" %}
+			{% include "../_assets/css/syntax.css" %}
+		{% endset %}
+		<style>
+			{{ css | cssmin | safe }}
+		</style>
+		<link rel="preload" href="/_assets/css/all.css" as="style">
+		<link rel="preload" href="/_assets/fonts/TiemposHeadline-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="/_assets/fonts/AdelleSans-Light.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="/_assets/fonts/TiemposTextWeb-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+		<link rel="stylesheet" href="/_assets/css/all.css">
+	</head>
+	<body>
+		<header class="sub header">
+			<div>
+			<h1 class="hed"><a href="/">{{ data.title | safe }}</a></h1>
+			{% if data.lede %}
+			<div class="lede">
+				<p>{{ data.lede | safe }}</p>
+			</div>
+			{% endif %}
+			</div>
+			<svg class="w-logo" viewBox="0 0 210 210" width="125" height="125" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M.412.353h206.647V207H.412z"/></defs><g fill="none" fill-rule="evenodd"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path id="w-bg" d="M207.059 103.677c0 57.063-46.26 103.323-103.323 103.323C46.672 207 .412 160.74.412 103.677.412 46.613 46.672.353 103.736.353s103.323 46.26 103.323 103.324" fill="#12073F" mask="url(#b)"/><path id="w-fore" fill="#FFF" d="M101.405 77.63H80.878L93.36 99.657l-5.579 9.812L69.614 77.63H49.087l38.578 68.359.08-.137.077.137 15.845-28.141 15.947 28.141 10.38-18.255z"/><path fill="#EF4136" d="M137.823 77.647L125.55 99.23h20.65l12.183-21.425z"/></g></svg>
+		</header>
+		<main role="main" id="main"{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+			<div class="body">
+
+
+
+				{{ layoutContent | safe }}
+			</div>
+		</main>
+
+
+		<footer class="site-foot">
+			<div class="site-meta">
+				<p>Built with <a href="https://www.11ty.io/">Eleventy</a>. The source is available on <a href="https://github.com/Wilto/hire.wil.to">GitHub</a>.</p>
+				<p>For questions, comments, or problems using the site, <a href="https://github.com/Wilto/hire.wil.to/issues">report an issue</a>.</p>
+		</div>
+		</footer>
+	</body>
+</html>

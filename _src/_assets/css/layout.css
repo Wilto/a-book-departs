@@ -1,0 +1,115 @@
+body {
+	margin: 0;
+	position: relative;
+	min-width: 100%;
+	min-height: 100vh;
+	height: auto;
+	background: linear-gradient(-7.5deg, #f1f1f1 60%, #fff);
+	border-top: .3em solid  #12073f;
+}
+@media( min-width: 65em ) {
+	body {
+		border-top-width: .42vw;
+	}
+}
+body:before {
+	content: "";
+	position: absolute;
+	height: .3em;
+	top: -.3em;
+	right: 0;
+	width: clamp(5em, 20vw, 10em);
+	background: #ef4136;
+	clip-path: polygon(.22em 0, 100% 0%, 100% 100%, 0% 100%);
+}
+@media( min-width: 65em ) {
+	body:before {
+		height: .42vw;
+		top: -.42vw;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: linear-gradient(-7.5deg,#faf7eb 50%,#f5f1e2);
+		border-top: .3em solid #222;
+	}
+}
+main {
+	overflow: hidden;
+}
+.w-logo {
+	width: clamp(2.5em, 10vw, 5em);
+}
+details.sub {
+	padding-top: 4em;
+}
+.head {
+	padding-top: 5vw;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.toc-nav {
+	padding: 1em 0;
+	font-family: "Ships Whistle", sans-serif;
+	font-size: .85em;
+	display: block;
+}
+.toc-nav ol {
+	list-style-type: square;
+	margin: 0;
+}
+.toc-nav a {
+	display: block;
+	margin: .25em 0;
+}
+.sub {
+	padding: .5em clamp(.125em, 5vw, 2.5em ) .5em clamp(.125em, 5vw, 2.5em );
+}
+.block-hed .hed {
+		padding: .325em clamp(.125em, 5vw, 2.5em ) .125em clamp(.125em, 5vw, 2.5em );
+}
+.sublede {
+	padding-left: clamp(.125em, 5vw, 2.5em );
+	min-height: 20em;
+	margin-bottom: 0;
+}
+
+.site-foot {
+	border-top: 1px solid rgba(0,0,0,.2);
+	text-align: right;
+	clear: both;
+	align-items: stretch;
+	margin: 5em clamp(.125em, 5vw, 2.5em ) .5em clamp(.125em, 5vw, 2.5em );
+
+}
+.site-meta {
+	text-align:left;
+}
+.site-foot > * {
+	flex-grow: 2;
+}
+.site-foot address {
+	font-style: normal;
+}
+.me {
+	display: flex;
+	margin: 0;
+	padding: .5em 0 1em 0;
+	flex-direction: column;
+}
+.me div {
+	display: flex;
+	align-items: center;
+	flex-grow: 2;
+	padding: .25em 0;
+}
+.me dt {
+	min-width: 5em;
+}
+
+

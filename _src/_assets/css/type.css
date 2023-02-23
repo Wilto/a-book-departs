@@ -1,0 +1,328 @@
+/* Adelle Sans */
+@font-face {
+    font-family: 'AdelleSans';
+    src: url('/_assets/fonts/AdelleSans-Bold.woff2') format('woff2'),
+        url('/_assets/fonts/AdelleSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'AdelleSans';
+    src: url('/_assets/fonts/AdelleSans-Light.woff2') format('woff2'),
+        url('/_assets/fonts/AdelleSans-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Tiempos Text */
+@font-face {
+    font-family: 'Tiempos';
+    src: url('/_assets/fonts/TiemposTextWeb-Regular.woff2') format('woff2'),
+        url('/_assets/fonts/TiemposTextWeb-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tiempos';
+    src: url('/_assets/fonts/TiemposTextWeb-RegularItalic.woff2') format('woff2'),
+        url('/_assets/fonts/TiemposTextWeb-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Tiempos Headline */
+@font-face {
+    font-family: 'TiemposHed';
+    src: url('/_assets/fonts/TiemposHeadline-Regular.woff2') format('woff2'),
+        url('/_assets/fonts/TiemposHeadline-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+li,
+p {
+    font-family: "Ships Whistle", sans-serif;
+    font-size: clamp(1.3em, 1.8vw, 1.45em);
+    line-height: 1.5;
+    color:#10093b;
+    max-width: 45em;
+}
+.lede {
+    margin: .25em 0 2.5em 0;
+}
+.lede p {
+    font-family: "Ships Whistle", sans-serif;
+    font-weight: 500;
+    font-size: clamp(1.4em, 2.5vw, 1.6em);
+    line-height: 1.35;
+    margin-top: 0;
+    max-width: 38em;
+    opacity: .85;
+}
+.header .lede {
+    margin: 0;
+}
+.header .lede p {
+    color: #F5F1E2;
+    font-size: clamp(1.4em, 2vw, 1.6em);
+}
+.summary {
+    opacity: .8;
+    background: rgba(50,50,50,.1);
+}
+.summary p {
+    font-size: clamp(1.2em, 2vw, 1.3em);
+}
+
+/* Gradient background effect */
+.txt-shaded {
+    background: linear-gradient(-175deg,#cb4335 0%,#10093b 82.5%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0,0,0,.15);
+}
+
+/* Hed/Subhed */
+h1, h2, h3, h4 {
+    font-family: AdelleSans, sans-serif;
+    margin: 1.25em 0 0 0;
+    line-height: 1.15;
+    display: inline-block;
+    color: #10093b ;
+    font-weight: bold;
+}
+h1+p, h2+p, h3+p, h4+p {
+    margin-top: .5em;
+}
+
+.section-hed {
+    font-size: 1.5em;
+    font-size: clamp( 1.8em, 5vw, 2em );
+    padding-bottom: 0;
+    margin-top: 1em;
+    padding-top: .5em;
+}
+.copy h3 {
+    font-size: 1.2em;
+    font-size: clamp( 1.1em, 3vw, 1.25em );
+}
+
+.header {
+    background: #3C3D34;
+}
+h1.hed {
+    font-family: "Adelle Sans", sans-serif;
+    font-size: 8.2vw;
+    color: #F5F1E2;
+    font-size: clamp( 2.5em, 4vw, 2.8em );
+    font-weight: 600;
+    line-height: 1.1;
+    margin: .65em 0 0 0;
+}
+h1.hed a {
+    color: #F5F1E2;
+    text-decoration: none;
+}
+
+@keyframes fadeover {
+  0%    { color: #3C3D34; }
+  100%  { width: #F5F1E2; }
+}
+.block-hed {
+    padding: .25em 0 0 0;
+    max-width: 45em;
+    font-size: .75em;
+    position: relative;
+    background: #e6e2d4;
+    color: #3C3D34;
+    transition: background .125s ease-in-out;
+}
+.block-hed:hover {
+    background: #d9d4c8;
+}
+.block-hed p {
+    position: relative;
+    z-index: 1;
+    color: #3C3D34;
+}
+
+pre,
+blockquote {
+    border-left: 4px solid #3C3D34;
+    opacity: .8;
+    font-size: .9em;
+    margin: 0;
+    padding: 0 0 0 1em;
+}
+code {
+    font-size: .75em;
+    background: #F5F1E2;
+    padding: 0 .35em;
+    border: 1px solid rgba(50,50,50,.2);
+    border-radius: 3px;
+}
+pre {
+    background: #F5F1E2;
+    padding: .75em 1.1em;
+}
+pre code {
+    padding: 0;
+    font-size: 1.2em;
+    line-height: 1.6;
+    background: none;
+    border: none;
+}
+ul {
+    list-style-type: square;
+}
+details[open] .block-hed:before,
+.block-hed:hover:before {
+    color: #F5F1E2;
+}
+details[open] .block-hed:before {
+    width: 100%;
+}
+summary {
+    list-style-type: none;
+}
+summary p:before {
+    background: #3C3D34;
+    content: "";
+    margin-right: 1ch;
+    display: inline-block;
+    height: 1ch;
+    width: 1ch;
+    margin-bottom: 1px;
+}
+details[open] summary p:before {
+    background: #e6e2d4;
+}
+.block-hed:before {
+    content:"";
+    transition: width .35s ease-in-out, background .25s linear;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: #3C3D34;
+    z-index: 0;
+    width: 0;
+}
+details[open] .block-hed:before {
+    width: 100%;
+}
+details:not([open]) .block-hed:hover:before {
+    background: #b2ab98;
+    color: #3C3D34;
+}
+.block-hed:after {
+    content:"";
+    display: block;
+    position: absolute;
+    bottom: -.5em;
+    left: 0;
+    width: 0;
+    transition: width .125s linear;
+    border-bottom: .25em solid #3C3D34;
+}
+details[open] .block-hed:after {
+    width: 100%;
+}
+.block-hed .hed {
+    color: #F5F1E2;
+    animation: fadeover .2s forwards;
+}
+summary.block-hed {
+    padding-left: clamp(.125em, 5vw, 2.5em );
+}
+summary.block-hed p {
+    display: inline-block;
+    font-family: "Adelle Sans", sans-serif;
+    margin: .35em 0 .125em 0;
+    animation: fadeover .2s forwards;
+}
+details[open] summary.block-hed p {
+    color: #F5F1E2;
+    display: inline-block;
+    font-family: "Adelle Sans", sans-serif;
+    animation: fadeover .2s forwards;
+}
+
+
+.block-hed .hed:before {
+    content: "";
+    display: inline-block;
+    height: 1ex;
+    width: 1ex;
+    margin-bottom: .1ex;
+    margin-right: .75em;
+    background: #F5F1E2;
+}
+
+
+@media( min-width: 45em ) {
+    h1.hed span {
+        white-space: nowrap;
+    }
+}
+
+
+.site-foot {
+    opacity: .75;
+    font-family: AdelleSans, sans-serif;
+    font-size: .95em;
+}
+.me {
+    font-size: .975em;
+}
+.me a {
+    color: #3c3d34;
+    transition: color .35s linear, text-decoration-color .5s linear;
+}
+.me a b {
+    color: #ef4136;
+    transition: color .35s linear;
+    font-weight: 600;
+}
+.me a:hover {
+    color: #000;
+    border-bottom-color: #cb4335;
+}
+.me a:hover b {
+    color: #6d252e;
+}
+.me dt {
+    font-weight: bold;
+    padding-top: 2px;
+    color: #222;
+}
+
+@media( prefers-color-scheme: dark ) {
+ /* Hed/Subhed */
+    h1, h2, h3, h4,
+    .section-hed,
+    p.lede,
+    li,
+    p {
+        color: #3c3d34;
+    }
+    .txt-shaded {
+        background: linear-gradient(-175deg,#ef4136 0%, #3c3d34 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(0,0,0,.15);
+    }
+    svg #w-bg {
+        fill: #F5F1E2;
+    }
+    svg #w-fore {
+        fill: #3c3d34;
+    }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "hire-wilto",
+  "version": "0.0.1",
+  "description": "Do it, chicken.",
+  "scripts": {
+    "start": "ELEVENTY_ENV=development npx eleventy --serve",
+    "production": "eleventy"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Wilto/hire.wil.to.git"
+  },
+  "author": {
+    "name": "Mat Marquis",
+    "email": "mat@matmarquis.com",
+    "url": "http://matmarquis.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wilto/hire.wil.to/issues"
+  },
+  "homepage": "https://hire.wil.to",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
+    "clean-css": "^5.3.2",
+    "cross-env": "^7.0.3",
+    "make-dir-cli": "^2.0.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy-img": "^2.0.1",
+    "@11ty/eleventy-plugin-directory-output": "^1.0.1"
+  }
+}

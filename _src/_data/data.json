@@ -1,0 +1,12 @@
+{
+  "title": "CSS Containment",
+  "lede": "This is a book about it.",
+  "name": "Hire Wilto",
+  "shortname": "hirewilto",
+  "url": "https://hire.wil.to",
+  "description": "I make websites.",
+  "author": {
+    "name": "Mat Marquis",
+    "email": "mat@matmarquis.com"
+  }
+}

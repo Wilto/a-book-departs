@@ -1,0 +1,29 @@
+---
+layout: base.njk
+---
+{% if summary %}
+<div class="summary">
+  <div class="sub">
+    <p>{{ summary | safe }}</p>
+  </div>
+</div>
+{% endif %}
+<section class="sub">
+  {% if title %}
+  <div class="section-head">
+    <h2 class="section-hed">{{ title | safe }}</h2>
+  </div>
+  {% endif %}
+
+  {% if lede %}
+  <div class="lede">
+    <p>{{ lede | safe }}</p>
+  </div>
+  {% endif %}
+
+
+
+  <div class="section-content">
+    {{ content | safe }}
+  </div>
+</section>

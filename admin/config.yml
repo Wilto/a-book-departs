@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: "_src/_assets/img"
+public_folder: "_site/_assets/img"
+collections:
+  - name: "sections"
+    label: "Sections"
+    folder: "_src/sections"
+    sortable_fields: ['order']
+    delete: true
+    create: true
+    preview_path: "/"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Page Class", name: "pageClass", widget: "string", default: "section"}
+      - {label: "order", name: "order", widget: "number", required: false}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "img", widget: "image", required: false}
+      - {label: "Fullbleed", name: "fullbleed", widget: "boolean", default: false, required: false}
+      - {label: "Image Fallback`", name: "imgfallbk", widget: "image", required: false}
+      - {label: "Image Mask", name: "imgmask", widget: "image", required: false}
+      - {label: "Image alt", name: "alt", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
