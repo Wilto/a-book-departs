@@ -8,22 +8,25 @@ layout: base.njk
   </div>
 </div>
 {% endif %}
-<section class="sub">
-  {% if title %}
-  <div class="section-head">
-    <h2 class="section-hed">{{ title | safe }}</h2>
-  </div>
-  {% endif %}
+<div class="mapped">
 
-  {% if lede %}
-  <div class="lede">
-    <p>{{ lede | safe }}</p>
-  </div>
-  {% endif %}
+  <section class="sub" id="primary">
+    {% if title %}
+    <div class="section-head">
+      <h2 class="section-hed">{{ title | safe }}</h2>
+    </div>
+    {% endif %}
 
+    {% if lede %}
+    <div class="lede">
+      <p>{{ lede | safe }}</p>
+    </div>
+    {% endif %}
 
-
-  <div class="section-content">
-    {{ content | safe }}
-  </div>
-</section>
+    <div class="section-content copy">
+      {{ content | safe }}
+    </div>
+  </section>
+    <aside class="minimap">
+    </aside>
+</div>

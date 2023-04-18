@@ -35,9 +35,6 @@ body:before {
 		border-top: .3em solid #222;
 	}
 }
-main {
-	overflow: hidden;
-}
 .w-logo {
 	width: clamp(2.5em, 10vw, 5em);
 }
@@ -78,14 +75,15 @@ details.sub {
 	min-height: 20em;
 	margin-bottom: 0;
 }
-
+#primary {
+	padding-bottom: 2.5em;
+}
 .site-foot {
 	border-top: 1px solid rgba(0,0,0,.2);
 	text-align: right;
 	clear: both;
 	align-items: stretch;
-	margin: 5em clamp(.125em, 5vw, 2.5em ) .5em clamp(.125em, 5vw, 2.5em );
-
+	padding: 1.25em clamp(.125em, 5vw, 2.5em ) .5em clamp(.125em, 5vw, 2.5em );
 }
 .site-meta {
 	text-align:left;

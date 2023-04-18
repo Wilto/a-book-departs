@@ -12,7 +12,6 @@
 		"/"
 	];
 	const staticAssets = [
-		'/_assets/css/fonts/TiemposTextWeb-Regular.woff2'
 	];
 
 	function updateStaticCache() {

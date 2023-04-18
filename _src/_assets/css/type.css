@@ -9,6 +9,14 @@
 }
 @font-face {
     font-family: 'AdelleSans';
+    src: url('/_assets/fonts/AdelleSans-Bold.woff2') format('woff2'),
+        url('/_assets/fonts/AdelleSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'AdelleSans';
     src: url('/_assets/fonts/AdelleSans-Light.woff2') format('woff2'),
         url('/_assets/fonts/AdelleSans-Light.woff') format('woff');
     font-weight: normal;
@@ -16,43 +24,76 @@
     font-display: swap;
 }
 
-/* Tiempos Text */
 @font-face {
-    font-family: 'Tiempos';
-    src: url('/_assets/fonts/TiemposTextWeb-Regular.woff2') format('woff2'),
-        url('/_assets/fonts/TiemposTextWeb-Regular.woff') format('woff');
+    font-family: 'Ships Whistle';
+    src: url('/_assets/fonts/ShipsWhistle-Regular.woff2') format('woff2'),
+        url('/_assets/fonts/ShipsWhistle-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
-    font-family: 'Tiempos';
-    src: url('/_assets/fonts/TiemposTextWeb-RegularItalic.woff2') format('woff2'),
-        url('/_assets/fonts/TiemposTextWeb-RegularItalic.woff') format('woff');
+    font-family: 'Ships Whistle';
+    src: url('/_assets/fonts/ShipsWhistle-Bold.woff2') format('woff2'),
+        url('/_assets/fonts/ShipsWhistle-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Ships Whistle';
+    src: url('/_assets/fonts/ShipsWhistle-Italic.woff2') format('woff2'),
+        url('/_assets/fonts/ShipsWhistle-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
 }
 
-/* Tiempos Headline */
-@font-face {
-    font-family: 'TiemposHed';
-    src: url('/_assets/fonts/TiemposHeadline-Regular.woff2') format('woff2'),
-        url('/_assets/fonts/TiemposHeadline-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+
+.mapped {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    min-height: 100vh;
+}
+.mapped #primary {
+    flex-grow: 2;
+}
+@supports( background: -moz-element(#primary) ) {
+    .minimap {
+        width: clamp(16.5em,10vw,160px);
+        max-width: 160px;
+        flex-grow: 2;
+        background: rgba(214, 209, 184, .325) -moz-element(#primary) no-repeat .25vw 1em / contain;
+        background-size: 95%;
+        border-left: .2vw solid rgba(80,80,80,.5);
+        min-height: 100vh;
+    }
+}
+@supports( background: element(#primary) ) {
+    .minimap {
+        width: clamp(16.5em,10vw,160px);
+        max-width: 160px;
+        flex-grow: 2;
+        background: rgba(214, 209, 184, .325) -moz-element(#primary) no-repeat .25vw 1em / contain;
+        flex-grow: 2;
+        border-left: .2vw solid rgba(80,80,80,.5);
+        min-height: 100vh;
+    }
 }
 
-
-
-li,
+ol,
+ul,
 p {
     font-family: "Ships Whistle", sans-serif;
-    font-size: clamp(1.3em, 1.8vw, 1.45em);
+    font-size: clamp(1.2em, 1.75vw, 1.4em);
     line-height: 1.5;
     color:#10093b;
     max-width: 45em;
+}
+ol ol ,
+ul ul {
+    font-size: inherit;
 }
 .lede {
     margin: .25em 0 2.5em 0;
@@ -110,8 +151,12 @@ h1+p, h2+p, h3+p, h4+p {
     padding-top: .5em;
 }
 .copy h3 {
-    font-size: 1.2em;
-    font-size: clamp( 1.1em, 3vw, 1.25em );
+    font-size: 1.3em;
+    font-size: clamp( 1.3em, 3vw, 1.5em );
+}
+.copy h4 {
+    font-size: 1.1em;
+    font-size: clamp( 1.1em, 2.5vw, 1.25em );
 }
 
 .header {
@@ -162,8 +207,11 @@ blockquote {
     padding: 0 0 0 1em;
 }
 code {
+      font-family: "Operator Mono Book", Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+
     font-size: .75em;
-    background: #F5F1E2;
+    color: #666;
+    background: rgba(255,255,245, .9);
     padding: 0 .35em;
     border: 1px solid rgba(50,50,50,.2);
     border-radius: 3px;
