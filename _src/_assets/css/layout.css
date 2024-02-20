@@ -50,6 +50,11 @@ details.sub {
 	align-items: center;
 }
 
+figure {
+	margin: .75em 1.25vw;
+	max-width: 40em;
+}
+
 .toc-nav {
 	padding: 1em 0;
 	font-family: "Ships Whistle", sans-serif;

@@ -118,8 +118,12 @@ ul ul {
     opacity: .8;
     background: rgba(50,50,50,.1);
 }
+.summary .sub {
+    padding-bottom: .325em;
+}
 .summary p {
     font-size: clamp(1.2em, 2vw, 1.3em);
+    max-width: 60em;
 }
 
 /* Gradient background effect */
@@ -143,6 +147,13 @@ h1+p, h2+p, h3+p, h4+p {
     margin-top: .5em;
 }
 
+figcaption {
+    color: #3c3d34;
+    font-family: AdelleSans, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    padding: .5em .25em;
+}
 .section-hed {
     font-size: 1.5em;
     font-size: clamp( 1.8em, 5vw, 2em );

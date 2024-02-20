@@ -2,13 +2,17 @@ const Image = require("@11ty/eleventy-img");
 const path = require('path')
 const CleanCSS = require('clean-css');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const md = require('markdown-it')({
+	html: false,
+	breaks: true
+});
 
 module.exports = function(eleventyConfig) {
 	async function imageShortcode(src, alt, sizes="100vw", cls="") {
 		let metadata = await Image(src, {
 			formats: ["avif", "webp", "jpeg"],
 			widths: [800, 600, 400],
-			urlPath: "./img/",
+			urlPath: "/img/",
 			outputDir: "./_site/img/",
 			filenameFormat: function( id, src, width, format, options ) {
 				const ext = path.extname( src ),
@@ -39,13 +43,12 @@ module.exports = function(eleventyConfig) {
 	});
 
 	eleventyConfig.addPassthroughCopy("_src/_assets/");
-
 	eleventyConfig.addPlugin(syntaxHighlight);
-
 	eleventyConfig.addFilter(
 		'cssmin',
 		code => new CleanCSS({}).minify(code).styles
 	);
+	eleventyConfig.addFilter('markdown', markdownString => md.render( markdownString ) );
 
 	return {
 		templateFormats: [

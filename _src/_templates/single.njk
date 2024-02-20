@@ -4,7 +4,7 @@ layout: base.njk
 {% if summary %}
 <div class="summary">
   <div class="sub">
-    <p>{{ summary | safe }}</p>
+    {{ summary | markdown | safe }}
   </div>
 </div>
 {% endif %}
