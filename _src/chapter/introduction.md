@@ -1,7 +1,6 @@
 ---
 title: Introduction
 ---
-## Introduction
 
 In all fairness, I should start this book with an apology—not to you, reader, though I don’t doubt that I’ll owe you at least one by the time we get to the end. I owe JavaScript a number of apologies for the things I said to it during the early years of my career—things strong enough to etch glass.
 

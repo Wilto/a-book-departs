@@ -7,19 +7,18 @@ layout: base.njk
   color: {{ data.color }};
 }
 </style>
-Chap:
 {% if chapnum %}
 <div class="outer-wrap chapter-opener" style="background: {{ data.color }}">
   <div class="inner-wrap">
-    <h2 class="chapter-title"><span class="chapter-num">1</span> {{title}}</h2>
+    <h2 class="chapter-title"><span class="chapter-num">{{ chapnum }}</span> {{title}}</h2>
   </div>
 </div>
 {% endif %}
-{% set prev = collections.chap | getPreviousCollectionItem(page) %}
-{% set next = collections.chap | getNextCollectionItem(page) %}
+{% set prev = collections.chapter | getPreviousCollectionItem( page ) %}
+{% set next = collections.chapter | getNextCollectionItem( page ) %}
 <div class="outer-wrap">
   <div class="inner-wrap book-body">
-    {% if chapnum == "" %}
+    {% if not chapnum %}
     <h2>{{title}}</h2>
     {% endif %}
     {{ content | safe }}

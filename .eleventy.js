@@ -28,10 +28,6 @@ module.exports = function(eleventyConfig) {
 		},
 	});
 
-	eleventyConfig.addCollection("chapters", function (collectionApi) {
-		return collectionApi.getFilteredByTag("chapter");
-	});
-
 	eleventyConfig.addPassthroughCopy("_src/_assets/");
 	eleventyConfig.addFilter(
 		'cssmin',
