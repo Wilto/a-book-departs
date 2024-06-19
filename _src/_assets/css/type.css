@@ -1,387 +1,190 @@
-/* Adelle Sans */
 @font-face {
-    font-family: 'AdelleSans';
-    src: url('/_assets/fonts/AdelleSans-Bold.woff2') format('woff2'),
-        url('/_assets/fonts/AdelleSans-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'League Gothic Condensed';
+	src: url('/_assets/fonts/LeagueGothic-Condensed.woff2') format('woff2'),
+		url('/_assets/fonts/LeagueGothic-Condensed.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 @font-face {
-    font-family: 'AdelleSans';
-    src: url('/_assets/fonts/AdelleSans-Bold.woff2') format('woff2'),
-        url('/_assets/fonts/AdelleSans-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'League Gothic';
+	src: url('/_assets/fonts/LeagueGothic-Regular.woff2') format('woff2'),
+		url('/_assets/fonts/LeagueGothic-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 @font-face {
-    font-family: 'AdelleSans';
-    src: url('/_assets/fonts/AdelleSans-Light.woff2') format('woff2'),
-        url('/_assets/fonts/AdelleSans-Light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'Open Sans';
+	src: url('/_assets/fonts/OpenSans-Regular.woff2') format('woff2'),
+		url('/_assets/fonts/OpenSans-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('/_assets/fonts/OpenSans-Bold.woff2') format('woff2'),
+		url('/_assets/fonts/OpenSans-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Lora';
+	src: url('/_assets/fonts/Lora-Regular.woff2') format('woff2'),
+		url('/_assets/fonts/Lora-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Lora';
+	src: url('/_assets/fonts/Lora-Italic.woff2') format('woff2'),
+		url('/_assets/fonts/Lora-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Lora';
+	src: url('/_assets/fonts/Lora-Bold.woff2') format('woff2'),
+		url('/_assets/fonts/Lora-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Lora';
+	src: url('/_assets/fonts/Lora-SemiBoldItalic.woff2') format('woff2'),
+		url('/_assets/fonts/Lora-SemiBoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
 }
 
-@font-face {
-    font-family: 'Ships Whistle';
-    src: url('/_assets/fonts/ShipsWhistle-Regular.woff2') format('woff2'),
-        url('/_assets/fonts/ShipsWhistle-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Ships Whistle';
-    src: url('/_assets/fonts/ShipsWhistle-Bold.woff2') format('woff2'),
-        url('/_assets/fonts/ShipsWhistle-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Ships Whistle';
-    src: url('/_assets/fonts/ShipsWhistle-Italic.woff2') format('woff2'),
-        url('/_assets/fonts/ShipsWhistle-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
 
-
-.mapped {
-    display: flex;
-    align-items: stretch;
-    justify-content: stretch;
-    min-height: 100vh;
+h1,
+h2 {
+	font-family: "League Gothic", sans-serif;
+	text-transform: uppercase;
 }
-.mapped #primary {
-    flex-grow: 2;
+h1, h2, h3, h4, h5 {
+	padding: 0;
+	margin: 1.5em 0 .5em 0;
 }
-@supports( background: -moz-element(#primary) ) {
-    .minimap {
-        width: clamp(16.5em,10vw,160px);
-        max-width: 160px;
-        flex-grow: 2;
-        background: rgba(214, 209, 184, .325) -moz-element(#primary) no-repeat .25vw 1em / contain;
-        background-size: 95%;
-        border-left: .2vw solid rgba(80,80,80,.5);
-        min-height: 100vh;
-    }
+h2 {
+	font-size: 2.25em;
+	font-weight: normal;
 }
-@supports( background: element(#primary) ) {
-    .minimap {
-        width: clamp(16.5em,10vw,160px);
-        max-width: 160px;
-        flex-grow: 2;
-        background: rgba(214, 209, 184, .325) -moz-element(#primary) no-repeat .25vw 1em / contain;
-        flex-grow: 2;
-        border-left: .2vw solid rgba(80,80,80,.5);
-        min-height: 100vh;
-    }
+h3 {
+	font-family: "Lora", serif;
+	font-size: 1.4em;
+	font-weight: bold;
 }
-
-ol,
-ul,
+h4 {
+	color: #666;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.1em;
+	font-weight: bold;
+}
 p {
-    font-family: "Ships Whistle", sans-serif;
-    font-size: clamp(1.2em, 1.75vw, 1.4em);
-    line-height: 1.5;
-    color:#10093b;
-    max-width: 45em;
-}
-ol ol ,
-ul ul {
-    font-size: inherit;
-}
-.lede {
-    margin: .25em 0 2.5em 0;
-}
-.lede p {
-    font-family: "Ships Whistle", sans-serif;
-    font-weight: 500;
-    font-size: clamp(1.4em, 2.5vw, 1.6em);
-    line-height: 1.35;
-    margin-top: 0;
-    max-width: 38em;
-    opacity: .85;
-}
-.header .lede {
-    margin: 0;
-}
-.header .lede p {
-    color: #F5F1E2;
-    font-size: clamp(1.4em, 2vw, 1.6em);
-}
-.summary {
-    opacity: .8;
-    background: rgba(50,50,50,.1);
-}
-.summary .sub {
-    padding-bottom: .325em;
-}
-.summary p {
-    font-size: clamp(1.2em, 2vw, 1.3em);
-    max-width: 60em;
+	font-family: "Lora", serif;
+	color: #15141A;
+	font-size: 1.1875em;
+	line-height: 1.5;
+	margin: .625em 0;
 }
 
-/* Gradient background effect */
-.txt-shaded {
-    background: linear-gradient(-175deg,#cb4335 0%,#10093b 82.5%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(0,0,0,.15);
+.book-body {
+	font-size: clamp( .8em, 1.25vw, 1.2em );
 }
-
-/* Hed/Subhed */
-h1, h2, h3, h4 {
-    font-family: AdelleSans, sans-serif;
-    margin: 1.25em 0 0 0;
-    line-height: 1.15;
-    display: inline-block;
-    color: #10093b ;
-    font-weight: bold;
+code {
+	background: #f2f2f2;
+	color: #575aad;
+	font-size: .9em	;
+	padding: .1em;
 }
-h1+p, h2+p, h3+p, h4+p {
-    margin-top: .5em;
+pre {
+	background-color: #f2f2f2;
+	padding: 1.2em 1em;
+	margin: 2em 0;
+	font-size: 1.15em;
+	line-height: 1.55;
+	overflow: auto;
+	border: solid #ccc;
+	border-width: 0 0 0 4px;
 }
 
 figcaption {
-    color: #3c3d34;
-    font-family: AdelleSans, sans-serif;
-    font-style: italic;
-    font-weight: 400;
-    padding: .5em .25em;
+	font-size: .925em;
+	font-family: "Open Sans", sans-serif;
+	color: #666;
+	margin-top: .5em;
 }
-.section-hed {
-    font-size: 1.5em;
-    font-size: clamp( 1.8em, 5vw, 2em );
-    padding-bottom: 0;
-    margin-top: 1em;
-    padding-top: .5em;
+.book-body p + p {
+	padding: 0;
+	margin: 1.25em 0;
 }
-.copy h3 {
-    font-size: 1.3em;
-    font-size: clamp( 1.3em, 3vw, 1.5em );
+.title-section h1 {
+	font-family: "League Gothic Condensed", sans-serif;
+	font-weight: normal;
+	letter-spacing: -.025em;
+	font-size: clamp(5em,20vw,14em);
 }
-.copy h4 {
-    font-size: 1.1em;
-    font-size: clamp( 1.1em, 2.5vw, 1.25em );
+.author {
+	font-size: 2em;
+	padding-bottom: .25em;
+	color: #fff;
+	font-style: normal;
+	font-weight: bold;
+	font-family: "Lora", serif;
 }
-
-.header {
-    background: #3C3D34;
+.cta {
+	font-size: 1.75em;
+	font-family: "League Gothic", sans-serif;
+	letter-spacing: .025em;
+	text-transform: uppercase;
 }
-h1.hed {
-    font-family: "Adelle Sans", sans-serif;
-    font-size: 8.2vw;
-    color: #F5F1E2;
-    font-size: clamp( 2.5em, 4vw, 2.8em );
-    font-weight: 600;
-    line-height: 1.1;
-    margin: .65em 0 0 0;
+.footer {
+	color: #666;
+	font-family: "Open Sans", sans-serif;
 }
-h1.hed a {
-    color: #F5F1E2;
-    text-decoration: none;
+.footer p {
+	color: #666;
+	font-size: 1em;
+	font-family: "Open Sans", sans-serif;
 }
-
-@keyframes fadeover {
-  0%    { color: #3C3D34; }
-  100%  { width: #F5F1E2; }
+.meta-hed {
+	color: #666;
+	font-family: "League Gothic", sans-serif;
+	font-weight: normal;
+	font-size: 1.25em;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+	margin: .25em 0 0 0;
 }
-.block-hed {
-    padding: .25em 0 0 0;
-    max-width: 45em;
-    font-size: .75em;
-    position: relative;
-    background: #e6e2d4;
-    color: #3C3D34;
-    transition: background .125s ease-in-out;
+.pub-info p {
+	font-size: .825em;
+	line-height: 1.55;
 }
-.block-hed:hover {
-    background: #d9d4c8;
+.chapter-title {
+	font-size: 5.7rem;
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	line-height: .9;
+	margin: 0;
+	padding: 0;
 }
-.block-hed p {
-    position: relative;
-    z-index: 1;
-    color: #3C3D34;
+.title-section h1 {
+	font-size: 16em;
+	color: rgba(255,255,255,.95);
 }
-
-pre,
-blockquote {
-    border-left: 4px solid #3C3D34;
-    opacity: .8;
-    font-size: .9em;
-    margin: 0;
-    padding: 0 0 0 1em;
-}
-code {
-      font-family: "Operator Mono Book", Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
-
-    font-size: .75em;
-    color: #666;
-    background: rgba(255,255,245, .9);
-    padding: 0 .35em;
-    border: 1px solid rgba(50,50,50,.2);
-    border-radius: 3px;
-}
-pre {
-    background: #F5F1E2;
-    padding: .75em 1.1em;
-}
-pre code {
-    padding: 0;
-    font-size: 1.2em;
-    line-height: 1.6;
-    background: none;
-    border: none;
-}
-ul {
-    list-style-type: square;
-}
-details[open] .block-hed:before,
-.block-hed:hover:before {
-    color: #F5F1E2;
-}
-details[open] .block-hed:before {
-    width: 100%;
-}
-summary {
-    list-style-type: none;
-}
-summary p:before {
-    background: #3C3D34;
-    content: "";
-    margin-right: 1ch;
-    display: inline-block;
-    height: 1ch;
-    width: 1ch;
-    margin-bottom: 1px;
-}
-details[open] summary p:before {
-    background: #e6e2d4;
-}
-.block-hed:before {
-    content:"";
-    transition: width .35s ease-in-out, background .25s linear;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    background: #3C3D34;
-    z-index: 0;
-    width: 0;
-}
-details[open] .block-hed:before {
-    width: 100%;
-}
-details:not([open]) .block-hed:hover:before {
-    background: #b2ab98;
-    color: #3C3D34;
-}
-.block-hed:after {
-    content:"";
-    display: block;
-    position: absolute;
-    bottom: -.5em;
-    left: 0;
-    width: 0;
-    transition: width .125s linear;
-    border-bottom: .25em solid #3C3D34;
-}
-details[open] .block-hed:after {
-    width: 100%;
-}
-.block-hed .hed {
-    color: #F5F1E2;
-    animation: fadeover .2s forwards;
-}
-summary.block-hed {
-    padding-left: clamp(.125em, 5vw, 2.5em );
-}
-summary.block-hed p {
-    display: inline-block;
-    font-family: "Adelle Sans", sans-serif;
-    margin: .35em 0 .125em 0;
-    animation: fadeover .2s forwards;
-}
-details[open] summary.block-hed p {
-    color: #F5F1E2;
-    display: inline-block;
-    font-family: "Adelle Sans", sans-serif;
-    animation: fadeover .2s forwards;
-}
-
-
-.block-hed .hed:before {
-    content: "";
-    display: inline-block;
-    height: 1ex;
-    width: 1ex;
-    margin-bottom: .1ex;
-    margin-right: .75em;
-    background: #F5F1E2;
-}
-
-
-@media( min-width: 45em ) {
-    h1.hed span {
-        white-space: nowrap;
-    }
-}
-
-
-.site-foot {
-    opacity: .75;
-    font-family: AdelleSans, sans-serif;
-    font-size: .95em;
-}
-.me {
-    font-size: .975em;
-}
-.me a {
-    color: #3c3d34;
-    transition: color .35s linear, text-decoration-color .5s linear;
-}
-.me a b {
-    color: #ef4136;
-    transition: color .35s linear;
-    font-weight: 600;
-}
-.me a:hover {
-    color: #000;
-    border-bottom-color: #cb4335;
-}
-.me a:hover b {
-    color: #6d252e;
-}
-.me dt {
-    font-weight: bold;
-    padding-top: 2px;
-    color: #222;
-}
-
-@media( prefers-color-scheme: dark ) {
- /* Hed/Subhed */
-    h1, h2, h3, h4,
-    .section-hed,
-    p.lede,
-    li,
-    p {
-        color: #3c3d34;
-    }
-    .txt-shaded {
-        background: linear-gradient(-175deg,#ef4136 0%, #3c3d34 50%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: rgba(0,0,0,.15);
-    }
-    svg #w-bg {
-        fill: #F5F1E2;
-    }
-    svg #w-fore {
-        fill: #3c3d34;
-    }
+.chapter-num {
+	bottom: -0.142em;
+	color: #fff;
+	padding-right: .125em;
+	position: relative;
+	font-size: 2.5em;
 }

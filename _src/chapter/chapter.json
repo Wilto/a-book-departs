@@ -1,1 +1,4 @@
-{ "layout": "single.njk" }
+{ 
+	"layout": "single.njk",
+	"tags" : [ "chap" ]
+}

@@ -1,49 +1,38 @@
-const Image = require("@11ty/eleventy-img");
+const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+const markdownIt = require('markdown-it');
+const dumpFilter = require("@jamshop/eleventy-filter-dump");
+const markdownCaption = require('./functions/captions');
 const path = require('path')
 const CleanCSS = require('clean-css');
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const md = require('markdown-it')({
 	html: false,
 	breaks: true
 });
 
 module.exports = function(eleventyConfig) {
-	async function imageShortcode(src, alt, sizes="100vw", cls="") {
-		let metadata = await Image(src, {
-			formats: ["avif", "webp", "jpeg"],
-			widths: [800, 600, 400],
-			urlPath: "/img/",
-			outputDir: "./_site/img/",
-			filenameFormat: function( id, src, width, format, options ) {
-				const ext = path.extname( src ),
-				name = path.basename( src, ext );
+	eleventyConfig.addFilter("dump", dumpFilter);
 
-				return `${name}-${width}.${format}`
-			}
-		});
+	eleventyConfig.setLibrary('md', markdownIt({
+		html: true,
+		breaks: true,
+		linkify: true
+	}).use(markdownCaption));
 
-		let imageAttributes = {
-			alt,
-			class: cls,
-			sizes,
-			loading: "lazy"
-		};
+	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+		extensions: "html",
+		formats: ["avif", "webp", "jpeg"],
+		// widths: ["auto"],
+		defaultAttributes: {
+			loading: "lazy",
+			decoding: "async",
+		},
+	});
 
-		return Image.generateHTML(metadata, imageAttributes);
-	}
-
-	eleventyConfig.addAsyncShortcode("respimg", imageShortcode);
-
-	eleventyConfig.addCollection("chapters", function(collection) {
-		return collection.getAllSorted().filter(function(item) {
-			return item.inputPath.match(/^\.\/_src\/chapter\//) !== null;
-		}).sort(function(a, b) {
-			return b.data.order - a.data.order;
-		});
+	eleventyConfig.addCollection("chapters", function (collectionApi) {
+		return collectionApi.getFilteredByTag("chapter");
 	});
 
 	eleventyConfig.addPassthroughCopy("_src/_assets/");
-	eleventyConfig.addPlugin(syntaxHighlight);
 	eleventyConfig.addFilter(
 		'cssmin',
 		code => new CleanCSS({}).minify(code).styles

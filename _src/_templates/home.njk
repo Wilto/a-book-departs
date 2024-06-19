@@ -1,0 +1,19 @@
+---
+layout: base.njk
+---
+
+<div class="">
+	<div class="cover" style="background: {{ data.color }};">
+		<div class="inner-wrap title-section">
+			<address class="author">{{ data.author.name }}</address>
+			<h1>{{ data.title }}</h1>
+		</div>
+	</div>
+	<div class="inner-wrap">
+		{{ content }}
+		<div class="ctas">
+			<a href="{{collections.chap[0].page.url }}" class="cta">Read for Free</a>
+		</div>
+	</div>
+</div>
+

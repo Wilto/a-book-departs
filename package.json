@@ -24,14 +24,18 @@
   },
   "homepage": "https://hire.wil.to",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy": "^3.0.0-alpha.13",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
+    "@andatoshiki/markdown-it-image-caption": "^0.0.2",
     "clean-css": "^5.3.2",
     "cross-env": "^7.0.3",
-    "make-dir-cli": "^2.0.0"
+    "make-dir-cli": "^2.0.0",
+    "markdown-it": "^14.1.0"
   },
   "dependencies": {
-    "@11ty/eleventy-img": "^2.0.1",
-    "@11ty/eleventy-plugin-directory-output": "^1.0.1"
+    "@11ty/eleventy-img": "^4.0.1",
+    "@11ty/eleventy-plugin-directory-output": "^1.0.1",
+    "@jamshop/eleventy-filter-dump": "^1.0.4",
+    "markdown-it-eleventy-img": "^0.10.2"
   }
 }

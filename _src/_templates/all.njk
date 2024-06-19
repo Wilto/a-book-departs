@@ -1,32 +1,5 @@
 ---
 layout: base.njk
 ---
-{% set chapters = collections.chapters | reverse %}
-<details class="sub">
-	<summary class="block-hed"><p>Table of Contents</p></summary>
-	<nav class="toc-nav" aria-label="Chapters">
-		{% set chapters = collections.chapters | reverse %}
-		<ol>
-		{%- for chapter in chapters-%}
-			{% if chapter.data.title %}
-				<li><a href="{{ chapter.url | safe }}">{{ chapter.data.title | safe }}</a></li>
-			{% endif %}
-		{%- endfor -%}
-		<ol>
-	</nav>
-</details>
 
-{%- for section in chapters -%}
-	{% if section.data.omit != true %}
-	<section class="sub sub-{{ section.fileSlug }}" role="region" id="section-{{ section.fileSlug }}">
-		{% if section.data.title %}
-		<div class="section-head">
-			<h2 class="section-hed">{{ section.data.title | safe }}</h2>
-		</div>
-		{% endif %}
-		<div class="section-content copy">
-			{{ section.data.content | safe }}
-		</div>
-	</section>
-	{% endif %}
-{%- endfor -%}
+

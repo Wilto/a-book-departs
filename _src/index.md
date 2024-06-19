@@ -1,5 +1,3 @@
 ---
-layout: all.njk
+layout: home.njk
 ---
-
-Alright. Let’s do this.
