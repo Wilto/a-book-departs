@@ -71,10 +71,6 @@ figure {
 	border-bottom: 3px double #ccc;
 	padding-bottom: 2em;
 }
-.pub-info > * {
-	max-width: 19em;
-	padding: 0 1.2em;
-}
 .inner-nav {
 	margin-top: 4em;
 	padding-top: 1em;
