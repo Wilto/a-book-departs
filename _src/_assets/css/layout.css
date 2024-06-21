@@ -114,7 +114,7 @@ dialog {
 	color: rgba(255,255,255,.9);
 	padding: 0;
 	border: none;
-	width: 100;
+	width: 100%;
 	height: 100%;
 	transition: all .15s ease-in-out;
 }
@@ -130,7 +130,7 @@ dialog nav {
 dialog #closer {
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: 1em;
 }
 dialog nav li {
 	margin: 2em;
@@ -154,4 +154,18 @@ dialog::backdrop {
 	padding: 0;
 	margin: 0;
 	opacity: .975;
+}
+
+#closer {
+	background: none;
+	border: none;
+	height: 3.25em;
+	display: flex;
+}
+#closer:after {
+	content: "×";
+	color: rgba(255,255,255,.7);
+	line-height: .45;
+	height: 100%;
+	font-size: 5em;
 }

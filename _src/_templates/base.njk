@@ -76,10 +76,11 @@
 			<h1 class="logo"><a href="/">{{ meta.title }}</a></h1>
 			<div class="book-btn"><a href="https://abookapart.com/products/javascript-for-web-designers">Buy the book</a></div>
 		</header>
+
 		{{ content | safe }}
 
 		<dialog id="dialog">
-			<button id="closer">Close Table of Contents</button>
+			<button id="closer" aria-label="Close Table of Contents"></button>
 			<nav aria-label="Table of Contents">
 				<ol>
 				{% for chap in collections.chapter %}
