@@ -1,9 +1,10 @@
 {
-  "name": "hire-wilto",
+  "name": "a-book-parted",
   "version": "0.0.1",
-  "description": "Do it, chicken.",
+  "description": "",
   "scripts": {
     "start": "ELEVENTY_ENV=development npx eleventy --serve",
+    "extract": "node ./util/processBook.mjs",
     "production": "eleventy"
   },
   "engines": {
@@ -30,11 +31,13 @@
     "clean-css": "^5.3.2",
     "cross-env": "^7.0.3",
     "make-dir-cli": "^2.0.0",
-    "markdown-it": "^14.1.0"
+    "markdown-it": "^14.1.0",
+    "typescript": "^5.5.2"
   },
   "dependencies": {
     "@11ty/eleventy-img": "^4.0.1",
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
+    "@eatonfyi/dq": "github:eaton/dq",
     "@jamshop/eleventy-filter-dump": "^1.0.4",
     "markdown-it-eleventy-img": "^0.10.2"
   }

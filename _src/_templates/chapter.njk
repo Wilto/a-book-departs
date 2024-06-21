@@ -17,6 +17,7 @@ layout: base.njk
 {% set prev = collections.chapter | getPreviousCollectionItem( page ) %}
 {% set next = collections.chapter | getNextCollectionItem( page ) %}
 <div class="outer-wrap">
+  {{ bookMeta | dump | safe }}
   <div class="inner-wrap book-body">
     {% if not chapnum %}
     <h2>{{title}}</h2>

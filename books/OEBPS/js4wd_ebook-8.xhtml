@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+	<head>
+		<title>js4wd_ebook-8</title>
+		<link href="css/ABA.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body id="js4wd_ebook-8" lang="en-US" xml:lang="en-US">
+		<div id="_idContainer063">
+			<h1 id="_idParaDest-5" class="chTitle"><a id="_idTextAnchor005"></a>Chapter 4.<span class="NoBreak"> Loops</span></h1>
+			
+				<div id="_idContainer062" class="ch_open_img _idGenObjectStyle-Disabled">
+					<img src="image/8.png" alt="" />
+				</div>
+			
+			<p class="BodyFirstParagraph"><span class="ChapterIntro"><a id="_idIndexMarker103"></a></span><span class="ChapterIntro">LOOPS ALLOW US</span> to repeat lines of code until a certain set of conditions are met. It’s another simple concept on the surface, but one that allows us to do a surprising amount of<span class="NoBreak"> work.</span><span class="NoBreak"><span class="aHeadCode">for</span></span></p>
+			<p class="BodyFirstParagraph">You’ll use <a id="_idIndexMarker104"></a><code class="CodeInline">for</code> loops in situations where you’ll be running a loop for a known number of times, or <em class="Emphasis">iterations</em>. (By “known,” I don’t mean that <em class="Emphasis">we</em>, the brains between the keyboards and chairs, necessarily know how many times we’ll need to go through a loop in advance; I just mean that we’ll be looping through a known quantity.)</p>
+			<p class="Body">The syntax for a loop is a little tricky, since we’re packing a lot of information into just a few characters. The basics are almost expected by this point: a <code class="CodeInline">for</code> keyword, followed by a set of parentheses, followed by a pair of curly braces that we want our loop to execute however many times. </p>
+			<p class="Body">But it’s the syntax between the parentheses that’s unlike anything we’ve encountered so far. A <code class="CodeInline">for</code> loop accepts three expressions: the <em class="Emphasis">initialization</em>, the <em class="Emphasis">condition</em>, and the somewhat redundantly named <em class="Emphasis">final expression</em>, all separated by<span class="NoBreak"> semicolons.</span></p>
+			<pre class="Code">for( var i = 0; i &lt; 3; i++ ) {</pre>
+			<pre class="Code">  console.log( &quot;This loop will run three times.&quot;)</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code"><span class="CodeConsole">(3) This loop will run three times</span><span class="CodeConsole">.</span></pre>
+			<p class="Body">The initialization is almost always used for one thing: to initialize a variable that will act as a counter. It gets initialized the same as any other variable, with a <code class="CodeInline">var</code> keyword, an identifier, and an assignment. You’ll see a lot of these counter variables with the identifier <code class="CodeInline">i</code>, which stands for “iteration.” It <em class="Emphasis">does</em> break the rule against giving identifiers single-character names, but it’s a well-established convention. Since JavaScript starts indexing things at zero, it’s a good idea for us to always start from zero as well—that way we don’t get into the habit of counting up from one or run into any mismatched counters in our<span class="NoBreak"> scripts.</span></p>
+			<p class="Body">The condition is how we define the point at which the loop stops. So, we’re defining <code class="CodeInline">i</code> as starting at zero, and we want the loop to run for as long as <code class="CodeInline">i</code> is less than<span class="NoBreak"> three.</span></p>
+			<p class="Body">The final expression is the statement we want executed at the end of every iteration through the loop—so, this is where we tick the <code class="CodeInline">i</code> variable’s value up by one. If you think all the way back to the mathematical operators we learned about earlier, you’ll recall that the <code class="CodeInline">++</code> syntax increments a value by one: <code class="CodeInline">i++</code> as the final expression says to increase i by one every time the loop<span class="NoBreak"> finishes.</span></p>
+			<p class="Body">So, in plain English, the <code class="CodeInline">for</code> syntax above says this: “Start <code class="CodeInline">i</code> at zero. Only run the following code if <code class="CodeInline">i</code> is smaller than three, and add one to <code class="CodeInline">i</code> after every loop.”</p>
+			<p class="Body">One of the most common uses for a <code class="CodeInline">for</code> loop is iterating over each item in an array. As we learned in the last chapter, arrays come with a property for determining how many items it contains—the <code class="CodeInline">.length</code> property—so we’ll always be dealing with a known quantity. If we use the array’s length in the condition, we get a loop that iterates as many times as there are items in our<span class="NoBreak"> array:</span></p>
+			<pre class="Code">var loopArray = [&quot;first&quot;, &quot;second&quot;, &quot;third&quot;];</pre>
+			<pre class="Code">for( var i = 0; i &lt; loopArray.length; i++ ) {</pre>
+			<pre class="Code">  console.log( &quot;Loop.&quot; );</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code"><span class="CodeConsole">(3) </span><span class="CodeConsole">Loop.</span></pre>
+			<p class="Body">And if we add an item to our test array, the number of iterations changes to<span class="NoBreak"> match:</span></p>
+			<pre class="Code">var loopArray = [&quot;first&quot;, &quot;second&quot;, &quot;third&quot;, 4];</pre>
+			<pre class="Code">for( var i = 0; i &lt; loopArray.length; i++ ) {</pre>
+			<pre class="Code">  console.log( &quot;Loop.&quot; );</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code"><span class="CodeConsole">(4) Loop.</span></pre>
+			<p class="Body">Cool—we can make a thing that runs arbitrary code as many times as we have items in an array. I know that isn’t particularly useful or exciting on the surface, but what’s <em class="Emphasis">very</em> exciting (I don’t get out much) is that <code class="CodeInline">i</code> is a plain ol’ number type variable that’s available to us on every iteration of the loop, and since we’re counting from zero, it contains a value that corresponds to the index of each item in our array. A <code class="CodeInline">for</code> loop gives us a method of iterating over the data in an array all at<span class="NoBreak"> once:</span></p>
+			<pre class="Code">var names = [ &quot;Ed&quot;, &quot;Al&quot; ];</pre>
+			<pre class="Code">for( var i = 0; i &lt; names.length; i++ ) {</pre>
+			<pre class="Code">  var name = names[ i ];</pre>
+			<pre class="Code">  console.log( &quot;Hello, &quot; + name + &quot;!&quot; );</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code"><span class="CodeConsole">Hello, Ed!</span></pre>
+			<pre class="Code"><span class="CodeConsole">Hello, Al!</span></pre>
+			<p class="Body">Now we can reach back into the <code class="CodeInline">names</code> variable that we’re iterating over, and using i as the index, we can tap into each item inside the<span class="NoBreak"> array.</span></p>
+			<p class="Body">We didn’t have to initialize a new <code class="CodeInline">name</code> variable here, of course—we could have used <code class="CodeInline">names[ i ]</code> inside our <code class="CodeInline">console.</code><code class="CodeInline">log</code> and had everything work the same way. Storing the array’s data in a variable on each iteration is a good idea if you’re likely to access that data multiple times during your loop, just for the sake of<span class="NoBreak"> convenience.</span></p>
+			<h3 class="BHead"><span class="bHeadCode">for</span>/<span class="bHeadCode">in</span></h3>
+			<p class="BodyFirstParagraph"><code class="CodeInline"><a id="_idIndexMarker105"></a></code><code class="CodeInline">for</code>/<code class="CodeInline">in</code> loops start out the same way as the <code class="CodeInline">for</code> loops above, using a <code class="CodeInline">for</code> keyword, a set of parentheses, and a pair of curly braces containing whatever code we want to iterate over. Likewise, you’ll use the <code class="CodeInline">for</code>/<code class="CodeInline">in</code> syntax to iterate over multiple items—but not necessarily the way we would want to with an array. <code class="CodeInline">for</code>/<code class="CodeInline">in</code> is used to iterate over the properties of an object—but in an arbitrary order, not a sequential<span class="NoBreak"> one.</span></p>
+			<p class="Body">Instead of an initialization, condition, and final expression, a <code class="CodeInline">for</code>/<code class="CodeInline">in</code> loop starts with us initializing a variable that will correspond with the keys in our object, followed by the <code class="CodeInline">in</code> keyword, and the object we want to iterate<span class="NoBreak"> over:</span></p>
+			<pre class="Code">var nameObject = {</pre>
+			<pre class="Code">  &quot;first&quot;: &quot;Mat&quot;,</pre>
+			<pre class="Code">  &quot;last&quot;: &quot;Marquis&quot; </pre>
+			<pre class="Code">};</pre>
+			<pre class="Code">for( var name in nameObject ) {</pre>
+			<pre class="Code">  console.log( &quot;Loop.&quot; );</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code"><span class="CodeConsole">(2) Loop.</span></pre>
+			<p class="Body">Unlike iterating over an array using <code class="CodeInline">for</code>—where we have a handy <code class="CodeInline">i</code> variable at our disposal—we now have to do a little more work to figure out what strings are used as keys in our object. Those keys get assigned to the <code class="CodeInline">name</code> variable we initialized in the<span class="NoBreak"> parentheses.</span></p>
+			<pre class="Code">var nameObject = {</pre>
+			<pre class="Code">  &quot;first&quot;: &quot;Mat&quot;,</pre>
+			<pre class="Code">  &quot;last&quot;: &quot;Marquis&quot; </pre>
+			<pre class="Code">};</pre>
+			<pre class="Code">for( var name in nameObject ) {</pre>
+			<pre class="Code">  console.log( name );</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code"><span class="CodeConsole">first</span></pre>
+			<pre class="Code"><span class="CodeConsole">last</span></pre>
+			<p class="Body">Not too useful on the surface, but just like a regular <code class="CodeInline">for</code> loop gave us a number data type we could use to access our data on each iteration, <code class="CodeInline">for</code>/<code class="CodeInline">in</code> gives us the string we need to access the data in an<span class="NoBreak"> object:</span></p>
+			<pre class="Code">var fullName = {</pre>
+			<pre class="Code">  &quot;first&quot;: &quot;Mat&quot;,</pre>
+			<pre class="Code">  &quot;last&quot;: &quot;Marquis&quot; </pre>
+			<pre class="Code">};</pre>
+			<pre class="Code">for( var name in fullName ) {</pre>
+			<pre class="Code">  console.log( name + &quot;: &quot; + fullName[ name ] );</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code"><span class="CodeConsole">first: Mat</span></pre>
+			<pre class="Code"><span class="CodeConsole">last: Marquis</span></pre>
+			<p class="Body">You’ll notice we’re using <a id="_idIndexMarker106"></a>bracket notation instead of dot notation here—that’s because we have to. If we were to try to access <code class="CodeInline">fullName.name</code>, we’d be trying to access exactly that: <code class="CodeInline">fullName.name</code>—a property with the key <code class="CodeInline">name</code><span class="NoBreak"> inside </span> <code class="CodeInline">fullName</code>—instead of a property with a key that matches the string that <code class="CodeInline">name</code><span class="NoBreak"> </span><span class="NoBreak"><em class="Emphasis">contains</em></span><span class="NoBreak">.</span></p>
+			<p class="Body">Now, you might be thinking, “But if pretty much everything is an object—sort of—does that mean we can use <code class="CodeInline">for</code>/<code class="CodeInline">in</code> to iterate over an array?” You can, in fact. <a id="_idIndexMarker107"></a>Arrays behave just like any other objects using <code class="CodeInline">for</code>/<code class="CodeInline">in</code>, but <code class="CodeInline">for</code>/<code class="CodeInline">in</code> isn’t quite as array-friendly as a regular <code class="CodeInline">for</code> loop. For one thing, we can’t guarantee that <code class="CodeInline">for</code>/<code class="CodeInline">in</code> will iterate over an array in sequential order—and that might be okay, depending on what you’re<span class="NoBreak"> doing.</span></p>
+			<p class="Body">The bigger problem is that <code class="CodeInline">for</code>/<code class="CodeInline">in</code> has a catch that a regular <code class="CodeInline">for</code> loop doesn’t: since pretty much everything is an object—and you can add properties to any object—that means <code class="CodeInline">for</code>/<code class="CodeInline">in</code> can end up iterating over properties we never meant for it to know<span class="NoBreak"> about.</span></p>
+			<p class="Body">I’ve previously mentioned that everything in JavaScript has “built-in” methods and properties—how a string, even though we only define it as a handful of characters, will come with properties like <code class="CodeInline">.length</code> and methods like <code class="CodeInline">.toLowerCase()</code>.</p>
+			<p class="Body">These methods and properties aren’t completely buried in the dark recesses of JavaScript. We can see—and even <em class="Emphasis">change</em>—the methods and properties that come attached to data types, arrays, objects, and so<span class="NoBreak"> on.</span></p>
+			<h3 class="BHead"><a id="_idIndexMarker108"></a>Prototypal<span class="NoBreak"> inheritance</span></h3>
+			<p class="BodyFirstParagraph">Most objects have an internal property named <a id="_idIndexMarker109"></a><code class="CodeInline">prototype</code> that contains those built-in properties, but accessing it for ourselves is a little strange. When we access a property on an object—even one we’ve created ourselves—the JavaScript runtime first checks to see if that property is something <em class="Emphasis">we</em> defined. If not, it looks for that key as a <code class="CodeInline">prototype</code> property for that object’s constructor—a sort of overarching template that JavaScript follows whenever dealing with a certain type of object. All strings, for example, inherit all the <code class="CodeInline">prototype</code> properties and methods from the <code class="CodeInline">String</code> constructor. With <em class="Emphasis">most</em> browser tools, typing <code class="CodeInline">String.prototype</code> into your console will show you all of those built-in<span class="NoBreak"> properties.</span></p>
+			<p class="Body">If your first instinct is that JavaScript allowing us to override built-in methods is a little scary, you’re absolutely right. The <code class="CodeInline">toString</code> method, for example, is a pretty cut-and-dry way of converting any object to a string, but with a few lines of code we can overwrite it, and make that method do whatever we<span class="NoBreak"> want.</span></p>
+			<pre class="Code">var myObject = {};</pre>
+			<pre class="Code">var otherObject = {};</pre>
+			<pre class="Code">myObject.toString();</pre>
+			<pre class="Code"><span class="CodeConsole">&quot;[object Object]&quot;</span></pre>
+			<pre class="Code">myObject.toString = function() {</pre>
+			<pre class="Code">  console.log( &quot;I just broke JavaScript a little.&quot; );</pre>
+			<pre class="Code">};</pre>
+			<pre class="Code">myObject.toString();</pre>
+			<pre class="Code"><span class="CodeConsole">I just broke JavaScript a little.</span></pre>
+			<pre class="Code">otherObject.toString();</pre>
+			<pre class="Code"><span class="CodeConsole">&quot;[object</span><span class="CodeConsole"> Object]&quot;</span></pre>
+			<p class="Body">That’s kind of a scary amount of power, but it gets<span class="NoBreak"> scarier.</span></p>
+			<p class="Body">We can access a constructor’s <code class="CodeInline">prototype</code> from <em class="Emphasis">any</em> object of that type by using the <code class="CodeInline">__proto__</code> property—a reference to the <code class="CodeInline">prototype</code> for <em class="Emphasis">all</em> objects of that same type. It isn’t available in all browsers just yet, but that’s okay—we probably shouldn’t be messing with it anyway. <code class="CodeInline">__proto__</code> allows us to add, remove, and completely change how JavaScript’s built-in properties work on any one object—and in doing so, change the set of properties and methods that are built into <em class="Emphasis">all related</em><span class="NoBreak"><em class="Emphasis"> objects</em></span><span class="NoBreak">.</span></p>
+			<pre class="Code">var myObject = {};</pre>
+			<pre class="Code">var unrelatedObject = {};</pre>
+			<pre class="Code">myObject.toString();</pre>
+			<pre class="Code"><span class="CodeConsole">&quot;[object Object]&quot;</span></pre>
+			<pre class="Code">myObject.__proto__.toString = function() {</pre>
+			<pre class="Code">  console.log( &quot;I just broke JavaScript a LOT.&quot; );</pre>
+			<pre class="Code">};</pre>
+			<pre class="Code">myObject.toString();</pre>
+			<pre class="Code"><span class="CodeConsole">I just broke JavaScript a LOT.</span></pre>
+			<pre class="Code">unrelatedObject.toString(); <span class="CodeComment">// </span><span class="CodeComment">Uh oh.</span></pre>
+			<pre class="Code"><span class="CodeConsole">I just broke JavaScript a LOT.</span></pre>
+			<p class="Body">Here, we managed to change the <code class="CodeInline">toString</code> method not just on <code class="CodeInline">myObject</code>, but on <em class="Emphasis">all</em> objects, by changing it at the <code class="CodeInline">prototype</code> level. In a vacuum like this, where we can see all our code at a glance, it may not seem like an especially terrifying prospect—but by tampering with the way JavaScript does things, we run a huge risk of breaking things on a real<span class="NoBreak"> site.</span></p>
+			<p class="Body">Luckily, you won’t see this much. By the time anyone has advanced enough in their script-writing to think they have a need to mess with <code class="CodeInline">prototype</code>, they’ve learned not to. What you will see on occasion are <em class="Emphasis">additions</em> to <code class="CodeInline">prototype</code>—methods and functions added to <code class="CodeInline">prototype</code> so they’re available to all objects of the same<span class="NoBreak"> type.</span></p>
+			<p class="Body">We can add methods and properties to <em class="Emphasis">all</em> objects of a certain type by making changes to the <code class="CodeInline">prototype</code> property of a constructor directly—we just can’t change the properties that have already been defined. This works the way you might expect: making additions to <code class="CodeInline">String.prototype</code> works the way you’d add properties on an object you created<span class="NoBreak"> yourself.</span></p>
+			<p class="Body">Now, adding methods to <code class="CodeInline">prototype</code> isn’t a great idea either—especially when it comes to <code class="CodeInline">for</code>/<code class="CodeInline">in</code> loops. But for the sake of argument, let’s say you’ll frequently need to check objects for the presence of a key with the identifier <code class="CodeInline">name</code>. In theory, we could just add a method to <em class="Emphasis">all</em> objects by adding a new method to the <code class="CodeInline">Object</code> constructor’s <code class="CodeInline">prototype</code> property. We won’t need to use <code class="CodeInline">__proto__</code> here, since we’re not looking to change <code class="CodeInline">Object.prototype</code> by way of an object data type<span class="NoBreak"> itself:</span> </p>
+			<pre class="Code">var firstObject = {</pre>
+			<pre class="Code">  &quot;foo&quot; : false</pre>
+			<pre class="Code">};</pre>
+			<pre class="Code"><span class="CodeConsole">undefined</span></pre>
+			<pre class="Code">var secondObject = { </pre>
+			<pre class="Code">  &quot;name&quot; : &quot;Hawkeye&quot;,</pre>
+			<pre class="Code">  &quot;location&quot; : &quot;Maine&quot;</pre>
+			<pre class="Code">};</pre>
+			<pre class="Code"><span class="CodeConsole">undefined</span></pre>
+			<pre class="Code">Object.prototype.containsAName = function() {</pre>
+			<pre class="Code">  var result = false;</pre>
+			<pre class="Code">  for( var key in this ) {</pre>
+			<pre class="Code">    if( key === &quot;name&quot; ) {</pre>
+			<pre class="Code">      result = true;</pre>
+			<pre class="Code">    }</pre>
+			<pre class="Code">  }</pre>
+			<pre class="Code">  return result;</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code"><span class="CodeConsole">function Object.containsAName()</span></pre>
+			<pre class="Code">firstObject.containsAName();</pre>
+			<pre class="Code"><span class="CodeConsole">false</span></pre>
+			<pre class="Code">secondObject.containsAName();</pre>
+			<pre class="Code"><span class="CodeConsole">true</span></pre>
+			<p class="Body">Once you’ve added something to an object’s prototype, that property or method will be available to all instances of that data<span class="NoBreak"> type.</span></p>
+			<p class="Body">Now, don’t commit that code to memory—it&apos;s an incredibly convoluted way to see whether an object contains the key <code class="CodeInline">name</code>. It works well enough, but in addition to being a strange way to handle a simple task, it comes with an unintended side-effect: an object’s built-in properties aren’t <em class="Emphasis">enumerable</em>, meaning that they don’t show up when we loop through an object’s properties using <code class="CodeInline">for</code>/<code class="CodeInline">in</code>. When we add <em class="Emphasis">new</em> properties to <code class="CodeInline">prototype</code>, however, they <em class="Emphasis">are</em><span class="NoBreak"> enumerable:</span></p>
+			<pre class="Code">Object.prototype.containsAName = function() {</pre>
+			<pre class="Code">  var result = false;</pre>
+			<pre class="Code">  for( var key in this ) {</pre>
+			<pre class="Code">    if( key === &quot;name&quot; ) {</pre>
+			<pre class="Code">      result = true;</pre>
+			<pre class="Code">    }</pre>
+			<pre class="Code">  }</pre>
+			<pre class="Code">  return result;</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code"><span class="CodeConsole">function Object.containsAName()</span></pre>
+			<pre class="Code">var newObject = { &quot;name&quot;: &quot;BJ&quot; };</pre>
+			<pre class="Code">for( var key in newObject ) {</pre>
+			<pre class="Code">  console.log( key );</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code"><span class="CodeConsole">name</span></pre>
+			<pre class="Code"><span class="CodeConsole">containsAName</span></pre>
+			<p class="Body">Now every time we run a <a id="_idIndexMarker110"></a><code class="CodeInline">for</code>/<code class="CodeInline">in</code> loop, our <code class="CodeInline">containsAName</code> method is going to show up—certainly not ideal, and probably reason enough to leave <code class="CodeInline">prototype</code> alone. Whenever we tinker with <code class="CodeInline">prototype</code>, we’re making global changes to JavaScript’s internals—adding a method or property means <code class="CodeInline">for</code>/<code class="CodeInline">in</code> loops throughout all the scripts on our page could end up behaving<span class="NoBreak"> unexpectedly.</span></p>
+			<p class="Body">That means we have to look at the issue from the other side—what happens to our <code class="CodeInline">for</code>/<code class="CodeInline">in</code> loops when someone else starts tinkering with <code class="CodeInline">prototype</code>? A page can contain scripts written by multiple developers, third-party scripts from external sources, and so on—we can’t be certain that our <code class="CodeInline">for</code>/<code class="CodeInline">in</code> loops won’t be affected by unexpected enumerable<span class="NoBreak"> properties.</span></p>
+			<h3 class="BHead"><a id="_idIndexMarker111"></a><span class="bHeadCode">hasOwnProperty</span></h3>
+			<p class="BodyFirstParagraph">The reason for this treacherous journey through <code class="CodeInline">prototype</code> was two-fold: first, to teach you a little bit about <code class="CodeInline">prototype</code>, since we were in the neighborhood and all. Second, to introduce you to the <code class="CodeInline">hasOwnProperty</code> method, which we can use to safeguard our <code class="CodeInline">for</code>/<code class="CodeInline">in</code> loops against unexpected enumerable properties on<span class="NoBreak"> </span><span class="NoBreak"><code class="CodeInline">prototype</code></span><span class="NoBreak">:</span></p>
+			<pre class="Code">Object.prototype.containsAName = function() {</pre>
+			<pre class="Code">  var result = false;</pre>
+			<pre class="Code">  for( var key in this ) {</pre>
+			<pre class="Code">    if( key === &quot;name&quot; ) {</pre>
+			<pre class="Code">      result = true;</pre>
+			<pre class="Code">    }</pre>
+			<pre class="Code">  }</pre>
+			<pre class="Code">  return result;</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code"><span class="CodeConsole">function Object.containsAName()</span></pre>
+			<pre class="Code">var mysteryObject = {</pre>
+			<pre class="Code">  &quot;name&quot; : &quot;Frank&quot;</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code">mysteryObject.hasOwnProperty( &quot;name&quot; );</pre>
+			<pre class="Code"><span class="CodeConsole">true</span></pre>
+			<pre class="Code">mysteryObject.hasOwnProperty( &quot;containsAName&quot; );</pre>
+			<pre class="Code"><span class="CodeConsole">false</span></pre>
+			<p class="Body">It just so happens that we can use <code class="CodeInline">hasOwnProperty</code> to do what we were trying to do when we were messing<span class="NoBreak"> with </span> <code class="CodeInline">prototype</code>: determine whether an object we created contains a certain property. But even more importantly—at least, for the sake of our loops—<code class="CodeInline">hasOwnProperty</code> <em class="Emphasis">doesn’t</em> apply to properties inherited from <code class="CodeInline">prototype</code>. We can use it to safeguard our <code class="CodeInline">for</code>/<code class="CodeInline">in</code> loops against misguided <code class="CodeInline">prototype</code><span class="NoBreak"> shenanigans.</span></p>
+			<pre class="Code">Object.prototype.customPrototypeMethod = function() {</pre>
+			<pre class="Code">  console.log( &quot;Hello again.&quot; ); </pre>
+			<pre class="Code">};</pre>
+			<pre class="Code"><span class="CodeConsole">function Object.customPrototypeMethod()</span></pre>
+			<pre class="Code">var swamp = {</pre>
+			<pre class="Code">  &quot;bunk1&quot; : &quot;Hawkeye&quot;,</pre>
+			<pre class="Code">  &quot;bunk2&quot; : &quot;BJ&quot;,</pre>
+			<pre class="Code">  &quot;bunk3&quot; : &quot;Frank&quot;</pre>
+			<pre class="Code">};</pre>
+			<pre class="Code"><span class="CodeConsole">undefined</span></pre>
+			<pre class="Code">for( var bunk in swamp ) {</pre>
+			<pre class="Code">  console.log( swamp[ bunk ] );</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code"><span class="CodeConsole">Hawkeye</span></pre>
+			<pre class="Code"><span class="CodeConsole">BJ</span></pre>
+			<pre class="Code"><span class="CodeConsole">Frank</span></pre>
+			<pre class="Code"><span class="CodeConsole">function </span><span class="CodeConsole">Object.containsAName()</span></pre>
+			<pre class="Code">for( var bunk in swamp ) {</pre>
+			<pre class="Code">  if( swamp.hasOwnProperty( bunk ) ) {</pre>
+			<pre class="Code">    console.log( swamp[ bunk ] );</pre>
+			<pre class="Code">  }</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code"><span class="CodeConsole">Hawkeye</span></pre>
+			<pre class="Code"><span class="CodeConsole">BJ</span></pre>
+			<pre class="Code"><span class="CodeConsole">Frank</span><span class="CodeConsoleInline"> </span></pre>
+			<p class="Body">With <code class="CodeInline">hasOwnProperty</code> in place, no additions to <code class="CodeInline">prototype</code> can change the results we expect from our <code class="CodeInline">for</code>/<code class="CodeInline">in</code> loops. After all, we won’t always be able to guarantee that we control every line of code that makes it into our websites, or know for certain whether another developer decided to tinker with a constructor’s<span class="NoBreak"> </span><span class="NoBreak"><code class="CodeInline">prototype</code></span><span class="NoBreak">.</span></p>
+			<h2 class="AHead"><span class="aHeadCode">while</span></h2>
+			<p class="BodyFirstParagraph">After that brief excursion into <code class="CodeInline">prototype</code>, the syntax for <a id="_idIndexMarker112"></a><code class="CodeInline">while</code> loops is going to be a refreshing change of pace. Like all the others, it starts with a keyword—<code class="CodeInline">while</code>—followed by a set of parentheses and a set of curly braces. The only thing we’ll put between the parentheses of a <code class="CodeInline">while</code> loop is a <a id="_idIndexMarker113"></a><em class="Emphasis">condition</em>—and just like the keyword implies, the loop will continue to execute for as long as that condition evaluates to<span class="NoBreak"> </span><span class="NoBreak"><span class="CodeConsoleInline">true</span></span><span class="NoBreak">.</span></p>
+			<pre class="Code">var i = 0;</pre>
+			<pre class="Code">while( i &lt; 3 ) {</pre>
+			<pre class="Code">  console.log( &quot;Loop.&quot; );</pre>
+			<pre class="Code">  i++;</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code"><span class="CodeConsole">(3) Loop</span></pre>
+			<p class="Body">The code above is really just another way of writing our first <code class="CodeInline">for</code> loop. Instead of putting the initialization, condition, and final expression between the parentheses, we’re creating the counter variable before the loop and incrementing the counter inside the<span class="NoBreak"> loop.</span></p>
+			<p class="Body">This isn’t a common case for <code class="CodeInline">while</code>, however—we could write this much more concisely using <code class="CodeInline">for</code>, after all. We’ll use <code class="CodeInline">while</code> when we <em class="Emphasis">don’t</em> have any way of measuring the number of iterations necessary, and instead want to continue to run the loop until a certain condition is met. For example, the following snippet of code will continually generate a number between zero and nine, only stopping when that random number equals<span class="NoBreak"> three:</span></p>
+			<pre class="Code">var random = Math.floor( Math.random() * 10 );</pre>
+			<pre class="Code">while( random !== 3 ){</pre>
+			<pre class="Code">  console.log( &quot;Nope, not &quot; + random );</pre>
+			<pre class="Code">  var random = Math.floor( Math.random() * 10 );</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code">console.log( &quot;Got it!&quot; );</pre>
+			<pre class="Code"><span class="CodeConsole">Nope, not 5</span></pre>
+			<pre class="Code"><span class="CodeConsole">Nope, </span><span class="CodeConsole">not 9</span></pre>
+			<pre class="Code"><span class="CodeConsole">Nope, not 2</span></pre>
+			<pre class="Code"><span class="CodeConsole">Got it!</span></pre>
+			<p class="Body">If we run this code again, that <code class="CodeInline">while</code> loop could run any number of times before continuing on to the <code class="CodeInline">console.log</code> that follows it—or <code class="CodeInline">random</code> could contain a <code class="CodeInline">3</code> right off the bat, and the loop will never run at<span class="NoBreak"> all</span><span class="NoBreak">.</span></p>
+			<h3 class="BHead"><span class="bHeadCode">do</span>/<span class="bHeadCode">while</span></h3>
+			<p class="BodyFirstParagraph"><a id="_idIndexMarker114"></a><code class="CodeInline">do</code>/<code class="CodeInline">while</code> loops serve largely the same purpose as <code class="CodeInline">while</code> loops: to iterate over a loop until a given condition evaluates to <span class="CodeConsoleInline">true</span>, as many times as is needed. The syntax is a little different—in fact, compared to the conditional logic you’ve seen so far, <code class="CodeInline">do</code>/<code class="CodeInline">while</code> loops look a little backwards. We start with a <code class="CodeInline">do</code> keyword, immediately followed by a set of curly braces—no parentheses, no conditions—containing the code we want to iterate over. <em class="Emphasis">After</em> the curly braces, we use the <code class="CodeInline">while</code> keyword and parentheses containing the condition; as long as that condition evaluates to <span class="CodeConsoleInline">true</span>, the loop will keep on<span class="NoBreak"> </span><span class="NoBreak">running.</span></p>
+			<pre class="Code">var i = 0;</pre>
+			<pre class="Code">do {</pre>
+			<pre class="Code">  console.log( &quot;Loop.&quot; );</pre>
+			<pre class="Code">  i++;</pre>
+			<pre class="Code">} while (i &lt; 3);</pre>
+			<pre class="Code"><span class="CodeConsole">(3) Loop.</span></pre>
+			<p class="Body">There’s really only one difference between a <code class="CodeInline">do</code>/<code class="CodeInline">while</code> and a plain ol’ <code class="CodeInline">while</code> loop: the contents of a <code class="CodeInline">while</code> loop may never run at all—as in our random number example above—but the code in a <code class="CodeInline">do</code>/<code class="CodeInline">while</code> loop will always execute at least<span class="NoBreak"> once.</span></p>
+			<p class="Body">Instead of evaluating the condition then deciding whether or not to run the code, the way all the other loops work, <code class="CodeInline">do</code>/<code class="CodeInline">while</code> will execute the code, then stop the loop <em class="Emphasis">after</em> the condition is found. If we were to write our random-number guessing game above using <code class="CodeInline">do</code>/<code class="CodeInline">while</code>, the code will run even once the condition is<span class="NoBreak"> met:</span></p>
+			<pre class="Code">do {</pre>
+			<pre class="Code">  var random = Math.floor( Math.random() * 10 );</pre>
+			<pre class="Code">  console.log( &quot;Is it... &quot; + random + &quot;?&quot; );</pre>
+			<pre class="Code">} while( random !== 3 );</pre>
+			<pre class="Code">console.log( &quot;Got it!&quot; );</pre>
+			<pre class="Code"><span class="CodeConsole">Is it... 7?</span></pre>
+			<pre class="Code"><span class="CodeConsole">Is it...</span><span class="CodeConsole"> 9?</span></pre>
+			<pre class="Code"><span class="CodeConsole">Is it... 6?</span></pre>
+			<pre class="Code"><span class="CodeConsole">Is it… 3?</span></pre>
+			<pre class="Code"><span class="CodeConsole">Got it!</span></pre>
+			<p class="Body">Now we don’t have to generate a random number before the loop <em class="Emphasis">and</em> regenerate it on each iteration: since the code inside the <code class="CodeInline">do</code> curly braces will always be executed before the condition is evaluated, we can generate the random number for the first time <em class="Emphasis">and</em> regenerate it on each subsequent iteration on that one line. We then log each “guess” to our console—and since the code executes before the condition is checked, that will include the matching number. Now that the condition matches, the loop stops, and we move<span class="NoBreak"> on.</span></p>
+			<h2 class="AHead"><span class="aHeadCode">continue</span> AND <span class="aHeadCode">break</span></h2>
+			<p class="BodyFirstParagraph">All of the loop syntaxes handle both iteration and termination—they all accept some form of condition for stopping the loop. If we need more finely grained control, we can do a little steering within our loops using the <a id="_idIndexMarker115"></a><code class="CodeInline">continue</code> and <a id="_idIndexMarker116"></a><code class="CodeInline">break</code><span class="NoBreak"> keywords.</span></p>
+			<p class="Body">To play with these keywords a little, let’s start with a <code class="CodeInline">for</code> loop that counts from zero to<span class="NoBreak"> four:</span></p>
+			<pre class="Code">for( var i = 0; i &lt; 5; i++ ) {</pre>
+			<pre class="Code">  console.log( i );</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code"><span class="CodeConsole">0</span></pre>
+			<pre class="Code"><span class="CodeConsole">1</span></pre>
+			<pre class="Code"><span class="CodeConsole">2</span></pre>
+			<pre class="Code"><span class="CodeConsole">3</span></pre>
+			<pre class="Code"><span class="CodeConsole">4</span></pre>
+			<p class="Body"><code class="CodeInline">continue</code> allows us to skip ahead to the next iteration of a loop without executing any of the code inside the loop that follows the <code class="CodeInline">continue</code><span class="NoBreak"> statement.</span></p>
+			<pre class="Code">for( var i = 0; i &lt; 5; i++ ) {</pre>
+			<pre class="Code">  if( i === 2 ) {</pre>
+			<pre class="Code">    continue;</pre>
+			<pre class="Code">  }</pre>
+			<pre class="Code">  console.log( i );</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code"><span class="CodeConsole">0</span></pre>
+			<pre class="Code"><span class="CodeConsole">1</span></pre>
+			<pre class="Code"><span class="CodeConsole">3</span></pre>
+			<pre class="Code"><span class="CodeConsole">4</span></pre>
+			<p class="Body">This loop skips the third <code class="CodeInline">console.log</code> by using <code class="CodeInline">continue</code> when <code class="CodeInline">i</code> is equal to two—which skips the third iteration, remember, since we start counting at zero. We never see a <code class="CodeInline">2</code> in our<span class="NoBreak"> </span><span class="NoBreak">console.</span></p>
+			<p class="Body"><code class="CodeInline">break</code>—a deeply satisfying keyword to type after a few hours of programming, in my experience—not only stops the current iteration of a loop, but stops the loop<span class="NoBreak"> completely:</span></p>
+			<pre class="Code">for( var i = 0; i &lt; 5; i++ ) {</pre>
+			<pre class="Code">  if( i === 2 ) {</pre>
+			<pre class="Code">    break;</pre>
+			<pre class="Code">  }</pre>
+			<pre class="Code">  console.log( i );</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code"><span class="CodeConsole">0</span></pre>
+			<pre class="Code"><span class="CodeConsole">1</span></pre>
+			<p class="Body">Upon encountering a <code class="CodeInline">break</code>, JavaScript reacts the same way it does when it reaches a loop’s built-in condition for termination: it stops iterating over the loop completely. As a matter of fact, we don’t <em class="Emphasis">need</em> to build in that condition at all—we can write a loop that iterates forever by default, and control its behavior using<span class="NoBreak"> </span><span class="NoBreak"><code class="CodeInline">break</code></span><span class="NoBreak">.</span></p>
+			<pre class="Code">var concatString = &quot;a&quot;;</pre>
+			<pre class="Code">while( true ) {</pre>
+			<pre class="Code">  concatString = concatString + &quot;a&quot;;</pre>
+			<pre class="Code">  if( concatString.length === 5 ) {</pre>
+			<pre class="Code">    break;</pre>
+			<pre class="Code">  }</pre>
+			<pre class="Code">  console.log( concatString );</pre>
+			<pre class="Code">}</pre>
+			<pre class="Code"><span class="CodeConsole">aa</span></pre>
+			<pre class="Code"><span class="CodeConsole">aaa</span></pre>
+			<pre class="Code"><span class="CodeConsole">aaaa</span></pre>
+			<p class="Body"><code class="CodeInline">true</code> can’t possibly stop evaluating to <code class="CodeInline">true</code>, so using it as a <code class="CodeInline">while</code> condition means the loop has to run forever—unless we use <code class="CodeInline">break</code> to stop it, once our string reaches five characters<span class="NoBreak"> long.</span></p>
+			<h2 class="AHead">INFINITE LOOPS</h2>
+			<p class="BodyFirstParagraph">We’re standing on the precipice of a very touchy subject for developers of any language. What happens if we pass <code class="CodeInline">while</code> the keyword <code class="CodeInline">true</code> as a condition, or write a <code class="CodeInline">for</code> loop that counts upwards from zero, but only stops iterating if <code class="CodeInline">i</code> is equal to <code class="CodeInline">-1</code>? We’ve just created an <a id="_idIndexMarker117"></a>infinite loop, and here be<span class="NoBreak"> dragons.</span></p>
+			<p class="Body">Upon encountering an infinite loop, some modern browsers eventually offer you the option of aborting the script—but only newer browsers, and not always. More often than not, an infinite loop means a browser<span class="NoBreak"> crash.</span></p>
+			<p class="Body">It happens to the best of us, and there’s no serious harm done (as long as the offending code didn’t make it out to a production website). Close and reopen your browser and you’ll be back to business as usual—just be sure to fix the infinite loop before you attempt to run your script<span class="NoBreak"> again.</span></p>
+			<h2 class="AHead">PUTTING IT ALL TOGETHER</h2>
+			<p class="BodyFirstParagraph">We’ve covered a lot of ground so far. Now that we have a sense of how JavaScript handles data, logic, and loops, we can start putting it all together into something more useful than a couple of lines in our developer consoles. It’s time to write a script in the context it was meant to occupy: a real web<span class="NoBreak"> page.</span></p>
+		</div>
+	</body>
+</html>

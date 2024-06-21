@@ -1,0 +1,600 @@
+/* Sans */
+
+@font-face {
+    font-family: YogaSansPro;
+    src: url("../fonts/YogaSansPro.otf");
+}
+@font-face {
+    font-family: YogaSansPro;
+    font-style: italic;
+    src: url("../fonts/YogaSansPro-Ita.otf");
+}
+@font-face {
+    font-family: YogaSansPro;
+    font-weight: bold;
+    src: url("../fonts/YogaSansPro-Bold.otf");
+}
+
+/* Serif */
+
+@font-face {
+    font-family: YogaPro;
+    src: url("../fonts/YogaPro.otf");
+}
+@font-face {
+    font-family: YogaPro;
+    font-weight: bold;
+    src: url("../fonts/YogaPro-Bold.otf");
+}
+@font-face {
+    font-family: YogaPro;
+    font-style: italic;
+    src: url("../fonts/YogaPro-Ita.otf");
+}
+
+/* Fixed-width */
+
+@font-face {
+    font-family: "FagoMonoOT";
+    src: url("../fonts/FagoMonoOT.otf");
+}
+@font-face {
+    font-family: "FagoMonoOT";
+    font-weight: bold;
+    src: url("../fonts/FagoMonoOT-Bold.otf");
+}
+
+@font-face {
+  font-family: "UbuntuMono";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/UbuntuMono-R.ttf");
+}
+
+@font-face {
+  font-family: "UbuntuMono";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/UbuntuMono-B.ttf");
+}
+
+@font-face {
+  font-family: "UbuntuMono";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../fonts/UbuntuMono-BI.ttf");
+}
+
+@font-face {
+  font-family: "UbuntuMono";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../fonts/UbuntuMono-RI.ttf");
+}
+
+/* Headlines */
+
+@font-face {
+    font-family: "TitlingGothicFB Cond Regular";
+    src: url("../fonts/TitlingGothicFBCond-Regular.ttf");
+}
+
+@font-face {
+    font-family: "TitlingGothicFB Nar Regular";
+    src: url("../fonts/TitlingGothicFBNar-Reg.otf");
+}
+
+body { 
+    font-family: "YogaPro", serif;
+    text-indent: 0;
+    margin-bottom: 10px;
+}
+
+div {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+p { text-indent: 0; text-align: left; }
+
+p.Dedication {
+    font-style: italic;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 35%;
+}
+
+p.Epigraph { 
+    font-style: italic;
+    margin: 1em 5% 0;
+}
+
+p.EpigraphSource {
+    font-family: "YogaSansPro", sans-serif;
+    font-size: smaller;
+    margin: 5px 5% 1em;
+}
+
+cite.EpigraphSourceTitle {
+    font-size: 1em;
+    font-style: normal;
+}
+
+em.Common_Strong-Emphasis { 
+    font-weight: bold;
+    font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: "TitlingGothicFB Cond Regular", sans-serif; /* Normal heading style */
+	/* font-family: "TitlingGothicFB Nar Regular", sans-serif; */ /* Use this heading style for "Briefs" */
+	color: #c75f5a; /*This color will change from book to book*/
+	font-weight: 400;
+	text-align: left;
+	text-indent: 0;
+	page-break-after: avoid;
+	-webkit-hyphens: none;
+    -moz-hyphens: none;
+    -epub-hyphens: none;
+    hyphens: none;
+}
+
+/* Hide chapter titles */
+h1.chTitle { display: none; }
+
+h1,
+h2 {
+	text-align: left;
+	font-size: 1.2em;
+	letter-spacing: 1px;
+	padding-top: 1em;
+}
+
+h1,
+h2.temp { padding-top: 0 }
+
+h3,
+h2.ReferenceHead {
+	font-family: "YogaPro", serif;
+	color: #000000;
+	font-size: 1.1em;
+	font-weight: 700;
+	text-align: left;
+	padding-top: 1em;
+	margin-bottom: .8em;
+}
+
+span.ReferenceNumber { 
+    font-family: "YogaSansPro", sans-serif;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-family: "YogaSansPro", sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #464646;
+    margin: 1.5em auto 0;
+}
+
+/*Special handling for code within headers*/
+span.ahead-code,
+span.aheadCode,
+span.aHeadCode,
+span.bhead-code,
+span.bheadCode,
+span.bHeadCode,
+span.chead-code,
+span.cHead-code { 
+    font-family: "YogaSansPro", sans-serif;
+    color: #3399CC;
+}
+
+/*TOC Listings*/
+div.mobi-toc h3 {
+    font-size: 1em;
+    margin: 0 0 0.25em;
+}
+
+blockquote,
+p.ExtractFirstParagraph{
+	color: #3c3c3c;
+	font-family: "YogaSansPro", Arial, Helvetica, sans-serif;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 1.2em;
+	margin: 0 0 0.45em 0.9em;
+	text-align: left;
+	text-indent: 0;
+}
+
+sup
+{
+	vertical-align: super;
+	font-size: 70%;
+	line-height: 100% !important;
+}
+
+a
+{
+	color: #3399cc;
+	font-family: "YogaSansPro", Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+img { max-width: 100% }
+
+div.figure
+{
+	border-top: 1px dotted rgb(200,200,200);
+	border-bottom: 1px dotted rgb(200,200,200);
+	padding-top: 1em;
+	padding-bottom: 0.5em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	page-break-inside: avoid;
+}
+
+div.figure div.figure {
+    border: 0;
+    margin: 0 auto 0.75em;
+    padding: 0;
+    page-break-inside: auto;
+}
+
+span.inline-figure,
+span.fig-number-inline,
+span.FigureNumberInline,
+span.inline-table
+{
+	color: #3c3c3c;
+	font-family: "YogaSansPro", Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	font-style: normal;
+	font-weight: 400;
+}
+
+div.image { text-align: center; }
+
+span.author-fig {
+    margin-right: 10px;
+    float: left;
+    max-width: 35%;
+}
+
+p.fig,
+p.FigureCaption,
+p.FigureCaptionBorder,
+p.tbl {
+	color: #000;
+	font-family: "YogaSansPro", Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.2em;
+	margin: 0 0 1.12em;
+	text-align: left;
+	text-indent: 0;
+}
+
+p.tbl { page-break-after: avoid }
+
+p.fig,
+p.FigureCaption,
+p.FigureCaptionBorder { page-break-before: avoid }
+
+span.fig-number,
+span.FigureNumber,
+span.tbl-number
+{
+	color: #000;
+	font-family: "YogaSansPro", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: 700;
+}
+
+div.chapterheading
+{
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	width: 100%;
+}
+
+div.chapterheading img
+{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 100%;
+	max-width: 700px;
+}
+
+span.cho-first-line,
+span.ChapterIntro {
+	letter-spacing: 0.1em;
+	font-variant: small-caps;
+	font-size: smaller;
+}
+
+div.index
+{
+	color: #000;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.29em;
+	margin-left: 0;
+	margin-right: 0;
+	text-align: left;
+	text-indent: 0;
+}
+
+div.index p
+{
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+div.index p.Index-level-2,
+div.index p.sub-entry,
+div.index p.Index-l2,
+div.index p.Back-Matter_Index-Level-2 { margin-left: 2em; }
+
+p.index-heds,
+h3.index-heds,
+h3.IndexHead,
+div.index h3 {
+	border-bottom: 2px solid #c8c8c8;
+	color: #000;
+	font-family: "YogaSansPro", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.2em;
+	margin: 0 0 0.5em;
+	padding: 2em 0 .25em;
+	text-align: left;
+	text-indent: 0;
+	page-break-after: avoid;
+}
+
+p.index-heds + p.index { padding-top: 1em }
+
+pre {
+	font-size: 0.9em;
+	color: #3399CC;
+	white-space: pre-wrap;
+	font-family: "UbuntuMono", "Courier New", Courier, monospace;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1.2em;
+	margin: 0 0 2px 1.1em;
+	padding-top: 10px;
+	text-align: left;
+	text-indent: 0;
+}
+
+pre + pre { padding-top: 0 }
+
+pre + p,
+pre + div,
+pre + h1 { margin-top: 30px }
+
+pre em
+{
+	color: #3399CC;
+	font-weight: bold;
+	font-style: normal;
+}
+
+code {
+	font-size: 0.97em;
+	color: #3399CC;
+	font-family: "UbuntuMono", "Courier New", Courier, monospace;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.fig code { color: #000; }
+
+.code-comment, .code-line-return
+{
+	font-family: "UbuntuMono", "Courier New", Courier, monospace;
+	font-style: normal;
+	color: #555555;
+	font-size: 0.97em;
+	/* Reset due to iBooks bug */
+}
+
+span.CodeConsole,
+span.CodeConsoleInline { 
+    font-family: "UbuntuMono", "Courier New", Courier, monospace;
+    font-style: italic; 
+    color: #000;
+ }
+ 
+span.CodeConsoleInline { font-size: 0.97em; }
+
+p.footnote
+{
+	color: #000;
+	font-family: "YogaSansPro", Arial, Helvetica, sans-serif;
+	font-size: 0.67em;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.4em;
+	margin: 0;
+	text-align: left;
+	text-indent: 0;
+}
+
+div.copy-block
+{
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+div.copy-block p
+{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 20px;
+}
+
+li {
+    margin: 0 auto 10px;
+    text-indent: 0;
+}
+
+/* Tables */
+table
+{
+	border-collapse: collapse;
+	font-family: "YogaSansPro", Arial, Helvetica, sans-serif;
+	font-size: small;
+	border: 1px solid rgb(209,210,209);
+	text-align: left;
+	vertical-align: top;
+	width: 75%;
+	max-width: 400px;
+}
+
+table tr
+{
+	border-right: 1px solid rgb(209,210,209);
+	border-left: 1px solid rgb(209,210,209);
+}
+
+table th,
+table thead td
+{
+	border-top: 1px solid rgb(209,210,209);
+	border-bottom: 1px solid rgb(209,210,209);
+	background-color: #e9e9e8;
+	text-align: left;
+	color: #4d4d4c;
+}
+
+table p {
+    margin: 0;
+    padding: 0;
+}
+
+table th p,
+table thead td p { 
+    font-family: "YogaSansPro", Arial, Helvetica, sans-serif; 
+    font-weight: bold;
+}
+table th, table td { padding: 6px; }
+table tr.versions { border-bottom: 1px solid rgb(209,210,209); }
+
+table.table td { 
+    text-align: left; 
+    vertical-align: top;
+}
+
+table.table tr, table.table td, table.table th { border: 1px solid rgb(209,210,209); }
+
+table.table#table002 { width: 100% }
+
+table.table#table002 td { text-align: center }
+
+table.table#table002 tbody tr td { border: none }
+
+table.table#table002 td.table_hed, 
+table.table#table002 td.left { 
+    text-align: left;
+    border-right: 1px solid rgb(209,210,209);
+    border-bottom: 1px solid rgb(209,210,209);
+}
+
+table.table#table002 tr.border-top td { border-top: 1px solid rgb(209,210,209) }
+
+table.table#table002 tr.border-top + tr td { border-bottom: 1px solid rgb(209,210,209) }
+
+table.table#table002 td.browser { border-top: none }
+
+table.table#table002 td.browser-icon { border-bottom: none }
+
+table.table#table002 img { width: 40px }
+
+table.vmiddle > tbody > tr > td { border-bottom: 1px solid rgb(209,210,209) }
+
+table.vmiddle > tbody > tr > td + td + td { 
+    border-left: 1px solid rgb(209,210,209);
+    padding-left: 20px;
+}
+
+/*Custom spacing for "More from" section*/
+/*ID will change from book to book*/
+div.more_from p.BodyFirstParagraph { margin-bottom: 0; margin-top: 0 }
+div.more_from p.BodyFirstParagraph em { display: inline-block; margin-bottom: 20px }
+div.more_from span.NoBreak { margin-left: 0.25em }
+
+
+/*table .property
+{
+	text-align: left;
+	border-right: 1px solid rgb(209,210,209);
+	vertical-align: top;
+}
+
+table .last { border-bottom: 1px solid rgb(209,210,209); }
+table th .table-heds,
+table thead td p { font-family: "YogaSansPro", Arial, Helvetica, sans-serif !important; }*/
+
+/* Table 1 formatting */
+
+
+/* Table 3 formatting 
+#table-3
+{
+	width: 340px;
+	font-size: small;
+}
+
+#table-3 td
+{
+	text-align: left;
+	vertical-align: middle;
+}
+*/
+
+/*Kindle Fire Specific Styles-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
+@media amzn-kf8 {
+    
+}*/
+
+/*Kindle Legacy Specific Styles-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/*/
+@media amzn-mobi {
+    
+    body { 
+        text-indent: 0;
+        margin-bottom: 10px;
+    }
+
+    p { 
+        text-indent: 0; 
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        padding-top: 15px;
+        padding-bottom: 5px;
+    }
+
+    pre {
+        margin-left: 0;
+        padding-left: 0;
+    }
+}

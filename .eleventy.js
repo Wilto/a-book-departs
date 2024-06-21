@@ -1,8 +1,9 @@
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 const markdownIt = require('markdown-it');
+const markdownItCaption = require('./util/caption');
 const dumpFilter = require("@jamshop/eleventy-filter-dump");
-const markdownCaption = require('./functions/captions');
-const path = require('path')
+const path = require('path');
+
 const CleanCSS = require('clean-css');
 const md = require('markdown-it')({
 	html: false,
@@ -16,7 +17,8 @@ module.exports = function(eleventyConfig) {
 		html: true,
 		breaks: true,
 		linkify: true
-	}).use(markdownCaption));
+	}).use( markdownItCaption));
+
 
 	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
 		extensions: "html",

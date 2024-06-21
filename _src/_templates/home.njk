@@ -2,18 +2,30 @@
 layout: base.njk
 ---
 
-<div class="">
-	<div class="cover" style="background: {{ data.color }};">
-		<div class="inner-wrap title-section">
-			<address class="author">{{ data.author.name }}</address>
-			<h1>{{ data.title }}</h1>
+<main role="main" id="main">
+	<div class="">
+		<div class="cover" style="background: {{ meta.color }};">
+			<div class="inner-wrap title-section">
+				<address class="author">{{ meta.creator }}</address>
+				<h1>{{ meta.title }}</h1>
+			</div>
+		</div>
+		<div class="inner-wrap">
+			<div class="ctas">
+				<a href="{{ collections.chapter[0].page.url }}" class="cta">Read for Free</a>
+			</div>
 		</div>
 	</div>
-	<div class="inner-wrap">
-		{{ content }}
-		<div class="ctas">
-			<a href="{{collections.chap[0].page.url }}" class="cta">Read for Free</a>
-		</div>
-	</div>
-</div>
+</main>
 
+<footer class="footer">
+	<div class="inner-wrap">
+		<div class="pub-info">
+			<h3 class="meta-hed">{{ title }}</h3>
+			{{ content | safe }}
+		</div>
+		<small class="copyright">
+			<p>{{ meta.rights }}</p>
+		</small>
+	</div>
+</footer>
