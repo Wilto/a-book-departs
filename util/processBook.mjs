@@ -1,7 +1,7 @@
 import { processBook } from '@eatonfyi/dq';
 await processBook('books/javascript-for-web-designers.epub', { 
 	root: '.',
-	data: '_data',
+	data: '_src/_data',
 	chapters: '_src/chapter',
 	images: '_src/chapter/image',
 });
