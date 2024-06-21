@@ -103,3 +103,48 @@ figure {
 	padding: 12% 1em 0;
 	background: #ddd;
 }
+
+.skiplink {
+	position: relative;
+	z-index: 3;
+}
+
+dialog {
+	background: none;
+	color: rgba(255,255,255,.9);
+	padding: 0;
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+dialog ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+dialog nav {
+	margin: 0 auto;
+	max-width: 30em;
+}
+dialog #closer {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+dialog nav li {
+	margin: 2em;
+}
+dialog a {
+	color: rgba(255,255,255,.9);
+	font-size: 1.4em;
+	font-family: "Lora", serif;
+	font-weight: bold;
+}
+
+dialog::backdrop {
+	background: rgba(0,0,0,.4);
+	padding: 0;
+	margin: 0;
+	opacity: .975;
+}

@@ -62,16 +62,48 @@
 			.book-body a {
 				color: {{ meta.color }};
 			}
+			dialog::backdrop {
+				background: {{ meta.color }};
+			}
 			</style>
 	</head>
 	<body>
 		<header class="masthead">
-			<div class="contents-btn"><a href="#modal-nav" rel="modal:open">Contents</a></div>
+			<div>
+				<a class="sr-only skiplink" href="#main">Skip to main content</a>
+				<button class="contents-btn" aria-expanded="false" data-controls="#dialog">Table of Contents</button>
+			</div>
 			<h1 class="logo"><a href="/">{{ meta.title }}</a></h1>
 			<div class="book-btn"><a href="https://abookapart.com/products/javascript-for-web-designers">Buy the book</a></div>
 		</header>
-
 		{{ content | safe }}
 
+		<dialog id="dialog">
+			<button id="closer">Close Table of Contents</button>
+			<nav aria-label="Table of Contents">
+				<ol>
+				{% for chap in collections.chapter %}
+					<li><a href="{{ chap.url }}">{{ chap.data.title }}</a></li>
+				{% endfor %}
+				</ol>
+			</nav>
+		</dialog>
+
 	</body>
+
+	<script>
+		let control = document.querySelector( "[data-controls]" ),
+			dialog  = document.querySelector( control.dataset.controls );
+			closer  = dialog.querySelector( "#closer" );
+
+		control.addEventListener( "click", function( e ) {
+			dialog.setAttribute( "aria-hidden", false );
+			dialog.showModal();
+		});
+
+		closer.addEventListener( "click", function( e ) {
+			dialog.close();
+			e.preventDefault();
+		});
+	</script>
 </html>

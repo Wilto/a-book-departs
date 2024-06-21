@@ -96,6 +96,15 @@ p {
 	margin: .625em 0;
 }
 
+.logo {
+	font-size: 1.6em;
+}
+.logo a {
+	text-decoration: none;
+	font-weight: normal;
+	color: #444;
+}
+
 .book-body {
 	font-size: clamp( .8em, 1.25vw, 1.2em );
 }
@@ -127,7 +136,6 @@ figcaption {
 	margin: 1.25em 0;
 }
 .title-section h1 {
-	font-family: "League Gothic Condensed", sans-serif;
 	font-weight: normal;
 	letter-spacing: -.025em;
 	font-size: clamp(5em,20vw,14em);
