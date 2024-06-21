@@ -131,15 +131,21 @@ dialog #closer {
 	top: 0;
 	right: 0;
 }
-
 dialog nav li {
 	margin: 2em;
 }
 dialog a {
 	color: rgba(255,255,255,.9);
-	font-size: 1.4em;
+	font-size: 1.6em;
 	font-family: "Lora", serif;
-	font-weight: bold;
+	font-weight: normal;
+	text-decoration: none;
+	display: inline-block;
+	transition: all .15s ease-in-out;
+}
+dialog a:hover {
+	color: rgba(255,255,255,.85);
+	transform: translate(.4em, 0);
 }
 
 dialog::backdrop {
