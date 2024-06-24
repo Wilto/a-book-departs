@@ -32,6 +32,7 @@
     "cross-env": "^7.0.3",
     "make-dir-cli": "^2.0.0",
     "markdown-it": "^14.1.0",
+    "sass": "^1.77.6",
     "typescript": "^5.5.2"
   },
   "dependencies": {

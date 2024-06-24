@@ -3,7 +3,7 @@ const markdownIt = require('markdown-it');
 const markdownItCaption = require('./util/caption');
 const dumpFilter = require("@jamshop/eleventy-filter-dump");
 const path = require('path');
-
+const sass = require('sass');
 const CleanCSS = require('clean-css');
 const md = require('markdown-it')({
 	html: false,
@@ -19,7 +19,6 @@ module.exports = function(eleventyConfig) {
 		linkify: true
 	}).use( markdownItCaption));
 
-
 	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
 		extensions: "html",
 		formats: ["avif", "webp", "jpeg"],
@@ -33,7 +32,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("_src/_assets/");
 	eleventyConfig.addFilter(
 		'cssmin',
-		code => new CleanCSS({}).minify(code).styles
+		code => sass.compileString( code/*, {style: "compressed"}*/).css
 	);
 	eleventyConfig.addFilter('markdown', markdownString => md.render( markdownString ) );
 

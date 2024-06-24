@@ -43,18 +43,13 @@
 
 		<meta name="author" content="{{ output-directory.data.meta.creator }}">
 		{% set css %}
-			{% include "../_assets/css/globals.css" %}
-			{% include "../_assets/css/layout.css" %}
-			{% include "../_assets/css/type.css" %}
-			{% include "../_assets/css/syntax.css" %}
+			{% include "../_assets/css/globals.scss" %}
+			{% include "../_assets/css/layout.scss" %}
+			{% include "../_assets/css/type.scss" %}
 		{% endset %}
 		<style>
 			{{ css | cssmin | safe }}
 		</style>
-		<link rel="preload" href="/_assets/css/all.css" as="style">
-
-		<link rel="stylesheet" href="/_assets/css/all.css">
-
 		<style>
 			.book-body h2 {
 				color: {{ meta.color }};
@@ -62,7 +57,7 @@
 			.book-body a {
 				color: {{ meta.color }};
 			}
-			dialog::backdrop {
+			.modal::backdrop {
 				background: {{ meta.color }};
 			}
 			</style>
@@ -79,8 +74,8 @@
 
 		{{ content | safe }}
 
-		<dialog id="dialog">
-			<button id="closer" aria-label="Close Table of Contents"></button>
+		<dialog id="dialog" class="modal">
+			<button class="btn btn-close" aria-label="Close Table of Contents"></button>
 			<nav aria-label="Table of Contents">
 				<ol>
 				{% for chap in collections.chapter %}
@@ -95,7 +90,7 @@
 	<script>
 		let control = document.querySelector( "[data-controls]" ),
 			dialog  = document.querySelector( control.dataset.controls );
-			closer  = dialog.querySelector( "#closer" );
+			closer  = dialog.querySelector( ".btn-close" );
 
 		control.addEventListener( "click", function( e ) {
 			dialog.setAttribute( "aria-hidden", false );

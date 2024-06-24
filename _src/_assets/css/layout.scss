@@ -9,10 +9,6 @@
 	z-index: 2;
 	background: #fff;
 }
-.logo {
-	margin: 0;
-	padding: 0;
-}
 .outer-wrap {
 	padding: 0 1em 6.5em 1em;
 }
@@ -21,32 +17,33 @@
 	max-width: 100%;
 	width: 42.5rem;
 }
-.cover {
-	background: #ccc;
-	padding: 15% 0 7.25% 0;
+
+.logo {
+	margin: 0;
+	padding: 0;
 }
 
+.cover {
+	background: #ccc;
+	padding-top: clamp(6.25em, 15vw, 12em);
+	.outer-wrap {
+		padding-bottom: 1.75%;
+	}
+}
 .title-section h1 {
-	text-align: left;
-	display: block;
 	margin: 0;
-	border-top: 2px solid #000;
-	border-bottom: 2px solid #000;
-	line-height: .9;
-	letter-spacing: .01em;
 	padding: .12em 0;
 }
 .ctas {
 	display: flex;
 	flex-direction: row;
-	margin-top: -1em;
 	gap: 2.5%;
+	position: relative;
+	top: 2em;
 	justify-content: center;
 }
-.ctas > * {
+.btn-cta {
 	padding: .65em 1em .5em 1em;
-	background: #000;
-	color: #fff;
 }
 
 figure {
@@ -64,7 +61,7 @@ figure {
 
 .footer {
 	background: #f2f2f2;
-	margin-top: 4em;
+	margin-top: 5em;
 	padding: 2em 0;
 }
 .pub-info {
@@ -109,7 +106,7 @@ figure {
 	z-index: 3;
 }
 
-dialog {
+.modal {
 	background: none;
 	color: rgba(255,255,255,.9);
 	padding: 0;
@@ -117,55 +114,55 @@ dialog {
 	width: 100%;
 	height: 100%;
 	transition: all .15s ease-in-out;
+	&::backdrop {
+		padding: 0;
+		margin: 0;
+		opacity: .975;
+	}
+	ol {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	nav {
+		margin: 0 auto;
+		max-width: 30em;
+	}
+	li {
+		margin: 2em;
+	}
+	a {
+		color: rgba(255,255,255,.9);
+		font-size: 1.6em;
+		font-family: "Lora", serif;
+		font-weight: normal;
+		text-decoration: none;
+		display: inline-block;
+		transition: all .15s ease-in-out;
+		&:hover {
+			color: rgba(255,255,255,.85);
+			transform: translate(.4em, 0);
+		}
+	}
 }
-dialog ol {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-dialog nav {
-	margin: 0 auto;
-	max-width: 30em;
-}
-dialog #closer {
-	position: absolute;
-	top: 0;
-	right: 1em;
-}
-dialog nav li {
-	margin: 2em;
-}
-dialog a {
-	color: rgba(255,255,255,.9);
-	font-size: 1.6em;
-	font-family: "Lora", serif;
-	font-weight: normal;
-	text-decoration: none;
-	display: inline-block;
-	transition: all .15s ease-in-out;
-}
-dialog a:hover {
-	color: rgba(255,255,255,.85);
-	transform: translate(.4em, 0);
-}
-
-dialog::backdrop {
-	background: rgba(0,0,0,.4);
-	padding: 0;
-	margin: 0;
-	opacity: .975;
-}
-
-#closer {
+.btn-close {
 	background: none;
 	border: none;
 	height: 3.25em;
 	display: flex;
+	position: absolute;
+	top: 0;
+	right: 1em;
+	&:after {
+		content: "×";
+		color: rgba(255,255,255,.7);
+		line-height: .45;
+		height: 100%;
+		font-size: 5em;
+		transition: color .15s linear;
+	}
+	&:hover:after {
+		color: rgba(255,255,255,1);
+	}
 }
-#closer:after {
-	content: "×";
-	color: rgba(255,255,255,.7);
-	line-height: .45;
-	height: 100%;
-	font-size: 5em;
-}
+

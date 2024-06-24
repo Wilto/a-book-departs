@@ -7,32 +7,34 @@ layout: base.njk
   color: {{ data.color }};
 }
 </style>
-{% if chapnum %}
-<div class="outer-wrap chapter-opener" style="background: {{ data.color }}">
-  <div class="inner-wrap">
-    <h2 class="chapter-title"><span class="chapter-num">{{ chapnum }}</span> {{title}}</h2>
+<main role="main" id="main">
+  {% if chapnum %}
+  <div class="outer-wrap chapter-opener" style="background: {{ data.color }}">
+    <div class="inner-wrap">
+      <h2 class="chapter-title"><span class="chapter-num">{{ chapnum }}</span> {{title}}</h2>
+    </div>
   </div>
-</div>
-{% endif %}
-{% set prev = collections.chapter | getPreviousCollectionItem( page ) %}
-{% set next = collections.chapter | getNextCollectionItem( page ) %}
-<div class="outer-wrap">
-  <div class="inner-wrap book-body">
-    {% if not chapnum %}
-    <h2>{{title}}</h2>
-    {% endif %}
-    {{ content | safe }}
-    <nav class="inner-nav repel">
-      <span>
-      {% if prev %}
-        <a href="{{ prev.url }}">{{ prev.data.title }}</a>
+  {% endif %}
+  {% set prev = collections.chapter | getPreviousCollectionItem( page ) %}
+  {% set next = collections.chapter | getNextCollectionItem( page ) %}
+  <div class="outer-wrap">
+    <div class="inner-wrap book-body">
+      {% if not chapnum %}
+      <h2>{{title}}</h2>
       {% endif %}
-      </span>
-      <span>
-      {% if next %}
-        <a href="{{ next.url }}">{{ next.data.title }}</a>
-      {% endif %}
-      </span>
-    </nav>
+      {{ content | safe }}
+      <nav class="inner-nav repel">
+        <span>
+        {% if prev %}
+          <a href="{{ prev.url }}">{{ prev.data.title }}</a>
+        {% endif %}
+        </span>
+        <span>
+        {% if next %}
+          <a href="{{ next.url }}">{{ next.data.title }}</a>
+        {% endif %}
+        </span>
+      </nav>
+    </div>
   </div>
-</div>
+</main>
