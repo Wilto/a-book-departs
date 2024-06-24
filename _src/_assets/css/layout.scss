@@ -166,3 +166,26 @@ figure {
 	}
 }
 
+.inner-nav {
+	padding-top: 2.5em;
+	a {
+		display: flex;
+		flex-wrap: no-wrap;
+		flex-direction: row;
+		align-items: center;
+
+		svg {
+			height: 2.5ch;
+			width: 1em;
+			margin-left: 1em;
+		}
+		&.chap-prev svg {
+			transform: rotate(180deg);
+			margin: 0 1em 0 0;
+		}
+	}
+	[aria-hidden] {
+		display: block;
+	}
+}
+
