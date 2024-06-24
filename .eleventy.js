@@ -36,6 +36,9 @@ module.exports = function(eleventyConfig) {
 	);
 	eleventyConfig.addFilter('markdown', markdownString => md.render( markdownString ) );
 
+	eleventyConfig.addPassthroughCopy("admin/");
+
+
 	return {
 		templateFormats: [
 			"md",

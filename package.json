@@ -40,6 +40,7 @@
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
     "@eatonfyi/dq": "github:eaton/dq",
     "@jamshop/eleventy-filter-dump": "^1.0.4",
+    "@sveltia/cms": "^0.34.8",
     "markdown-it-eleventy-img": "^0.10.2"
   }
 }
