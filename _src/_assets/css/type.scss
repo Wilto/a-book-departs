@@ -63,39 +63,6 @@
 	font-display: swap;
 }
 
-
-h1,
-h2 {
-	font-family: "League Gothic", sans-serif;
-	text-transform: uppercase;
-}
-h1, h2, h3, h4, h5 {
-	padding: 0;
-	margin: 1.5em 0 .5em 0;
-}
-h2 {
-	font-size: 2.25em;
-	font-weight: normal;
-}
-h3 {
-	font-family: "Lora", serif;
-	font-size: 1.4em;
-	font-weight: bold;
-}
-h4 {
-	color: #666;
-	font-family: "Open Sans", sans-serif;
-	font-size: 1.1		em;
-	font-weight: bold;
-}
-p {
-	font-family: "Lora", serif;
-	color: #15141A;
-	font-size: 1.1875em;
-	line-height: 1.5;
-	margin: .625em 0;
-}
-
 .logo {
 	font-size: 1.6em;
 }
@@ -107,6 +74,41 @@ p {
 
 .book-body {
 	font-size: clamp( .8em, 1.25vw, 1.2em );
+
+	h1,
+	h2 {
+		font-family: "League Gothic", sans-serif;
+		text-transform: uppercase;
+		font-size: 2.25em;
+		font-weight: normal;
+	}
+	h1, h2, h3, h4, h5 {
+		padding: 0;
+		margin: 1.5em 0 .5em 0;
+	}
+	h3 {
+		font-family: "Lora", serif;
+		font-size: 1.4em;
+		font-weight: bold;
+	}
+	h4 {
+		color: #666;
+		font-family: "Open Sans", sans-serif;
+		font-size: 1.1		em;
+		font-weight: bold;
+	}
+	p {
+		font-family: "Lora", serif;
+		color: #15141A;
+		font-size: 1.1875em;
+		line-height: 1.5;
+		margin: .625em 0;
+	}
+
+	p + p {
+		padding: 0;
+		margin: 1.25em 0;
+	}
 }
 code {
 	background: #f2f2f2;
@@ -131,10 +133,6 @@ figcaption {
 	color: #666;
 	margin-top: .5em;
 }
-.book-body p + p {
-	padding: 0;
-	margin: 1.25em 0;
-}
 .title-section h1 {
 	font-weight: normal;
 	letter-spacing: -.025em;
@@ -148,7 +146,7 @@ figcaption {
 	font-weight: bold;
 	font-family: "Lora", serif;
 }
-.cta {
+.btn-cta {
 	font-size: clamp(1.45em, 4vw, 2.1em );
 	font-family: "League Gothic", sans-serif;
 	letter-spacing: .025em;

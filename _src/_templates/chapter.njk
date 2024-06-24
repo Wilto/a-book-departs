@@ -3,8 +3,9 @@ layout: base.njk
 ---
 
 <style>
+.book-body h1,
 .book-body h2 {
-  color: {{ data.color }};
+  color: {{ meta.color }};
 }
 </style>
 <main role="main" id="main">
@@ -19,9 +20,6 @@ layout: base.njk
   {% set next = collections.chapter | getNextCollectionItem( page ) %}
   <div class="outer-wrap">
     <div class="inner-wrap book-body">
-      {% if not chapnum %}
-      <h2>{{title}}</h2>
-      {% endif %}
       {{ content | safe }}
       <nav class="inner-nav repel">
         <span>
