@@ -16,8 +16,8 @@ layout: base.njk
     </div>
   </div>
   {% endif %}
-  {% set prev = collections.chapter | getPreviousCollectionItem( page ) %}
-  {% set next = collections.chapter | getNextCollectionItem( page ) %}
+  {% set prev = collections.sortedChapters | getPreviousCollectionItem( page ) %}
+  {% set next = collections.sortedChapters | getNextCollectionItem( page ) %}
   <div class="outer-wrap">
     <div class="inner-wrap book-body">
       {% if not chapnum %}
