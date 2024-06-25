@@ -39,7 +39,9 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("admin/");
 
 	eleventyConfig.addCollection("sortedChapters", function (collectionApi) {
-		return collectionApi.getFilteredByTag("chapter");
+		return collectionApi.getFilteredByTag("chapter").sort(function (a, b) {
+			return a.data.order - b.data.order;
+		});
 	});
 
 	return {
