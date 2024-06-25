@@ -1,6 +1,6 @@
 ---
 title: Chapter 3. Conditional Statements
-order: 999
+order: 4
 ---
 # Chapter 3. Conditional Statements
 
