@@ -94,15 +94,19 @@
 	h4 {
 		color: #666;
 		font-family: "Open Sans", sans-serif;
-		font-size: 1.1		em;
+		font-size: 1.1em;
 		font-weight: bold;
 	}
+	li,
 	p {
 		font-family: "Lora", serif;
 		color: #15141A;
 		font-size: 1.1875em;
 		line-height: 1.5;
 		margin: .625em 0;
+	}
+	li {
+		line-height: 1.4;
 	}
 
 	p + p {
