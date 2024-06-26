@@ -41,7 +41,7 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addCollection("sortedChapters", function (collectionApi) {
 		return collectionApi.getFilteredByTag("chapter").sort(function (a, b) {
-			return a.data.order - b.data.order;
+			return a.data.tocOrder - b.data.tocOrder;
 		});
 	});
 

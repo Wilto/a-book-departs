@@ -1,11 +1,9 @@
 ---
-title: Chapter 5. DOM Scripting
-order: 6
+title: DOM Scripting
+headerImage: image/9.png
+chapterNumber: 5
+tocOrder: 6
 ---
-# Chapter 5. DOM Scripting
-
-![](image/9.png)
-
 BEFORE WE CAN DO ANYTHING with a page, we have to first revisit something we touched on near the start: the Document Object Model. There are two purposes to the DOM: providing JavaScript with a map of all the elements on our page, and providing us with a set of methods for accessing those elements, their attributes, and their contents.
 
 The “object” part of Document Object Model should make a lot more sense now than it did the first time the DOM came up, though: the DOM is a representation of a web page in the form of an object, made up of properties that represent each of the document’s child elements and subproperties representing each of those elements’ child elements, and so on. It’s objects all the way down.

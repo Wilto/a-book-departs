@@ -1,6 +1,6 @@
 ---
+tocOrder: 13
 title: About A Book Apart
-order: 13
 ---
 ## ABOUT A BOOK APART
 

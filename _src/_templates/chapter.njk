@@ -9,10 +9,11 @@ layout: base.njk
 }
 </style>
 <main role="main" id="main">
-  {% if chapnum %}
-  <div class="outer-wrap chapter-opener" style="background: {{ data.color }}">
-    <div class="inner-wrap">
-      <h2 class="chapter-title"><span class="chapter-num">{{ chapnum }}</span> {{title}}</h2>
+  {% if chapterNumber %}
+  <div class="outer-wrap chapter-opener" style="background: {{ meta.color }}">
+    <div class="inner-wrap chapter-header">
+      <div class="chapter-num">{{ chapterNumber }}</div>
+      <h2 class="chapter-title">{{title}}</h2>
     </div>
   </div>
   {% endif %}
@@ -20,8 +21,8 @@ layout: base.njk
   {% set next = collections.sortedChapters | getNextCollectionItem( page ) %}
   <div class="outer-wrap">
     <div class="inner-wrap book-body">
-      {% if not chapnum %}
-      <!-- <h2>{{title}}</h2> -->
+      {% if not chapterNumber %}
+        <h2>{{title}}</h2>
       {% endif %}
       {{ content | safe }}
       <nav class="inner-nav repel">

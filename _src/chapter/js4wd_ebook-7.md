@@ -1,11 +1,9 @@
 ---
-title: Chapter 3. Conditional Statements
-order: 4
+title: Conditional Statements
+headerImage: image/5.png
+chapterNumber: 3
+tocOrder: 4
 ---
-# Chapter 3. Conditional Statements
-
-![](image/5.png)
-
 CONDITIONAL STATEMENTS are a type of control flow concerned with logic: they determine when and where to execute code, based on conditions you specify.
 
 ## if/else STATEMENTS

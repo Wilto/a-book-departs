@@ -189,14 +189,27 @@ figcaption {
 	font-size: .925em;
 	line-height: 1.55;
 }
-.chapter-title {
-	font-size: 5.7rem;
+.chapter-header {
 	display: flex;
-	flex-direction: row;
-	align-items: baseline;
-	line-height: .9;
+	flex-wrap: no-wrap;
+	align-items: flex-end;
+	font-size: clamp( .2em, 2vw, 1em);
+}
+.chapter-title {
+	font-family: "League Gothic", sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 5.5em;
+	line-height: .85;
 	margin: 0;
 	padding: 0;
+}
+.chapter-num {
+	font-family: "League Gothic", sans-serif;
+	font-size: 15em;
+	line-height: .55;
+	color: #fff;
+	padding-right: .125em;
 }
 .title-section h1 {
 	padding-right: 2.5vw;
@@ -207,11 +220,4 @@ figcaption {
 	border-bottom: 2px solid #000;
 	letter-spacing: -.01em;
 	padding: .12em 0;
-}
-.chapter-num {
-	bottom: -0.142em;
-	color: #fff;
-	padding-right: .125em;
-	position: relative;
-	font-size: 2.5em;
 }

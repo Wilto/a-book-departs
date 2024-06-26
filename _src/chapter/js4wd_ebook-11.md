@@ -1,9 +1,7 @@
 ---
-title: Resources
-order: 8
+title: RESOURCES
+tocOrder: 8
 ---
-# RESOURCES
-
 So, where to from here? An entire programming language is sprawling out before you. Well, there are plenty more books to read—and read them you should—but now that you know what to look for, there’s no substitute for reading code. Take a little time to read through the scripts you’ve seen flying around a project at work, or dig into the code that powers your favorite open source tools. There’ll be a lot more going on than we’ve covered here, but I bet you’ll recognize more than you think.
 
 ### Next steps

@@ -1,9 +1,7 @@
 ---
-title: References
-order: 10
+title: REFERENCES
+tocOrder: 10
 ---
-# REFERENCES
-
 Shortened URLs are numbered sequentially; the related long URLs are listed below for reference.
 
 ## Introduction

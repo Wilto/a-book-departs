@@ -1,11 +1,9 @@
 ---
-title: Chapter 2. Understanding Data Types
-order: 3
+title: Understanding Data Types
+headerImage: image/2.png
+chapterNumber: 2
+tocOrder: 3
 ---
-# Chapter 2. Understanding Data Types
-
-![](image/2.png)
-
 THINGS ARE ABOUT TO GET REAL.
 
 By the end of this chapter, you’ll have a sense for the types of data you’ll encounter during your JavaScript-writing travels. Some types of data will seem self-explanatory, at least on the surface: numbers are numbers, strings of text are strings of text. Some types of data will veer a little more toward the philosophical-sounding: `true`, as a keyword in JavaScript, represents the very essence of trueness.

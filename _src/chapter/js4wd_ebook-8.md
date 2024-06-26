@@ -1,11 +1,9 @@
 ---
-title: Chapter 4. Loops
-order: 5
+title: Loops
+headerImage: image/8.png
+chapterNumber: 4
+tocOrder: 5
 ---
-# Chapter 4. Loops
-
-![](image/8.png)
-
 LOOPS ALLOW US to repeat lines of code until a certain set of conditions are met. It’s another simple concept on the surface, but one that allows us to do a surprising amount of work.for
 
 You’ll use `for` loops in situations where you’ll be running a loop for a known number of times, or *iterations*. (By “known,” I don’t mean that *we*, the brains between the keyboards and chairs, necessarily know how many times we’ll need to go through a loop in advance; I just mean that we’ll be looping through a known quantity.)

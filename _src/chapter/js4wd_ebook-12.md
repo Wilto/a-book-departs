@@ -1,9 +1,7 @@
 ---
-title: Acknowledgments
-order: 9
+title: ACKNOWLEDGMENTS
+tocOrder: 9
 ---
-# ACKNOWLEDGMENTS
-
 Man, this section is something I never thought I’d end up writing. Same goes for the rest of the book, if I’m being honest. I guess I should’ve known better, though. I should’ve seen this all coming.
 
 Not because of *me*—God, no—but because of the people who’ve helped me with my writing, with my speaking, with landing a job with a desk, with *everything*. With those people supporting me—with their brilliance, their kindness, and their willingness to curse me out as needed—even a scrub like me had a chance to do something like this.

@@ -1,9 +1,7 @@
 ---
-title: Introduction
-order: 1
+title: INTRODUCTION
+tocOrder: 1
 ---
-# INTRODUCTION
-
 IN ALL FAIRNESS, I should start this book with an apology—not to you, reader, though I don’t doubt that I’ll owe you at least one by the time we get to the end. I owe JavaScript a number of apologies for the things I said to it during the early years of my career—things strong enough to etch glass.
 
 This is my not-so-subtle way of saying that JavaScript can be a tricky thing to learn.

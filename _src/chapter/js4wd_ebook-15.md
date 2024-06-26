@@ -1,6 +1,6 @@
 ---
+tocOrder: 12
 title: About the Author
-order: 12
 ---
 ## ABOUT THE AUTHOR
 

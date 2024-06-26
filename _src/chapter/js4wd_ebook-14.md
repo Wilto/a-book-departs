@@ -1,9 +1,7 @@
 ---
-title: Index
-order: 11
+title: INDEX
+tocOrder: 11
 ---
-# INDEX
-
 ### A
 
 alert() [16](js4wd_ebook-5.xhtml#_idIndexMarker033)–17

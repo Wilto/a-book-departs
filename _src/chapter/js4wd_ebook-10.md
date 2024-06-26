@@ -1,9 +1,7 @@
 ---
-title: Conclusion
-order: 7
+title: CONCLUSION
+tocOrder: 7
 ---
-# CONCLUSION
-
 We’ve come a long way, from “Hello, world” to a script that accepts user input and changes the entire page.
 
 This has been a hell of a lot of JavaScript over a short number of pages, so if you didn’t catch every single definition or punch every snippet of code into your console, don't sweat it. The goal was never absolute mastery over JavaScript, after all. As promised, we’ve only just barely scratched the surface of all the things JavaScript can do. And JavaScript is constantly evolving, like any other web standard—we can’t know it all, and we’ll never have to. To this day, I spend a lot of time searching the web for the best way to do *X* or *Y* with JavaScript.

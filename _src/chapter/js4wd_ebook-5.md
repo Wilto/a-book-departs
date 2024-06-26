@@ -1,11 +1,9 @@
 ---
-title: Chapter 1. Getting Set Up
-order: 2
+title: Getting Set Up
+headerImage: image/1.png
+chapterNumber: 1
+tocOrder: 2
 ---
-# Chapter 1. Getting Set Up
-
-![](image/1.png)
-
 BEFORE WE SET FOOT on JavaScript’s turf, let’s get a feel for our development environment. First we’re going to set up a page where we can do a little work, then we’re going to have a look at that page through the lens of our browsers’ built-in JavaScript debugging tools, and finally, we’ll start making sense of the basic rules of JavaScript syntax.
 
 ## INCLUDING JAVASCRIPT IN A PAGE
