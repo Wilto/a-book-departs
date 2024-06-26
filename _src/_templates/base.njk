@@ -79,7 +79,7 @@
 			<nav aria-label="Table of Contents">
 				<ol>
 				{% for chap in collections.sortedChapters %}
-					<li><a href="{{ chap.url }}">{{ chap.data.title.toLowerCase() }}</a></li>
+					<li><a href="{{ chap.url }}">{{ chap.data.title }}</a></li>
 				{% endfor %}
 				</ol>
 			</nav>
