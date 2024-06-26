@@ -17,7 +17,8 @@ module.exports = function(eleventyConfig) {
 		html: true,
 		breaks: true,
 		linkify: true
-	}).use( markdownItCaption));
+	}).use( markdownItCaption ));
+	eleventyConfig.amendLibrary('md', (mdLib) => mdLib.enable("code") );
 
 	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
 		extensions: "html",
