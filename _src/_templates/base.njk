@@ -79,7 +79,9 @@
 			<nav aria-label="Table of Contents">
 				<ol>
 				{% for chap in collections.sortedChapters %}
-					<li><a href="{{ chap.url }}">{{ chap.data.title }}</a></li>
+					<li><a href="{{ chap.url }}">{% if chap.data.title === chap.data.title.toUpperCase() %}{{ chap.data.title.toLowerCase() }}{% else %}{{ chap.data.title }}{% endif %}
+					</a>
+				</li>
 				{% endfor %}
 				</ol>
 			</nav>
