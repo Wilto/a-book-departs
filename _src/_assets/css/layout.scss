@@ -1,6 +1,8 @@
 .masthead {
 	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
 	padding: 1% 1.25%;
 	position: fixed;
 	width: 100%;
@@ -145,7 +147,26 @@ figure {
 	li {
 		margin: 2em;
 	}
-	
+}
+
+.mininav {
+	display: flex;
+}
+.toc-btn {
+	display: flex;
+	align-items: center;
+	padding: 0;
+	background: none;
+	border: none;
+	[aria-hidden="true"] {
+		display: block;
+	}
+	svg {
+		width: 3em;
+		height: 2em;
+		margin-right: .5em;
+		fill: #777;
+	}
 }
 .btn-close {
 	background: none;
