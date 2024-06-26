@@ -145,19 +145,7 @@ figure {
 	li {
 		margin: 2em;
 	}
-	a {
-		color: rgba(255,255,255,.9);
-		font-size: 1.6em;
-		font-family: "Lora", serif;
-		font-weight: normal;
-		text-decoration: none;
-		display: inline-block;
-		transition: all .15s ease-in-out;
-		&:hover {
-			color: rgba(255,255,255,.85);
-			transform: translate(.4em, 0);
-		}
-	}
+	
 }
 .btn-close {
 	background: none;

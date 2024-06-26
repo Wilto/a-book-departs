@@ -13,7 +13,7 @@ layout: base.njk
   <div class="outer-wrap chapter-opener" style="background: {{ meta.color }}">
     <div class="inner-wrap chapter-header">
       <div class="chapter-num">{{ chapterNumber }}</div>
-      <h2 class="chapter-title">{{title}}</h2>
+      <h1 class="chapter-title">{{title}}</h1>
     </div>
   </div>
   {% endif %}
@@ -22,7 +22,7 @@ layout: base.njk
   <div class="outer-wrap">
     <div class="inner-wrap book-body">
       {% if not chapterNumber %}
-        <h2>{{title}}</h2>
+        <h1>{{title}}</h1>
       {% endif %}
       {{ content | safe }}
       <nav class="inner-nav repel">
