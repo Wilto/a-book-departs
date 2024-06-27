@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: wilto/a-book-departs
+  branch: main
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'chapter'
+    label: 'Chapters'
+    folder: '_src/chapter'
+    create: true
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Permalink', name: 'permalink', widget: 'string', required: false }
+      - { label: 'Chapter Number', name: 'chapterNumber', widget: 'number' }
+      - { label: 'Chapter Title', name: 'title', widget: 'string' }
+      - { label: 'Order', name: 'tocOrder', widget: 'number' }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
