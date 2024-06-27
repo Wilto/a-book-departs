@@ -1,7 +1,5 @@
 backend:
-  name: github
-  repo: wilto/a-book-departs
-  branch: main
+  name: git-gateway
 
 media_folder: static/img
 public_folder: /img
