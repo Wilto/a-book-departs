@@ -11,5 +11,3 @@ files.forEach( async ( filePath ) => {
 		images: '_src/chapter/image',
 	});
 });
-
-

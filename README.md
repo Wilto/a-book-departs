@@ -10,15 +10,15 @@
 
 Drop your .epub into the `./epub` directory and run `npm run extract`. 
 
-The contents of the .epub will get turned into Markdown and dropped into `_src/chapter` alongside all your images, while a `_data/meta.json` will be created with basic information—book title, your name, copyright information, ISBN, former publisher, and cover color. `_data/` will also contain JSON files with lists of all the extracted files, links in the copy, and the table of contents.
+Thanks to Jeff Eaton’s 「[DANCING QUEEN](https://github.com/eaton/dq)」, the contents of the .epub will get turned into Markdown and dropped into `_src/chapter` alongside all your images, while a `_data/meta.json` will be created with basic information—book title, your name, copyright information, ISBN, former publisher, and cover color. `_data/` will also contain JSON files with lists of all the extracted files, links in the copy, and the table of contents.
 
 ## And finally…
 
-### Building the Dev Site
+### Build the Dev Site
 
 `npm start`
 
-### Building the Production Site
+### Build the Production Site
 
 `npm run production` or just `eleventy`
 
