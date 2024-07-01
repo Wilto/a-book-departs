@@ -1,0 +1,19 @@
+---
+permalink: "./pages.json"
+permalinkBypassOutputDir: true
+eleventyExcludeFromCollections: true
+---
+[
+{%- for pages in collections.sortedChapters %}
+  {
+      "title"     : "{{ pages.data.title | addNbsp | safe }}",
+      "imgName"   : "{{ pages.data.title | slug }}",
+      "color"     : "{{ meta.color }}",
+      "variables" : {
+        "chapterNumber" : "{{ pages.data.chapterNumber }}",
+        "book"          : "{{ meta.title }}",
+        "author"        : "{{ meta.creator }}"
+      }
+  }{% if loop.last == false %},{% endif -%}
+{% endfor %}
+]

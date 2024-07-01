@@ -1,0 +1,142 @@
+[
+  {
+      "title"     : "INTRODUCTION",
+      "imgName"   : "introduction",
+      "color"     : "#bd302a",
+      "variables" : {
+        "chapterNumber" : "",
+        "book"          : "JavaScript for Web Designers",
+        "author"        : "Mat Marquis"
+      }
+  },
+  {
+      "title"     : "Getting Set&nbsp;Up",
+      "imgName"   : "getting-set-up",
+      "color"     : "#bd302a",
+      "variables" : {
+        "chapterNumber" : "1",
+        "book"          : "JavaScript for Web Designers",
+        "author"        : "Mat Marquis"
+      }
+  },
+  {
+      "title"     : "Understanding Data&nbsp;Types",
+      "imgName"   : "understanding-data-types",
+      "color"     : "#bd302a",
+      "variables" : {
+        "chapterNumber" : "2",
+        "book"          : "JavaScript for Web Designers",
+        "author"        : "Mat Marquis"
+      }
+  },
+  {
+      "title"     : "Conditional&nbsp;Statements",
+      "imgName"   : "conditional-statements",
+      "color"     : "#bd302a",
+      "variables" : {
+        "chapterNumber" : "3",
+        "book"          : "JavaScript for Web Designers",
+        "author"        : "Mat Marquis"
+      }
+  },
+  {
+      "title"     : "Loops",
+      "imgName"   : "loops",
+      "color"     : "#bd302a",
+      "variables" : {
+        "chapterNumber" : "4",
+        "book"          : "JavaScript for Web Designers",
+        "author"        : "Mat Marquis"
+      }
+  },
+  {
+      "title"     : "DOM&nbsp;Scripting",
+      "imgName"   : "dom-scripting",
+      "color"     : "#bd302a",
+      "variables" : {
+        "chapterNumber" : "5",
+        "book"          : "JavaScript for Web Designers",
+        "author"        : "Mat Marquis"
+      }
+  },
+  {
+      "title"     : "CONCLUSION",
+      "imgName"   : "conclusion",
+      "color"     : "#bd302a",
+      "variables" : {
+        "chapterNumber" : "",
+        "book"          : "JavaScript for Web Designers",
+        "author"        : "Mat Marquis"
+      }
+  },
+  {
+      "title"     : "RESOURCES",
+      "imgName"   : "resources",
+      "color"     : "#bd302a",
+      "variables" : {
+        "chapterNumber" : "",
+        "book"          : "JavaScript for Web Designers",
+        "author"        : "Mat Marquis"
+      }
+  },
+  {
+      "title"     : "ACKNOWLEDGMENTS",
+      "imgName"   : "acknowledgments",
+      "color"     : "#bd302a",
+      "variables" : {
+        "chapterNumber" : "",
+        "book"          : "JavaScript for Web Designers",
+        "author"        : "Mat Marquis"
+      }
+  },
+  {
+      "title"     : "REFERENCES",
+      "imgName"   : "references",
+      "color"     : "#bd302a",
+      "variables" : {
+        "chapterNumber" : "",
+        "book"          : "JavaScript for Web Designers",
+        "author"        : "Mat Marquis"
+      }
+  },
+  {
+      "title"     : "INDEX",
+      "imgName"   : "index",
+      "color"     : "#bd302a",
+      "variables" : {
+        "chapterNumber" : "",
+        "book"          : "JavaScript for Web Designers",
+        "author"        : "Mat Marquis"
+      }
+  },
+  {
+      "title"     : "About the&nbsp;Author",
+      "imgName"   : "about-the-author",
+      "color"     : "#bd302a",
+      "variables" : {
+        "chapterNumber" : "",
+        "book"          : "JavaScript for Web Designers",
+        "author"        : "Mat Marquis"
+      }
+  },
+  {
+      "title"     : "About A Book&nbsp;Apart",
+      "imgName"   : "about-a-book-apart",
+      "color"     : "#bd302a",
+      "variables" : {
+        "chapterNumber" : "",
+        "book"          : "JavaScript for Web Designers",
+        "author"        : "Mat Marquis"
+      }
+  },
+  {
+      "title"     : "Cover",
+      "imgName"   : "cover",
+      "color"     : "#bd302a",
+      "variables" : {
+        "chapterNumber" : "",
+        "book"          : "JavaScript for Web Designers",
+        "author"        : "Mat Marquis"
+      }
+  }
+]

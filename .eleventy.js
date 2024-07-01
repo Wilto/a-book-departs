@@ -5,6 +5,7 @@ const dumpFilter = require("@jamshop/eleventy-filter-dump");
 const path = require('path');
 const sass = require('sass');
 const CleanCSS = require('clean-css');
+const socialImages = require("@11tyrocks/eleventy-plugin-social-images");
 const md = require('markdown-it')({
 	html: false,
 	breaks: true
@@ -12,6 +13,7 @@ const md = require('markdown-it')({
 
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addFilter("dump", dumpFilter);
+	eleventyConfig.addPlugin(socialImages);
 
 	eleventyConfig.setLibrary('md', markdownIt({
 		html: true,

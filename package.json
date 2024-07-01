@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "start": "ELEVENTY_ENV=development npx eleventy --serve",
+    "social-images": "eleventy-social-images --templatePath _socialcards/index.html --stylesPath _socialcards/styles.css --siteName 'JavaScript for Web Designers'",
+    "start": "eleventy && npm run social-images && ELEVENTY_ENV=development npx eleventy --serve",
     "extract": "node ./util/processBook.mjs",
-    "production": "eleventy"
+    "production": "npm run social-images && eleventy"
   },
   "engines": {
     "node": ">=14.0.0"
@@ -38,6 +39,7 @@
   "dependencies": {
     "@11ty/eleventy-img": "^4.0.1",
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
+    "@11tyrocks/eleventy-plugin-social-images": "^0.4.1",
     "@eatonfyi/dq": "github:eaton/dq",
     "@jamshop/eleventy-filter-dump": "^1.0.4",
     "@sveltia/cms": "^0.34.8",
