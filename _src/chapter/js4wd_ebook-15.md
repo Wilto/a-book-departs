@@ -1,8 +1,8 @@
 ---
-tocOrder: 12
 title: About the Author
+tocOrder: 12
 ---
-## ABOUT THE AUTHOR
+![](sticker3.png)
 
 ![](image/mat-marquis.png)
 
