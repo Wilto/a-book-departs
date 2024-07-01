@@ -25,3 +25,4 @@ Thanks to Jeff Eaton’s 「[DANCING QUEEN](https://github.com/eaton/dq)」, the
 ## Known Issues
 Some maniacs (cough) used bold and italics in their code snippets. Unfortunately, the markup responsible for that formatting is going to come through as Markdown, which won’t be _interpreted_ as Markdown on account of being inside codeblocks. Those will have to be cleaned out manually.
 
+Don’t forget to update all your icons and your social preview card thing. Those are all in `_src/_assets/img`.
