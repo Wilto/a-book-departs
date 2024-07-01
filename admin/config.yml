@@ -16,7 +16,7 @@ collections:
       preview: false
     fields:
       - { label: 'Permalink', name: 'permalink', widget: 'string', required: false }
-      - { label: 'Chapter Number', name: 'chapterNumber', widget: 'number' }
+      - { label: 'Chapter Number', name: 'chapterNumber', widget: 'number', required: false }
       - { label: 'Chapter Title', name: 'title', widget: 'string' }
-      - { label: 'Order', name: 'tocOrder', widget: 'number' }
+      - { label: 'Order', name: 'tocOrder', widget: 'number', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown', required: false }
