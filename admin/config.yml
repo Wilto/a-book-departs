@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: netlify
 
-media_folder: '/chapter/image'
-public_folder: '_src/chapter/image'
+media_folder: '_src/chapter/image'
+public_folder: '/chapter/image'
 
 collections:
   - name: 'chapter'
@@ -11,8 +11,8 @@ collections:
     folder: '_src/chapter'
     create: true
     slug: 'index'
-    media_folder: '/chapter/image'
-    public_folder: '_src/chapter/image'
+    media_folder: '_src/chapter/image'
+    public_folder: '/chapter/image'
     path: '{{title}}'
     editor:
       preview: false
