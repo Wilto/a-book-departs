@@ -33,7 +33,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("_src/_assets/");
 	eleventyConfig.addFilter(
 		'cssmin',
-		code => sass.compileString( code/*, {style: "compressed"}*/).css
+		code => sass.compileString( code, {style: "compressed"}).css
 	);
 	eleventyConfig.addFilter('markdown', markdownString => md.render( markdownString ) );
 
