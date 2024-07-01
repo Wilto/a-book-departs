@@ -6,7 +6,6 @@
 	align-items: center;
 	position: fixed;
 	width: 100%;
-	padding: 0 10vw;
 	top: 0;
 	left: 0;
 	z-index: 2;
@@ -21,6 +20,7 @@
 	width: 45rem;
 }
 .mast-wrap {
+	padding: 0 5vw;
 	margin: auto;
 	max-width: 100%;
 	width: 60rem;
@@ -169,6 +169,10 @@ figure {
 		height: 2em;
 		margin-right: .5em;
 		fill: #777;
+	}
+	@media( max-width: 35em ) {
+		svg { margin-right: 0; }
+		span { display: none; }
 	}
 }
 .btn-close {
