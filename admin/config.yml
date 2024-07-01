@@ -11,8 +11,6 @@ collections:
     folder: '_src/chapter'
     create: true
     slug: 'index'
-    media_folder: '_src/chapter/image'
-    public_folder: '/chapter/image'
     path: '{{title}}'
     editor:
       preview: false
