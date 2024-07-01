@@ -65,6 +65,7 @@
 	<body>
 		<header class="masthead">
 			<div class="mast-wrap repel">
+				<h1 class="logo"><a href="/">{{ meta.title }}</a></h1>
 				<div class="mininav">
 					<a class="sr-only skiplink" href="#main">Skip to main content</a>
 					<button class="toc-btn" aria-expanded="false" data-controls="#dialog">
@@ -72,7 +73,6 @@
 						Contents
 					</button>
 				</div>
-				<h1 class="logo"><a href="/">{{ meta.title }}</a></h1>
 			</div>
 		</header>
 		{{ content | safe }}
