@@ -90,19 +90,22 @@
 	</body>
 
 	<script>
-		let control = document.querySelector( "[data-controls]" ),
-			dialog  = document.querySelector( control.dataset.controls );
-			closer  = dialog.querySelector( ".btn-close" );
+		(function() {
+			let control = document.querySelector( "[data-controls]" ),
+				dialog  = document.querySelector( control.dataset.controls );
+				closer  = dialog.querySelector( ".btn-close" );
 
-		control.addEventListener( "click", function( e ) {
-			dialog.setAttribute( "aria-hidden", false );
-			dialog.showModal();
-		});
+			control.addEventListener( "click", function( e ) {
+				dialog.setAttribute( "aria-hidden", false );
+				dialog.showModal();
+			});
 
-		closer.addEventListener( "click", function( e ) {
-			dialog.setAttribute( "aria-hidden", true );
-			dialog.close();
-			e.preventDefault();
-		});
+			closer.addEventListener( "click", function( e ) {
+				dialog.setAttribute( "aria-hidden", true );
+				dialog.close();
+				e.preventDefault();
+			});
+		}());
 	</script>
+
 </html>
