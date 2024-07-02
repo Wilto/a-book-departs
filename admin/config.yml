@@ -6,12 +6,10 @@ media_folder: '../_src/chapter/image'
 public_folder: 'image'
 
 collections:
-  - files: '_src/index.md'
+  - name: 'home'
+    label: 'Homepage Blurb'
     folder: '_src/'
-    label: "Home"
     create: false
-    delete: false
-    name: "home"
     editor:
       preview: false
     fields:
