@@ -12,9 +12,11 @@ All told, nearly two dozen icons there.
 
 We *could* make each of those icons an image, like  icon\_pencil.svg, and use them in our HTML like this:
 
-    `<``li>`
-      <a href="">
-        <img src="icons/icon_pencil.svg">
+```
+`<``li>`
+  <a href="">
+    <img src="icons/icon_pencil.svg">
+```
 
 That works. There is nothing inherently wrong with using `img`. But it does mean that each unique image is a separate network request. That is, when a browser sees an `img` tag, it goes across the network to get that file and display it. The same is true for background images in CSS: every unique image referenced is a separate network request.
 
@@ -41,53 +43,63 @@ But as long as we’re going the SVG route, there’s an even better way. Let’
 
 We’re working inside one big SVG, so we’ll start with this:
 
-    <svg>
-    </svg>
+```
+<svg>
+</svg>
+```
 
 Between the opening and closing tags, we’ll put the paths that do the actual drawing:
 
-    <svg>
-      <!-- this draws the Twitter logo, one shape -->
-      <path d="">
-      <!-- this draws the CodePen logo, two separate shapes -->
-      <path d="">
-      <path d="">
-    </svg>
+```
+<svg>
+  <!-- this draws the Twitter logo, one shape -->
+  <path d="">
+  <!-- this draws the CodePen logo, two separate shapes -->
+  <path d="">
+  <path d="">
+</svg>
+```
 
 Then we’ll wrap those paths in `g` tags. The `g` tag in SVG is like a `div` in HTML: it doesn’t do much by itself other than group the things inside it. It’s mostly useful for referencing and applying styles that can affect everything together.
 
-    <svg>
-      <g id="icon-twitter>
-        <path d="">
-      </g>
-      <g id="icon-codepen">
-        <path d="">
-        <path d="">
-      </g>
-    </svg>
+```
+<svg>
+  <g id="icon-twitter>
+    <path d="">
+  </g>
+  <g id="icon-codepen">
+    <path d="">
+    <path d="">
+  </g>
+</svg>
+```
 
 Then we’ll wrap all of that in a `defs` tag. A `defs` tag essentially says, “SVG, don’t try to actually draw any of the stuff inside this tag; I’m just defining it to use later.” The SVG element itself will still try to render, though, so let’s make sure it doesn’t do that by shrinking it to nothing. Using `width="``0"` and `height="0"` or `display="none"` is better than using CSS to hide the SVG; CSS takes longer to process, and `style="display: none;"` can have weird consequences, like failing to work at all on some iOS devices ([http://bkaprt.com/psvg/03-03/](http://bkaprt.com/psvg/03-03/)).
 
-    <svg width="0" height="0" class="hide">
-      <defs>
-        <g id="icon-twitter">
-          <path d="">
-        </g>
-        <g id="icon-codepen">
-          <path d="">
-          <path d="">
-        </g>
-      </defs>
-    </svg>
+```
+<svg width="0" height="0" class="hide">
+  <defs>
+    <g id="icon-twitter">
+      <path d="">
+    </g>
+    <g id="icon-codepen">
+      <path d="">
+      <path d="">
+    </g>
+  </defs>
+</svg>
+```
 
 The chunk of SVG we’ve just built is our SVG icon system. We’re going to be talking about this chunk of SVG a lot in this book, so let’s give it a name: an *SVG* *sprite*.
 
 As long as this SVG sprite is present in the HTML of our page, we can do this anywhere we want to draw one of those icons:
 
-    <svg class="icon icon-twitter" viewBox="0 0 100 100">
-      <title>@CoolCompany on Twitter</title>
-      <use xlink:href="#icon-twitter" />
-    </svg>
+```
+<svg class="icon icon-twitter" viewBox="0 0 100 100">
+  <title>@CoolCompany on Twitter</title>
+  <use xlink:href="#icon-twitter" />
+</svg>
+```
 
 This code snippet will draw that icon onto the page, just like an `img` would. One new thing here is the `viewBox` attribute, which we’ll get to soon. The other new element is `use xlink:href`, which essentially says, “Go find the chunk of SVG that has this ID and replace me with a clone of it.” That’s a beautiful thing right there. We can use `xlink:``href` to draw any bit of SVG anywhere we like and repeat it as many times as we want without repeating actual drawing code.
 
@@ -97,13 +109,15 @@ You can see this in action in the footer on a previous design of CSS-Tricks, whi
 
 These icons are properly accessible. They are nicely semantic. And—perhaps best of all—we can size, position, and style them easily.
 
-    .icon {
-      /\* make it match the font-size \*/
-      width: 1em;
-      height: 1em;
-      /\* make it match the text color \*/ 
-      fill: currentColor; 
-    }
+```
+.icon {
+  /\* make it match the font-size \*/
+  width: 1em;
+  height: 1em;
+  /\* make it match the text color \*/ 
+  fill: currentColor; 
+}
+```
 
 These values are a pretty cool little trick! Instead of explicitly styling the SVG, we make it size and color itself to match the font properties. If we drop that SVG into a `button`, it will absorb the styles already happening in that button and style itself accordingly (FIG 3.4).
 
@@ -119,23 +133,27 @@ We also used a `title` attribute to make sure we had basic screen-reader accessi
 
 Our chunk of SVG where we build the icon system now looks like this:
 
-    <svg width="0" height="0" class="visually-hidden">
-      <symbol id="icon-twitter" viewBox="0 0 100 100">
-        <title>@CoolCompany on Twitter</title>
-        <path d="...">
-      </symbol>
-      <symbol id="icon-codepen" viewBox="0 0 200 175">
-        <title>See Our CodePen Profile</title>
-        <path d="...">
-        <path d="...">
-      </symbol>
-    </svg>
+```
+<svg width="0" height="0" class="visually-hidden">
+  <symbol id="icon-twitter" viewBox="0 0 100 100">
+    <title>@CoolCompany on Twitter</title>
+    <path d="...">
+  </symbol>
+  <symbol id="icon-codepen" viewBox="0 0 200 175">
+    <title>See Our CodePen Profile</title>
+    <path d="...">
+    <path d="...">
+  </symbol>
+</svg>
+```
 
 And then, when we go to draw the icon somewhere on our page, we can *do less* and *avoid a lot of repetition* if the icon is used in multiple places:
 
-    <svg class="icon icon-twitter">
-      <use xlink:href="#icon-twitter" />
-    </svg>
+```
+<svg class="icon icon-twitter">
+  <use xlink:href="#icon-twitter" />
+</svg>
+```
 
 The result is exactly the same as with the initial snippet; it’s just easier and less error-prone when implementing. In the second, the `use` element will draw the icon with the correct `viewBox` dimensions taken from the `symbol` element. We don’t have to manually deal with `viewBox` anymore. Plus, the final `svg` in the document will contain the correct `title` and `desc`. See? Very awesome.
 
@@ -151,24 +169,30 @@ With inline SVG, we just define that shape as a `path` once, make it a `symbol`,
 
 Let’s say you have a `symbol` with two `path`s in it. Each `path` has a class, like `.path-1` and `.path-2`. In your CSS, you can target and style those with no problem.
 
-    .path-1 {
-      fill: red;
-    }
-    .path-2 {
-      fill: yellow;
-    }
+```
+.path-1 {
+  fill: red;
+}
+.path-2 {
+  fill: yellow;
+}
+```
 
 You can use the `symbol` wherever you like:
 
-    <svg class="icon">
-      <use xlink:href="#my-icon" />
-    </svg>
+```
+<svg class="icon">
+  <use xlink:href="#my-icon" />
+</svg>
+```
 
 Now say you’d like to create a variation on the normal styling. So you use the `.path-1` class on the `svg` as part of the selector.
 
-    .icon .path-1 {
-      fill: green;
-    }
+```
+.icon .path-1 {
+  fill: green;
+}
+```
 
 Sadly, that doesn’t work. `use` is kind of magical in that it clones the elements inside the `symbol` and moves them into what is called the Shadow DOM. You can look at the Shadow DOM by using the developer tools in the browser (FIG 3.6).
 
@@ -178,32 +202,38 @@ I don’t want to take us down a rabbit hole, but the Shadow DOM forms a boundar
 
 There’s a trick for getting two configurable colors per `use`, though. Imagine this symbol:
 
-    <symbol id="icon">
-      <path d=" … " />
-      <path fill="currentColor" d=" … " />
-    <symbol>
+```
+<symbol id="icon">
+  <path d=" … " />
+  <path fill="currentColor" d=" … " />
+<symbol>
+```
 
 We’ll use it more than once:
 
-    <svg class="icon icon-1">
-      <use xlink:href="#icon" />
-    </svg>
-    <svg class="icon icon-2">
-      <use xlink:href="#icon" />
-    </svg>
+```
+<svg class="icon icon-1">
+  <use xlink:href="#icon" />
+</svg>
+<svg class="icon icon-2">
+  <use xlink:href="#icon" />
+</svg>
+```
 
 The first `path` has no fill of its own. It will default to black unless its parent `svg` has a fill set, in which case that color will cascade down to it. That’s color number one. With the second path, we’ve used the keyword `currentColor` for the fill (you could do this from CSS as well). Whatever `color` you set on the parent `svg` will be used for the fill on it. That’s color number two.
 
 It goes like this:
 
-    .icon-1 {
-      fill: red;       /\* Color #1 \*/
-      color: green;    /\* Color #2 \*/
-    }
-    .icon-2 {
-      fill: pink;      /\* Color #1 \*/
-      color: orange;   /\* Color #2 \*/
-    }
+```
+.icon-1 {
+  fill: red;       /\* Color #1 \*/
+  color: green;    /\* Color #2 \*/
+}
+.icon-2 {
+  fill: pink;      /\* Color #1 \*/
+  color: orange;   /\* Color #2 \*/
+}
+```
 
 I intentionally took a roundabout way to get here. Sorry about that! I wanted to sneak in some practical SVG learnin’. `symbol` is definitely the way to go when building an SVG system.
 
@@ -219,17 +249,19 @@ Well, putting the SVG sprite at the top of the document (that is, right after th
 
 Also, using `file``_get_contents()` is safer than `include()` in PHP, as XML like `<?xml` will have trouble going through the PHP parser. Say you’re using PHP:
 
-    </head>
-    <body>
-      <!-- include your SVG sprite here -->
-      <?php echo file\_get\_contents("svg/sprite.svg"); ?>
-      ...
-      <!-- use your sprite, here -->
-      <a href="/" class="logo">
-        <svg class="logo">
-          <use xlink:href="#logo" />
-        </svg>
-      </a>
+```
+</head>
+<body>
+  <!-- include your SVG sprite here -->
+  <?php echo file\_get\_contents("svg/sprite.svg"); ?>
+  ...
+  <!-- use your sprite, here -->
+  <a href="/" class="logo">
+    <svg class="logo">
+      <use xlink:href="#logo" />
+    </svg>
+  </a>
+```
 
 The advantage of doing it this way is that there are *zero* network requests for the icons. That’s pretty nice!
 
@@ -239,26 +271,32 @@ Including the sprite server-side also doesn’t take advantage of browser cachin
 
 We can make sure the browser caches the sprite by putting the file path in the `xlink:href` attribute of the `use` element. That’s right, it doesn’t have to be just an `#identifier`; it can be a file path (or *external source*):
 
-    <svg class="icon icon-twitter">
-      <use xlink:href="/svg/sprite.svg#icon-twitter" />
-    </svg>
+```
+<svg class="icon icon-twitter">
+  <use xlink:href="/svg/sprite.svg#icon-twitter" />
+</svg>
+```
 
 To ensure the file is cached by the browser, you could put this code in the site’s `.htaccess` file (assuming an Apache server):
 
-    \# Ensure SVG is served with the correct file type
-    AddType image/svg+xml .svg .svgz
-    \# Add browser caching to .svg files
-    <IfModule mod\_expires.c>
-      ExpiresActive on
-      ExpiresByType image/svg+xml "access plus 1 month"
-    </IfModule>
+```
+\# Ensure SVG is served with the correct file type
+AddType image/svg+xml .svg .svgz
+\# Add browser caching to .svg files
+<IfModule mod\_expires.c>
+  ExpiresActive on
+  ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>
+```
 
 Remember that if you alter the icons in any way, you’ll need to make sure fresh copies are used, not the stale ones in the cache. One way to do that is to use a URL parameter on the file path, making it look like a different file to the browser. I use a simple system like this sometimes:
 
-    <?php $version = "1.2"; ?>
-    <svg class="icon icon-twitter">
-      <use xlink:href="/svg/symbols.svg?version=<?php echo $version; ?>#icon-twitter" />
-    </svg>
+```
+<?php $version = "1.2"; ?>
+<svg class="icon icon-twitter">
+  <use xlink:href="/svg/symbols.svg?version=<?php echo $version; ?>#icon-twitter" />
+</svg>
+```
 
 You can get as clever with that as you want to, but the basic concept holds true. Don’t write this one off as too much work! Remember that network requests are slow, so browser caching is one of the most effective ways to speed up a website.
 
@@ -270,13 +308,17 @@ You know how we’ve been referencing icons in the `use` element with the hash s
 
 For instance, in an image tag in HTML:
 
-    <img src="sprite.svg#logo(viewBox(0,0,32,32))" alt="Logo">
+```
+<img src="sprite.svg#logo(viewBox(0,0,32,32))" alt="Logo">
+```
 
 Or in a `background-image` in CSS:
 
-    .logo {
-      background: url("sprite.svg#logo(viewBox(0,0,32,32))");
-    }
+```
+.logo {
+  background: url("sprite.svg#logo(viewBox(0,0,32,32))");
+}
+```
 
 Support for fragment identifiers used this way in HTML and CSS isn’t quite here. If it were, you could base an entire icon system on it, I reckon, as it nicely solves the one-request issue. I delved into the details of fragment identifiers in an article for CSS-Tricks ([http://bkaprt.com/psvg/03-07/](http://bkaprt.com/psvg/03-07/)).
 
@@ -288,8 +330,10 @@ No version of Internet Explorer (and some older versions of WebKit browsers) cur
 
 To polyfill this external reference feature (that is, make it work in browsers where it doesn’t), try Jonathan Neal’s SVG for Everybody script ([http://bkaprt.com/psvg/03-04/](http://bkaprt.com/psvg/03-04/)). You could include the script on the page like this:
 
-      <script src="/js/svg4everybody.min.js"></script>
-    </body>
+```
+  <script src="/js/svg4everybody.min.js"></script>
+</body>
+```
 
 More likely, though, you’d concatenate it into the rest of the scripts you’re loading on your site.
 
@@ -297,21 +341,25 @@ The script is tiny (less than 1 KB before compression), simple, and clever. Here
 
 Here’s a common example. You put this in your HTML:
 
-    <svg class="logo">
-      <use xlink:href="/svg/sprite.svg#logo" />
-    </svg>
+```
+<svg class="logo">
+  <use xlink:href="/svg/sprite.svg#logo" />
+</svg>
+```
 
 If SVG for Everybody determines that the current browser supports this, it leaves it alone. If SVG for Everybody determines that the current browser does *not* support this, it converts the earlier code into this:
 
-    <svg class="logo">
-      <path id="logo" d="..." />
-    </svg>
+```
+<svg class="logo">
+  <path id="logo" d="..." />
+</svg>
+```
 
 The second snippet is more widely supported by browsers.
 
 To perform this sleight of hand, SVG for Everybody tests the browser’s User-Agent string—typically a frowned-upon practice in our field because of how easy it is to screw it up or get the opposite result of what you need. Here’s the test SVG for Everybody runs:
 
-    /Trident\\/\[567\]\\b/.test(navigator.userAgent) || (navigator.userAgent.match(/AppleWebKit\\/(\\d+)/) || \[\])\[1\] < 537
+/Trident\/[567]\\b/.test(navigator.userAgent) || (navigator.userAgent.match(/AppleWebKit\\/(\\d+)/) || \[\])\[1\] < 537
 
 The result will be either true or false, generally matching older versions of Internet Explorer and WebKit-based browsers. If it comes back true, the script will do the rest of its magic. I don’t think the test is so offensive in this particular case because:
 
@@ -328,7 +376,7 @@ Elements in the DOM have their own *namespace* that essentially tells the browse
 
 To create a new SVG element in JavaScript with the proper namespace, you need to do something like this:
 
-    var svgElement = document.createElementNS("www.w3.org/2000/svg", "svg");
+var svgElement = document.createElementNS("www.w3.org/2000/svg", "svg");
 
 That goes for the SVG element and any child SVG element you append.
 
@@ -336,32 +384,38 @@ If we create a normal HTML element, like a `div`, and then append the SVG sprite
 
 So here’s how we can use Ajax for our SVG sprite and add it to the page properly:
 
-    var ajax = new XMLHttpRequest();
-    ajax.open("GET", "svg/sprite.svg", true);
-    ajax.onload = function(e) {
-      var div = document.createElement("div");
-      div.innerHTML = ajax.responseText;
-      document.body.insertBefore(div, document.body.childNodes\[0\]);
-    }
-    ajax.send();
+```
+var ajax = new XMLHttpRequest();
+ajax.open("GET", "svg/sprite.svg", true);
+ajax.onload = function(e) {
+  var div = document.createElement("div");
+  div.innerHTML = ajax.responseText;
+  document.body.insertBefore(div, document.body.childNodes[0]);
+}
+ajax.send();
+```
 
 Or you can ensure that the response type is a document, which also gets everything in good shape to append, and drop that in without needing the `div`.
 
-    var ajax = new XMLHttpRequest();
-    ajax.open("GET", "svg/sprite.svg", true);
-    ajax.responseType = "document";
-    ajax.onload = function(e) {
-      document.body.insertBefore(ajax.responseXML.documentElement, document.body.childNodes\[0\]);
-    }
-    ajax.send();
+```
+var ajax = new XMLHttpRequest();
+ajax.open("GET", "svg/sprite.svg", true);
+ajax.responseType = "document";
+ajax.onload = function(e) {
+  document.body.insertBefore(ajax.responseXML.documentElement, document.body.childNodes[0]);
+}
+ajax.send();
+```
 
 If you’re using jQuery to help with Ajax, the response will automatically be a document. You need to force that into a string before inserting it into the `div`, like this:
 
-    $.get("svg/sprite.svg", function(data) {
-      var div = document.createElement("div");
-      div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);
-      document.body.insertBefore(div, document.body.childNodes\[0\]);
-    });
+```
+$.get("svg/sprite.svg", function(data) {
+  var div = document.createElement("div");
+  div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);
+  document.body.insertBefore(div, document.body.childNodes[0]);
+});
+```
 
 We can see that the caching is in effect by looking at the Cache-Control header of the XHR request for the SVG file (FIG 3.9). Lookin’ good.
 

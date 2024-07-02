@@ -31,13 +31,15 @@ Below is some example SVG output from Illustrator. I should mention that during 
 
 Strikethrough text indicates code that is useless on the web and can safely be deleted:
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-    <svg version="1.1" id="Layer\_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     viewBox="0 0 300 200" enable-background="new 0 0 300 200" xml:space="preserve"\>
-    <rect x="45.7" y="49.3" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" width="36.44237" height="34.23123"/>
-    </svg>
+```
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer\_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+ viewBox="0 0 300 200" enable-background="new 0 0 300 200" xml:space="preserve">
+<rect x="45.7" y="49.3" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" width="36.44237" height="34.23123"/>
+</svg>
+```
 
 Even more of that code could probably go. I’m sure Illustrator does things the way it does for a reason, but that doesn’t mean we shouldn’t try to trim the fat. Remember: the smaller the file we serve, the faster it will be—and fast is good!
 
@@ -52,7 +54,7 @@ The leading project in automated SVG optimization is SVGO ([http://bkaprt.com/ps
 
 If we ran SVGO on the example SVG file we just showed, we would get this:
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" enable-background="new 0 0 300 200"><path fill="#fff" stroke="#000" stroke-miterlimit="10" d="M45.7 49.3h36.4v34.2h-36.4z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" enable-background="new 0 0 300 200"><path fill="#fff" stroke="#000" stroke-miterlimit="10" d="M45.7 49.3h36.4v34.2h-36.4z"/></svg>
 
 65.5 percent smaller! (SVGO calls it “65.5 percent profit,” which I love.)
 
@@ -62,46 +64,48 @@ Developer Sindre Sorhus has created a Grunt plugin for SVGO called grunt-svgmin 
 
 Since we already have Grunt set up, we’ll run the following from the command line at our project’s root folder to install the plugin:
 
-    npm install --save-dev grunt-svgmin
+npm install --save-dev grunt-svgmin
 
 Next, we’ll configure svgmin to take our entire icons folder and optimize all of the images it finds there into an  icons-optimized/ folder. Then we’ll reconfigure svgstore to build the sprite from the icons-optimized/ folder.
 
 Finally, we’ll alter our watch task to run svgmin first, then svgstore. Here’s everything together:
 
-    module.exports = function(grunt) {
-      grunt.initConfig({
-        svgmin: {
-          dist: {
-            files: \[{
-              expand: true,
-              cwd: "icons/",
-              src: \["\*.svg"\],
-              dest: "icons-optimized/"
-            }\]
-          }
-        },
-        svgstore: {
-          default: {
-            files: {
-              "includes/defs.svg": \["icons-optimized/          \*.svg"\]
-            }
-          }
-        },
-        watch: {
-          svg: {
-            files: \["icons/\*"\],
-            tasks: \["svgmin", "svgstore"\],
-            options: {
-              livereload: true
-            }
-          }
+```
+module.exports = function(grunt) {
+  grunt.initConfig({
+    svgmin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: "icons/",
+          src: ["\*.svg"],
+          dest: "icons-optimized/"
+        }]
+      }
+    },
+    svgstore: {
+      default: {
+        files: {
+          "includes/defs.svg": ["icons-optimized/          \*.svg"]
         }
-      });
-      grunt.loadNpmTasks("grunt-svgstore");
-      grunt.loadNpmTasks("grunt-svgmin");
-      grunt.loadNpmTasks("grunt-contrib-watch");
-      grunt.registerTask("default", \["watch"\]);
-    };
+      }
+    },
+    watch: {
+      svg: {
+        files: ["icons/\*"],
+        tasks: ["svgmin", "svgstore"],
+        options: {
+          livereload: true
+        }
+      }
+    }
+  });
+  grunt.loadNpmTasks("grunt-svgstore");
+  grunt.loadNpmTasks("grunt-svgmin");
+  grunt.loadNpmTasks("grunt-contrib-watch");
+  grunt.registerTask("default", ["watch"]);
+};
+```
 
 As we did before, we’ll kick things off by typing `grunt watch` into the command line at the project’s root. Whenever any SVG is added, deleted, or modified, an optimized sprite will be generated.
 
@@ -109,13 +113,15 @@ An alternative would be to optimize the finished sprite. That may be more effici
 
 Another advantage to using SVGO through Grunt is that it provides easy configuration for turning SVGO plugins on and off. We can pass an `options` object in the configuration, like this:
 
-    svgmin: {
-      options: {
-        plugins: \[
-          { removeViewBox: false }
-        \]
-      },
-      dist: {
+```
+svgmin: {
+  options: {
+    plugins: [
+      { removeViewBox: false }
+    ]
+  },
+  dist: {
+```
 
  The names of the plugins in the configuration, like removeViewBox, correspond to the plugin’s file name: removeViewBox.js ([http://bkaprt.com/psvg/05-03/](http://bkaprt.com/psvg/05-03/)).
 

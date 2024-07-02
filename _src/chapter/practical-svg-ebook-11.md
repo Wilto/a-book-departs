@@ -14,26 +14,31 @@ Lucky for you, the same CSS techniques you use for animating and transitioning H
 
 Let me give you an example. Say we’ve designed a display ad in SVG (FIG 7.1). We want to slowly animate a series of clouds horizontally across the ad to add a little visual interest. To do this, we’ll duplicate some clouds we already have in our original artwork (FIG 7.2).
 
-    <svg>
-      <g class="clouds">
-        <path d=" ... " />
-        <path d=" ... " />
-        <path d=" ... " />
-        <path d=" ... " />
-      </g>
-    </svg>
+```
+<svg>
+  <g class="clouds">
+    <path d=" ... " />
+    <path d=" ... " />
+    <path d=" ... " />
+    <path d=" ... " />
+  </g>
+</svg>
+```
+
 ![Figure](image/7.1_single-ad-with-clouds.png "FIG 7.1: A sample advertisement designed as an SVG.")![Figure](image/7.2_Screen_Shot_2016-01-24_at_1.29.44_PM.png "FIG 7.2: Adding an extra set of clouds. (Level up: use use for the second set!)")
 
 The idea is that we can animate the whole row of clouds so that the duplicates are in the exact same position as the originals, but then instantly jump back to their initial position. That way, the clouds can infinitely animate.
 
-    .clouds {
-      animation: move-clouds 15s linear infinite;
-    }
-    @keyframes move-clouds {
-      to {
-        transform: translateX(-50%);
-      }
-    }
+```
+.clouds {
+  animation: move-clouds 15s linear infinite;
+}
+@keyframes move-clouds {
+  to {
+    transform: translateX(-50%);
+  }
+}
+```
 
 That’s all there is to it! I’ve put up a demo on CodePen ([http://bkaprt.com/psvg/07-01/](http://bkaprt.com/psvg/07-01/)).
 
@@ -55,16 +60,18 @@ Why might you *avoid* CSS animations on SVG?
 
 SVG actually has its own syntax for animation built right into it. It’s a part of SMIL (pronounced “smile”), which stands for *Synchronized Multimedia* *Integration Language* ([http://bkaprt.com/psvg/07-04/](http://bkaprt.com/psvg/07-04/)). The `animate` tag is our primary weapon here. While it can get complicated, the syntax is pretty straightforward and declarative:
 
-    <circle r="30" cx="50" cy="50" fill="orange">
+```
+<circle r="30" cx="50" cy="50" fill="orange">
 
-      <animate 
-         attributeName="cx"
-         from="50"
-         to="450" 
-         dur="1s"
-         begin="click"
-         fill="freeze" />
-    </circle>
+  <animate 
+     attributeName="cx"
+     from="50"
+     to="450" 
+     dur="1s"
+     begin="click"
+     fill="freeze" />
+</circle>
+```
 
 In this example, an orange circle moves to the right by `400` when it’s clicked, and then stays there.
 
@@ -78,19 +85,24 @@ We see color-changing and position-changing effects in animations on the web reg
 
 Shapes are drawn from data in attributes on the shape elements themselves, for instance the `d` in `path d=""`. In the star-to-check-mark example, the shape element is a `polygon` and the attribute is `points`, as in `polygon points="".` So to animate the the shape, we animate the `points` attribute.
 
-    <polygon points=" ... shape 1 points ... ">
-      <animate 
-        id="animate-to-check"
-        attributeName="points" 
-        dur="500ms" 
-        to=" ... shape 2 points ... " />
-    </polygon>
+```
+<polygon points=" ... shape 1 points ... ">
+  <animate 
+    id="animate-to-check"
+    attributeName="points" 
+    dur="500ms" 
+    to=" ... shape 2 points ... " />
+</polygon>
+```
+
 ![Figure](image/shape_morphing.png "FIG 7.4: Example of a star morphing into a check mark.")
 
 We can trigger that animation with SMIL events, like we did in the orange circle example, but we can also trigger animations like this with JavaScript.
 
-    var ani = document.getElementById("animation-to-check");
-    ani.beginElement();
+```
+var ani = document.getElementById("animation-to-check");
+ani.beginElement();
+```
 
 Why use SMIL at all? Here are the main reasons why you might reach for it:
 
@@ -111,7 +123,9 @@ Some great articles by Sarah Drasner can help us out here. In “Weighing SVG An
 
 When you use SMIL, the animation code is embedded into the SVG syntax itself. The same is true if you use CSS to animate the SVG and put that CSS in a `style` block within the SVG code. When this is the case, depending on the browser, that animation might work even if you use the SVG as an `img` or `background-image`.
 
-    <img src="animated-graphic.svg" alt="Might just work!">
+```
+<img src="animated-graphic.svg" alt="Might just work!">
+```
 
 People often reach for GIFs when they need to show animation in an `img`, but GIFs can have large file sizes and (therefore) create a serious performance burden. Animation embedded into SVG and used in an `img` is an attractive alternative, but unfortunately it’s not supported nearly as widely as GIF’s (for example, it doesn’t work in Firefox).
 
@@ -119,57 +133,65 @@ This is not a comprehensive look at SMIL. There are many more attributes you can
 
 There are even other animation elements, like  `animateTransform`, that allow you to animate the `transform` attribute on SVG elements. You can’t do that with `animate` alone ([http://bkaprt.com/psvg/07-11/](http://bkaprt.com/psvg/07-11/))—for instance, this doesn’t work:
 
-    <animate
-      attributeName="transform"
-      from="rotate(0 60 70)"
-      to="rotate(360 60 70)"
-      dur="10s" />
+```
+<animate
+  attributeName="transform"
+  from="rotate(0 60 70)"
+  to="rotate(360 60 70)"
+  dur="10s" />
+```
 
 Instead, you need to do this:
 
-    <animateTransform
-      attributeName="transform"
-      type="rotate"
-      from="0 60 70"
-      to="360 60 70"
-      dur="10s" />
+```
+<animateTransform
+  attributeName="transform"
+  type="rotate"
+  from="0 60 70"
+  to="360 60 70"
+  dur="10s" />
+```
 
 Another SMIL element opens up an interesting animation possibility: animating an element along a `path`. Imagine a little paper airplane floating across the screen, or a ball rolling down a hill. `animateMotion` is our friend here. It can animate any other SVG element along a `path` (but only a `path`; other basic shapes don’t work). Here’s a very simple example of animating an element in a circle ([http://bkaprt.com/psvg/07-12/](http://bkaprt.com/psvg/07-12/)):
 
-    <svg viewBox="0,0 10,10" width="200px" height="200px">
+```
+<svg viewBox="0,0 10,10" width="200px" height="200px">
 
-      <path 
-        id="theMotionPath"
-        fill="none"
-        stroke="lightgrey"
-        stroke-width="0.25"
-        d="
-          M 5 5
-          m -4, 0
-          a 4,4 0 1,0  8,0
-          a 4,4 0 1,0 -8,0
-          "
-      />
+  <path 
+    id="theMotionPath"
+    fill="none"
+    stroke="lightgrey"
+    stroke-width="0.25"
+    d="
+      M 5 5
+      m -4, 0
+      a 4,4 0 1,0  8,0
+      a 4,4 0 1,0 -8,0
+      "
+  />
 
-      <circle r="1" fill="red">
-        <animateMotion dur="5s" repeatCount="indefinite">
-           <mpath xlink:href="#theMotionPath" />
-        </animateMotion>
-      </circle>
+  <circle r="1" fill="red">
+    <animateMotion dur="5s" repeatCount="indefinite">
+       <mpath xlink:href="#theMotionPath" />
+    </animateMotion>
+  </circle>
 
-    </svg>
+</svg>
+```
 
 That may not look tremendously simple at first blush, but remember that you probably won’t be crafting that `path` by hand; you’ll just be referencing it by ID.
 
 This has long been nearly impossible in CSS. The most you could do was animate position values or get very tricky with `transform`s (see Lea Verou’s post on this topic, for example \[[http://bkaprt.com/psvg/07-13/](http://bkaprt.com/psvg/07-13/)\]). But new CSS properties can help: `motion-path: path()` and `motion-offset`. Blink already supports motion paths ([http://bkaprt.com/psvg/07-14/](http://bkaprt.com/psvg/07-14/)), perhaps motivated by the SMIL deprecation. You can take the `path` data and use it directly, which makes moving a SMIL `path` animation to CSS quite easy! Here’s how:
 
-    .move-me {
-      motion-offset: 0
-      motion-path: path("M 5 5 m -4, 0 a 4,4 0 1,0 8,  0 a 4,4 0 1,0 -8,0");
-    }
-    .move-me:hover {
-      motion-offset: 100%;
-    }
+```
+.move-me {
+  motion-offset: 0
+  motion-path: path("M 5 5 m -4, 0 a 4,4 0 1,0 8,  0 a 4,4 0 1,0 -8,0");
+}
+.move-me:hover {
+  motion-offset: 100%;
+}
+```
 
 For a more comprehensive look at SMIL animations, check out Sara Soueidan’s “Guide to SVG Animations” and the spec ([http://bkaprt.com/psvg/07-15/](http://bkaprt.com/psvg/07-15/), [http://bkaprt.com/psvg/07-16/](http://bkaprt.com/psvg/07-16/)).
 
@@ -190,8 +212,10 @@ Here’s how it works (FIG 7.5, [http://bkaprt.com/psvg/07-18/](http://bkaprt.co
 
 You can do all that in CSS, but with a dash of JavaScript, it becomes a little more foolproof. `path` elements have a property you can access via JavaScript that tells you exactly how long the element is:
 
-    var path = document.querySelector(".path");
-    var length = path.getTotalLength();
+```
+var path = document.querySelector(".path");
+var length = path.getTotalLength();
+```
 
 The resulting `length` number is exactly what the dash length and stroke offset need to be to do this trick.
 
@@ -201,18 +225,20 @@ JavaScript can animate SVG because JavaScript is all-powerful. In other words, J
 
 JavaScript also has the ability to run a loop. Let’s say we increased the `cx` attribute by `10` every 10 milliseconds:
 
-    var circle = document.getElementById("orange-circle"), positionX = 0;
-    var interval = setInterval(function() {
+```
+var circle = document.getElementById("orange-circle"), positionX = 0;
+var interval = setInterval(function() {
 
-      positionX += 10;
+  positionX += 10;
 
-      if (positionX > 500) {
-        positionX = 0;
-      }
+  if (positionX > 500) {
+    positionX = 0;
+  }
 
-      circle.setAttribute("cx", positionX);
+  circle.setAttribute("cx", positionX);
 
-    }, 20);
+}, 20);
+```
 
 That’s animation ([http://bkaprt.com/psvg/07-19/](http://bkaprt.com/psvg/07-19/))! That orange circle will animate from left to right over and over and over again.
 
@@ -220,11 +246,13 @@ It’s not particularly efficient, though. For starters, `setInterval` isn’t i
 
 The best approach to animation looping in JavaScript is `requestAnimationFrame` ([http://bkaprt.com/psvg/07-20/](http://bkaprt.com/psvg/07-20/)). At its most basic:
 
-    function doAnimation() {
-      // Do animation things
-      requestAnimationFrame(doAnimation);
-    }
-    requestAnimationFrame(doAnimation);
+```
+function doAnimation() {
+  // Do animation things
+  requestAnimationFrame(doAnimation);
+}
+requestAnimationFrame(doAnimation);
+```
 
 That loop will run as close to 60 *frames per* *second* (FPS) as it can. The idea is that 60 FPS is what is required to make an animation appear very smooth to our eyes. That’s great; it just means that that loop runs very fast, and that it’s up to you to figure out the timing and duration.
 
@@ -247,27 +275,29 @@ And why would you avoid JavaScript here?
 
 Snap.svg is heralded as the “jQuery of SVG” ([http://bkaprt.com/psvg/07-21/](http://bkaprt.com/psvg/07-21/)). It can be used to create and manipulate SVG, as well as animate it. To use it, you’ll need to add the script to your page before you write any Snap.svg-specific JavaScript.
 
-    <script src="snap.svg.js"></script>
+<script src="snap.svg.js"></script>
 
 It has no other dependencies, so after you add it, you’re ready to use it ([http://bkaprt.com/psvg/07-22/](http://bkaprt.com/psvg/07-22/)).
 
-    <script>
-      // create a new <svg> on the page
-      // or use Snap("#existing-svg")
-      var s = Snap(800, 600);
-      // Draw a <circle>
-      // Those attributes are cx, cy, and r
-      var bigCircle = s.circle(150, 150, 100);
-      // Manipulate the fill attribute to be "green"
-      bigCircle.attr({
-        fill: "green"
-      });
-      // Animate the radius and fill over one second
-      bigCircle.animate({
-        r: 50,
-        fill: "lightgreen"
-      }, 1000);
-    </script>
+```
+<script>
+  // create a new <svg> on the page
+  // or use Snap("#existing-svg")
+  var s = Snap(800, 600);
+  // Draw a <circle>
+  // Those attributes are cx, cy, and r
+  var bigCircle = s.circle(150, 150, 100);
+  // Manipulate the fill attribute to be "green"
+  bigCircle.attr({
+    fill: "green"
+  });
+  // Animate the radius and fill over one second
+  bigCircle.animate({
+    r: 50,
+    fill: "lightgreen"
+  }, 1000);
+</script>
+```
 
 And that’s only a drop in the bucket of Snap.svg’s capabilities. Just as jQuery can help with anything DOM-related, like cloning elements, manipulating attributes, or attaching event handlers, so, too, can Snap.svg. Except that Snap.svg will do everything correctly in SVG, while jQuery may not. For instance, you’d think you could use jQuery’s `.addClass()` method on an SVG element. Unfortunately, that will fail—the workaround is `.attr("class``", "foo")`—but Snap.svg’s identical `.addClass()` *will* work.
 
@@ -279,17 +309,21 @@ Greensock is a robust and performant library focused on animation ([greensock.co
 
 Say you have existing SVG like this:
 
-    <svg width="260" height="200" viewBox="0 0 260 200">
-      <rect id="rect" x="20" y="60" width="220"   height="80" fill="#91e600" />
-    </svg>
+```
+<svg width="260" height="200" viewBox="0 0 260 200">
+  <rect id="rect" x="20" y="60" width="220"   height="80" fill="#91e600" />
+</svg>
+```
 
 Let’s target that `rect`, turn it in a circle, and halve the size of it over five seconds:
 
-    TweenMax.to("#rect", 5, {
-      rotation: 360, 
-      transformOrigin: "50% 50%",
-      scale: 0.5
-    });
+```
+TweenMax.to("#rect", 5, {
+  rotation: 360, 
+  transformOrigin: "50% 50%",
+  scale: 0.5
+});
+```
 
 This is a particularly pertinent example, because if you try to do this exact same animation in CSS, you’ll run into a lot of trouble. Here’s why:
 

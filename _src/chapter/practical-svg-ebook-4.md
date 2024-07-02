@@ -6,7 +6,9 @@ HEY, EVERYBODY! Let’s be honest. Look how short this book is. We don’t have 
 
 Here’s how easy it can be to use SVG (FIG 0.1):
 
-    <img src="dog.svg" alt="dog">
+```
+<img src="dog.svg" alt="dog">
+```
 
 No joke!
 
@@ -16,8 +18,10 @@ Where did this `dog.svg` file come from, though? Well, the Noun Project is a par
 
 When downloading from the Noun Project, you have the option of downloading the PNG or SVG version. If you download both, you’ll wind up with two files:
 
-    icon\_364.png
-    icon\_364.svg
+```
+icon\_364.png
+icon\_364.svg
+```
 
 They’re both the same image of a dog. If you link to either of them from an `img` tag, you’ll get the same image of the same dog. So what’s the difference?
 

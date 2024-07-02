@@ -59,6 +59,10 @@ figure {
 	padding: 2em 0;
 	border: dashed #ccc;
 	border-width: 1px 0;
+	img {
+		margin: 0 auto .825em auto;
+		display: block;
+	}
 }
 @media( min-width: 52em ) {
 	figure {

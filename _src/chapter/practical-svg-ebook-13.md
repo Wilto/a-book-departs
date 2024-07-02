@@ -20,20 +20,24 @@ SVG used in CSS as a background image also commonly falls into this category. Al
 
 The simplest approach here is to use SVG as you normally would:
 
-    <img src="dog.svg" alt="dog">
+```
+<img src="dog.svg" alt="dog">
+```
 
 Then replace that `src` with something that will be supported, like dog.png. That’s exactly what the SVGeezy script by Ben Howdle does ([http://bkaprt.com/psvg/09-01/](http://bkaprt.com/psvg/09-01/)). If the script determines that a browser doesn’t support SVG in this way, it will replace the `src`, and end up looking like this in the DOM:
 
-      <img src="images/dog.svg" alt="dog">
-      <!-- 
-         this will be turned into this
-             <img src="images/dog.png" alt="dog">
-          if the browser doesn’t support SVG this way -->
-      <script src="/js/libs/svgeezy.js"></script>
-      <script>
-        svgeezy.init(false, "png");
-      </script>
-    </body>
+```
+  <img src="images/dog.svg" alt="dog">
+  <!-- 
+     this will be turned into this
+         <img src="images/dog.png" alt="dog">
+      if the browser doesn’t support SVG this way -->
+  <script src="/js/libs/svgeezy.js"></script>
+  <script>
+    svgeezy.init(false, "png");
+  </script>
+</body>
+```
 
 The file type is configurable, but it’s on you to ensure that the fallback image is located in the same location as the SVG.
 
@@ -41,9 +45,11 @@ This works, but it comes at a cost beyond just loading additional JavaScript. No
 
 We can beat this double-download problem, and we’ll get to that in a moment. But first, we can learn something else very useful. SVGeezy tests for SVG-as-`img` support with this function:
 
-    supportsSvg: function() {
-      return document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
-    }
+```
+supportsSvg: function() {
+  return document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
+}
+```
 
 Um, `document.implementation.hasFeature`? What is this wizardry? Is there some native JavaScript API for testing feature support? For that sort of thing, we normally turn to Modernizr, a library built from an amalgam of clever tests developers have concocted to coerce browsers into telling us whether they support a certain feature or not ([http://modernizr.com](http://modernizr.com)).
 
@@ -53,23 +59,25 @@ And why might you need to know if a browser supports SVG-as-`img` in JavaScript?
 
 You could easily build your own SVG-as-`img` fallback system:
 
-    // do the test
-    if (!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1")) {
-      // if the browser doesn’t support SVG-as-<img>
-      // find all images
-      var images = document.getElementsByTagName("img"),   i, src, newsrc;
-      // loop through them
-      for (i = 0; i < images.length; i++) {
-        src = images\[i\].src;
-        ext = src.split(".").pop();
-        // if the image is .svg (note this doesn’t     account for ?query strings
-        if (ext === "svg") {
-          // replace that with .png
-          newsrc = src.replace(".svg", ".png");
-      images\[i\].setAttribute("src", newsrc);
-        }
-      }
+```
+// do the test
+if (!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1")) {
+  // if the browser doesn’t support SVG-as-<img>
+  // find all images
+  var images = document.getElementsByTagName("img"),   i, src, newsrc;
+  // loop through them
+  for (i = 0; i < images.length; i++) {
+    src = images[i].src;
+    ext = src.split(".").pop();
+    // if the image is .svg (note this doesn’t     account for ?query strings
+    if (ext === "svg") {
+      // replace that with .png
+      newsrc = src.replace(".svg", ".png");
+  images[i].setAttribute("src", newsrc);
     }
+  }
+}
+```
 
 These techniques also require a little more elbow grease: you have to create the fallback images yourself and place them alongside their `.svg` comrades. So when the `src` is replaced, the `.png` version is there to pop into position. Wouldn’t it be nice if that were automated?
 
@@ -81,10 +89,12 @@ One way of circumventing it is to use the `picture` element. The `picture` eleme
 
 Here’s how that works in HTML:
 
-    <picture>
-      <source type="image/svg+xml" srcset="graph.svg">
-      <img src="graph.png" alt="A lovely graph">
-    </picture>
+```
+<picture>
+  <source type="image/svg+xml" srcset="graph.svg">
+  <img src="graph.png" alt="A lovely graph">
+</picture>
+```
 
 If the browser supports SVG this way, `source` will be used; otherwise, the fallback PNG in the `img` tag will be served, without the double-download. It’s pretty great to have a fallback solution like this right in HTML. The rub is that the browser *also* needs to support `picture`, which is so new that any browser that supports it also supports SVG.
 
@@ -96,10 +106,12 @@ There is a catch though, beyond loading the 7 KB script. The reason double-downl
 
 In a browser that natively supports `picture`, the prefetcher will be smart enough not to do that. But we can’t count on that (hence the polyfill). To solve this, we can just skip the `src` and make the markup more like this:
 
-    <picture>
-      <source srcset="graph.svg" type="image/svg+xml">
-      <img srcset="graph-small.png, graph-large.png   1000" alt="A lovely graph">
-    </picture>
+```
+<picture>
+  <source srcset="graph.svg" type="image/svg+xml">
+  <img srcset="graph-small.png, graph-large.png   1000" alt="A lovely graph">
+</picture>
+```
 
 Solved! Even though, as I write this, that’s technically invalid code, it works with Picturefill and in browsers that already support `picture`. So you could even safely pull out Picturefill one day and not worry about breaking anything. I wouldn’t be terribly surprised if this eventually becomes valid markup, since it’s so useful.
 
@@ -107,12 +119,14 @@ Solved! Even though, as I write this, that’s technically invalid code, it work
 
 This method is pretty great, because it relies on some simple sleight of hand right in the CSS, rather than on some other technology or much additional code.
 
-    .my-element {
-      background-image: url(fallback.png);
-      background-image: 
-        linear-gradient(transparent, transparent),
-        url(image.svg);
-    }
+```
+.my-element {
+  background-image: url(fallback.png);
+  background-image: 
+    linear-gradient(transparent, transparent),
+    url(image.svg);
+}
+```
 
 It does the trick because of some serendipitous overlap in features that browsers support. Two forces are at work here: multiple backgrounds and “old” syntax gradients. A browser that supports both of these things also necessarily supports SVG as `background-image`. Thus, the SVG background image we supplied here will be shown (the gradient is completely transparent and will have no effect). If either of those things fails, the whole declaration fails, and the fallback `background-image` declaration takes effect.
 
@@ -120,12 +134,14 @@ Because this is so straightforward, it’s kind of tempting to exploit it for im
 
 Another possibility here would be to run the JavaScript test for SVG-as-`img` (the support is identical for background images), add a class to to the `html` element (something like  `<html class="no-svg">`) and then:
 
-    .my-element {
-      background-image: url(image.svg);
-    }
-    html.no-svg .my-element {
-      background-image: url(fallback.png);
-    }
+```
+.my-element {
+  background-image: url(image.svg);
+}
+html.no-svg .my-element {
+  background-image: url(fallback.png);
+}
+```
 
 This works, but since it requires JavaScript, I prefer the multiple-backgrounds trick.
 
@@ -139,31 +155,42 @@ This method is forward-thinking in the sense that down the road, you can decide 
 
 Here’s a possible approach, one I quite like:
 
-1. Use inline SVG normally:    <svg class="icon icon-cart" xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="#icon-cart"></use>
-        </svg>
+1. Use inline SVG normally:
+    ```
+    <svg class="icon icon-cart" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="#icon-cart"></use>
+    </svg>
+    ```
     
-2. Make an inline SVG test in JavaScript:    var supportsSvg = function() {
-          var div = document.createElement("div");
-          div.innerHTML = "<svg/>";
-          return (div.firstChild && div.firstChild.namespaceURI) == "http://www.w3.org/2000/svg";
-        };
+2. Make an inline SVG test in JavaScript:
+    ```
+    var supportsSvg = function() {
+      var div = document.createElement("div");
+      div.innerHTML = "<svg/>";
+      return (div.firstChild && div.firstChild.namespaceURI) == "http://www.w3.org/2000/svg";
+    };
+    ```
     
-3. If the browser doesn’t support inline SVG, add a class name to the `html` element:    if (supportsSvg()) {
-          document.documentElement.className += "no-svg";
-        };
+3. If the browser doesn’t support inline SVG, add a class name to the `html` element:
+    ```
+    if (supportsSvg()) {
+      document.documentElement.className += "no-svg";
+    };
+    ```
     
 4. Use that class name to set a background image on the `svg`:
 
-    html.no-svg .icon-key {
-      display: inline-block;
-      width: 33px;
-      height: 33px;
-      margin-right: 0.25em;
-      vertical-align: middle;
-      /\* Even better, a sprite \*/
-      background: url(icon-fallbacks/key.png) no-repeat;
-    }
+```
+html.no-svg .icon-key {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  margin-right: 0.25em;
+  vertical-align: middle;
+  /\* Even better, a sprite \*/
+  background: url(icon-fallbacks/key.png) no-repeat;
+}
+```
 
 You can see the technique in action on CodePen ([http://bkaprt.com/psvg/09-05/](http://bkaprt.com/psvg/09-05/)).
 
@@ -178,32 +205,36 @@ IE 8 will need the fallback background image, but it can be set directly on the 
 
 Imagine a Close button that you hope will appear simply as a cross shape: **×**. Start with a `span` containing the text “Close”—worst-case scenario, your button will still say “Close.”
 
-    <button aria-label="Close">
-      <span class="inline-svg" data-xlink="#icon-close">Close</span>
-    </button>
+```
+<button aria-label="Close">
+  <span class="inline-svg" data-xlink="#icon-close">Close</span>
+</button>
+```
 
 Now, if you run the JavaScript test we just went over and see that the browser *does* support inline SVG, inject it and replace the `span`.
 
-    if (supportsSvg()) {
-      var inlineSvgs = document.querySelectorAll(  "span.inline-svg");
-      for (i = 0; i < inlineSvgs.length; i++) {
-        var span = inlineSvgs\[i\];
-        var svgNS = "http://www.w3.org/2000/svg";
-        var xlinkNS = "http://www.w3.org/1999/xlink";
-        var svg = document.createElementNS(svgNS,     "svg");
-        var use = document.createElementNS(svgNS,     "use");
-        // Prepare the <use> element
-        use.setAttributeNS(xlinkNS, "xlink:href",     span.getAttribute("data-xlink"));
-        // Append it
-        svg.appendChild(use);
-        // Prepare the SVG
-        svg.setAttribute("class", "inline-svg");
-        // Inject the SVG
-        span.parentNode.insertBefore(svg, span);
-        // Get rid of the <span>
-        span.remove();
-      }
-    }
+```
+if (supportsSvg()) {
+  var inlineSvgs = document.querySelectorAll(  "span.inline-svg");
+  for (i = 0; i < inlineSvgs.length; i++) {
+    var span = inlineSvgs[i];
+    var svgNS = "http://www.w3.org/2000/svg";
+    var xlinkNS = "http://www.w3.org/1999/xlink";
+    var svg = document.createElementNS(svgNS,     "svg");
+    var use = document.createElementNS(svgNS,     "use");
+    // Prepare the <use> element
+    use.setAttributeNS(xlinkNS, "xlink:href",     span.getAttribute("data-xlink"));
+    // Append it
+    svg.appendChild(use);
+    // Prepare the SVG
+    svg.setAttribute("class", "inline-svg");
+    // Inject the SVG
+    span.parentNode.insertBefore(svg, span);
+    // Get rid of the <span>
+    span.remove();
+  }
+}
+```
 
 Dave Rupert thought this up ([http://bkaprt.com/psvg/09-06/](http://bkaprt.com/psvg/09-06/)).
 
@@ -244,11 +275,13 @@ An element’s role defines its purpose. To guarantee that all browsers apply th
 
 Combining Watson’s recommendations so far, properly accessible SVG looks like this:
 
-    <svg aria-labelledby="title desc" role="img">
-      <title id="title">Green rectangle</title>
-      <desc id="desc">A light green rectangle with   rounded corners and a dark green border.</desc>
-      <rect width="75" height="50" rx="10" ry="10"   fill="#90ee90" stroke="#228b22" stroke-fill="1" />
-    </svg>
+```
+<svg aria-labelledby="title desc" role="img">
+  <title id="title">Green rectangle</title>
+  <desc id="desc">A light green rectangle with   rounded corners and a dark green border.</desc>
+  <rect width="75" height="50" rx="10" ry="10"   fill="#90ee90" stroke="#228b22" stroke-fill="1" />
+</svg>
+```
 
 ### Use text
 
@@ -258,7 +291,7 @@ The text is also copy-and-pasteable and SEO-friendly, which is nice. Plus, the t
 
 SVG also has access to all the same fonts that the rest of your document does. So if you are loading up a custom `@font-face` font for your site (as we are in these examples), you can use that font in your SVG just fine.
 
-    <text font-family="Custom Font, sans-serif" font-size="14" letter-spacing="10">Bluegrass Festival</text>
+<text font-family="Custom Font, sans-serif" font-size="14" letter-spacing="10">Bluegrass Festival</text>
 
 One limitation of `text` in SVG is that it can’t autowrap or reflow, a problem that may be solved in SVG 2.
 
@@ -268,10 +301,13 @@ One limitation of `text` in SVG is that it can’t autowrap or reflow, a problem
 
 If your SVG is interactive, you can use `a` links around the interactive elements to make them focusable from the keyboard—for instance, if part of the image has a hover state, or is clickable as a link:
 
-    <a xlink:href="http://example.com">
-      <rect width="75" height="50" rx="20" ry="20"   fill="#90ee90" stroke="#228b22" stroke-fill="1" />
-      <text x="35" y="30" font-size="1em"   text-anchor="middle" fill="#000000">Website</text>
-    </a>
+```
+<a xlink:href="http://example.com">
+  <rect width="75" height="50" rx="20" ry="20"   fill="#90ee90" stroke="#228b22" stroke-fill="1" />
+  <text x="35" y="30" font-size="1em"   text-anchor="middle" fill="#000000">Website</text>
+</a>
+```
+
 ![Figure](image/Screen_Shot_2016-01-24_at_12.49.28_PM.png "FIG 9.3: SVG text is selectable like any other real text on the web, and it scales proportionally with the rest of the SVG.")
 
 ### Create an alternative
@@ -282,16 +318,18 @@ Now, a string of text typically isn’t sufficient to explain a chart full of in
 
 Here’s a block of code that stitches all of these pieces together:
 
-    <svg aria-labelledby="title desc" viewBox="0 0 400 327">
-      <title id="title">Graves Mountain Bluegrass   Festival</title>
-      <desc id="desc">Advertisement for Graves Mountain   Bluegrass Festival. Blue skies and three   differently sized blue-tinted mountains.</desc>
-      <a xlink:href="http://gravesmountain.com"   tabindex="0" role="link">
-        <polygon opacity="0.2" fill="#7DACDC"   points="0,327 200,173.797 400,327 "/>
-        <!-- and other shapes -->
-        <text x="35" y="30">Graves</text>
-        <!-- and other text -->
-      </a>
-    </svg>
+```
+<svg aria-labelledby="title desc" viewBox="0 0 400 327">
+  <title id="title">Graves Mountain Bluegrass   Festival</title>
+  <desc id="desc">Advertisement for Graves Mountain   Bluegrass Festival. Blue skies and three   differently sized blue-tinted mountains.</desc>
+  <a xlink:href="http://gravesmountain.com"   tabindex="0" role="link">
+    <polygon opacity="0.2" fill="#7DACDC"   points="0,327 200,173.797 400,327 "/>
+    <!-- and other shapes -->
+    <text x="35" y="30">Graves</text>
+    <!-- and other text -->
+  </a>
+</svg>
+```
 
 An accessibility checklist like this can be valuable: it gets you thinking about accessibility, and sends you off and running in the right direction. I would warn against thinking of a checklist as a “just do these things and then wipe your hands of it” reflex, however. Instead, I’d encourage this sort of mindset:
 

@@ -10,7 +10,9 @@ I WANT TO COVER all of the different ways we can use SVG on the web right away s
 
 We already covered this one. You can use SVG images in HTML like this:
 
-    <img src="leaf-maple.svg" alt="Five-lobed sugar maple leaf">
+```
+<img src="leaf-maple.svg" alt="Five-lobed sugar maple leaf">
+```
 
 Here we’re using `img` with SVG just as we would with any other appropriate image format (like JPG, GIF, or PNG): to display an image within content.
 
@@ -24,9 +26,11 @@ Now imagine that that same CMS also automatically creates a weekly newsletter of
 
 CSS plays well with SVG, too. It goes like this:
 
-    .main-header {
-       background-image: url(header-bg.svg);
-    }
+```
+.main-header {
+   background-image: url(header-bg.svg);
+}
+```
 
 Here, you use SVG just as you would background images in any other appropriate file format: as part of the design of a page. In this case, the image itself isn’t considered content.
 
@@ -40,11 +44,13 @@ Imagine this is another blog post in our hypothetical CMS that sends out the wee
 
 Another way to use SVG is to drop it right into the HTML, hence the moniker “inline” SVG. Simply open up a .svg file in a text editor, copy all the code, and paste it into the HTML where you want that image to be. Like this:
 
-    <h1>Hey, there’s an SVG image below me!</h1>
-    <svg viewBox="0 0 100 100">
-       <rect x="10" y="10" width="100" height="100" />
-       <!-- and all the shapes you need! —>
-    </svg>
+```
+<h1>Hey, there’s an SVG image below me!</h1>
+<svg viewBox="0 0 100 100">
+   <rect x="10" y="10" width="100" height="100" />
+   <!-- and all the shapes you need! —>
+</svg>
+```
 
 SVG is right at home in HTML, because they are both markup languages (you know: angle brackets with tags, attributes, and familiar stuff like that). While SVG is a stand-alone image format, browsers that support SVG will parse this SVG and render it right within the HTML document. A document within a document!
 

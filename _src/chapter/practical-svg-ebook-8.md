@@ -37,19 +37,21 @@ In a nutshell: you simply configure tasks for Grunt to do, run it, and it does t
 
 Note that Grunt can’t run any of these tasks by itself. That’s what plugins are for. The one we’re going to use is grunt-svgstore ([http://bkaprt.com/psvg/04-03/](http://bkaprt.com/psvg/04-03/)). Its sole purpose is spriting SVG. Once we’ve installed the plugin, we can configure Grunt to do what we want. We do this with Gruntfile.js, which lives in your project’s root folder:
 
-    module.exports = function(grunt) {
-      grunt.initConfig({
-        svgstore: {
-          default: {
-            files: {
-              "includes/defs.svg": \["svg/\*.svg"\]
-            }
-          }
+```
+module.exports = function(grunt) {
+  grunt.initConfig({
+    svgstore: {
+      default: {
+        files: {
+          "includes/defs.svg": ["svg/\*.svg"]
         }
-      });
-      grunt.loadNpmTasks("grunt-svgstore");
-      grunt.registerTask("default", \["svgstore"\]);
-    };
+      }
+    }
+  });
+  grunt.loadNpmTasks("grunt-svgstore");
+  grunt.registerTask("default", ["svgstore"]);
+};
+```
 
 And now in plain English:
 
@@ -59,29 +61,31 @@ Leveling up a little more, we can make that happen *automatically* whenever an S
 
 We’ll tell it to watch our icons folder for SVG files and run svgstore when they change.
 
-    module.exports = function(grunt) {
-      grunt.initConfig({
-        svgstore: {
-          default: {
-            files: {
-              "includes/defs.svg": \["svg/\*.svg"\]
-            }
-          }
-        },
-        watch: {
-          svg: {
-            files: \["icons/\*"\],
-            tasks: \["svgstore"\],
-            options: {
-              livereload: true
-            }
-          }
+```
+module.exports = function(grunt) {
+  grunt.initConfig({
+    svgstore: {
+      default: {
+        files: {
+          "includes/defs.svg": ["svg/\*.svg"]
         }
-      });
-      grunt.loadNpmTasks("grunt-svgstore");
-      grunt.loadNpmTasks("grunt-contrib-watch");
-      grunt.registerTask("default", \["watch"\]);
-    };
+      }
+    },
+    watch: {
+      svg: {
+        files: ["icons/\*"],
+        tasks: ["svgstore"],
+        options: {
+          livereload: true
+        }
+      }
+    }
+  });
+  grunt.loadNpmTasks("grunt-svgstore");
+  grunt.loadNpmTasks("grunt-contrib-watch");
+  grunt.registerTask("default", ["watch"]);
+};
+```
 
 You’ll kick things off by typing `grunt watch` into the command line at the project’s root folder.
 
@@ -91,10 +95,12 @@ See the `livereload: true` option as part of the configuration for that watch ta
 
 I would be remiss not to mention Grunticon as a build tool for an icon system ([grunticon.com](http://grunticon.com)). Grunticon is a Grunt plugin just like grunt-svgstore is, but it takes an entirely different approach to SVG icons. It still takes a folder full of .svg files and combines them for you, but it combines them into a stylesheet containing a bunch of class declarations that set a `background-image` for the icon. Like this:
 
-    .icon-cloud-sync {
-      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20 …");
-      background-repeat: no-repeat;
-    }
+```
+.icon-cloud-sync {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20 …");
+  background-repeat: no-repeat;
+}
+```
 
 The SVG images are converted into a *data URL* and put directly into the stylesheet. We’ll cover data URLs momentarily, but in a nutshell: a data URL is literally the SVG itself, specially encoded and turned into a long string right inside the URL. All the drawing information is right there; no network request is required to go get anything else. In that sense, the stylesheet is your sprite, because all the icons are combined into one request and can be used on demand.
 
@@ -111,7 +117,7 @@ It also has some drawbacks:
 
 Grunticon 2 mostly takes care of that disadvantage ([http://bkaprt.com/psvg/04-05/](http://bkaprt.com/psvg/04-05/)). You can use an attribute to tell it to inject inline SVG:
 
-    <div class="icon-cart" data-grunticon-embed></div>
+<div class="icon-cart" data-grunticon-embed></div>
 
 Grunticon will work some magic and inject the inline SVG of that icon for you, as long as the browser supports it. It requires a little DOM injection that you wouldn’t need if you started with inline SVG, but it allows for variations and all the fancy powers inherent to inline SVG.
 
@@ -123,26 +129,35 @@ Here’s a real-world example for you (FIG 4.4). When he was working for Lonely 
 
 Converting images into data URLs has long been a little performance trick that can be used on websites. The idea is that all of the information for the image is right there, so there’s no need for a network request. You can do that with SVG, too. Here’s an example of an `img`:
 
-    <img src="data:image/svg+xml;charset=UTF-8,<svg ... > ... </svg>">
+```
+<img src="data:image/svg+xml;charset=UTF-8,<svg ... > ... </svg>">
+```
 
 You could put the whole SVG syntax right in there. That would be weird, though, since in that case you’d probably just use inline SVG. It makes more sense in CSS:
 
-    .icon {
-      url("data:image/svg+xml;charset=UTF-8,  <svg ... > ... </svg>");
-    }
+```
+.icon {
+  url("data:image/svg+xml;charset=UTF-8,  <svg ... > ... </svg>");
+}
+```
+
 ![Figure](image/fig-4.4-noshadow.png "FIG 4.4: Icons at LonelyPlanet.com powered by Grunticon.")
 
 That will actually work in some browsers, but it’s invalid and rightfully fails in compliant browsers. It’s not the data URL that poses a problem, though—it’s the angle brackets. The trick is to URL-encode those angle brackets and spaces (as Grunticon does) and it will work just fine:
 
-    .icon {
-      background: url("data:image/svg+xml;  charset=UTF-8,%3Csvg%20 ...");
-    }
+```
+.icon {
+  background: url("data:image/svg+xml;  charset=UTF-8,%3Csvg%20 ...");
+}
+```
 
 The most common way you tend to encounter data URLs, though, is in the Base64 encoding:
 
-    .icon {
-      background: url("data:image/svg+xml;base64,...");
-    }
+```
+.icon {
+  background: url("data:image/svg+xml;base64,...");
+}
+```
 
 Base64 is typically used as an encoding format because it’s safe. It uses only sixty-four characters, none of which are angle brackets or any other character that could be interpreted weirdly anywhere the data string could be used. The result, though, is an encoded string that is larger than the original. URL encoding does that, too, but because URL encoding ends up changing fewer characters, it retains SVG’s fairly repetitive syntax, and thus lends itself better to compression.
 
@@ -152,18 +167,20 @@ Gulp is another very popular task runner ([http://bkaprt.com/psvg/04-07/](http:/
 
 Here’s an example that does exactly what our Grunt  example did:
 
-    var gulp = require("gulp");
-    var svgstore = require("gulp-svgstore");
-    gulp.task("svgstore", function () {
-      return gulp
-        .src("icons/\*.svg")
-        .pipe(svgstore({
-          inlineSvg: true,
-          fileName: "sprite.svg",
-          prefix: "icon-"
-         }))
-        .pipe(gulp.dest("includes/"));
-    });
+```
+var gulp = require("gulp");
+var svgstore = require("gulp-svgstore");
+gulp.task("svgstore", function () {
+  return gulp
+    .src("icons/\*.svg")
+    .pipe(svgstore({
+      inlineSvg: true,
+      fileName: "sprite.svg",
+      prefix: "icon-"
+     }))
+    .pipe(gulp.dest("includes/"));
+});
+```
 
 Just type `gulp svgstore` into the command line, and  sprite.svg will be created for you.
 
@@ -173,38 +190,47 @@ Let’s say we’re working on a project and it comes up that we need a new icon
 
 The icons in this project are often set next to text within buttons, like this:
 
-    <button>
-      Download
-      <svg class="icon">
-        <use xlink:href="#icon-arrow-down" />
-      </svg>
-    </button>
+```
+<button>
+  Download
+  <svg class="icon">
+    <use xlink:href="#icon-arrow-down" />
+  </svg>
+</button>
+```
 
 In our stylesheet, we set the text color for the button, and try to make sure that the SVG picks up the proper `fill` color:
 
-    button {
-      color: orange;
-    }
-    button svg {
-      fill: currentColor;
-    }
+```
+button {
+  color: orange;
+}
+button svg {
+  fill: currentColor;
+}
+```
 
 That should work great. But when we look at the site, we see that our icon is black (FIG. 4.5)! What the heck?!
 
 We investigate our arrow-down.svg file and find this:
 
-    <svg ... >
-      <path fill="#000" d="..." />
-    </svg>
+```
+<svg ... >
+  <path fill="#000" d="..." />
+</svg>
+```
+
 ![Figure](image/4.5.png "FIG 4.5: The icon is black, even though we’re trying to set the fill color in CSS (http://bkaprt.com/psvg/04-09/).")
 
 See the default `fill` attribute (`#000`) on the `path`? CSS can override that—quite easily, in fact. A *presentational attribute* like this isn’t like an inline style on HTML elements, which can only be overwritten by powerful `!important` values. Presentational attributes on SVG elements are overwritten by any CSS that targets the element directly. They have a CSS specificity value of zero, as it were.
 
 If we did this in our CSS instead, it would have worked:
 
-    path {
-      fill: currentColor;
-    }
+```
+path {
+  fill: currentColor;
+}
+```
 
 But as we know, `path` is just one of many SVG elements. We don’t want to get into the mess of naming them all in CSS. It’s much easier to set the SVG element itself and let the `fill` cascade through the other elements. And the `fill` will cascade through the other elements, unless there is a `fill` attribute on them, like we just encountered.
 
@@ -216,31 +242,33 @@ But we’re talking build tools here. Let’s make our `fill`\-attribute strippi
 
 If you’ve ever worked with jQuery, you know that removing attributes from elements is trivially easy. We could select all elements that have a `fill` attribute and then remove it.
 
-    $("\[fill\]").removeAttr("fill");
+$("[fill]").removeAttr("fill");
 
 If only we could do that with Gulp. Er, wait. We can! Cheerio is an implementation of jQuery for the server and it has a Gulp plugin ([http://bkaprt.com/psvg/04-10/](http://bkaprt.com/psvg/04-10/)). We can run that exact line of code from within Gulp, which I think is just *so* *cool.*
 
 While we’re at it, let’s add in SVG optimization, too, so you can see how easy it is for Gulp to “pipe” from one task to the next. Here’s everything all together.
 
-    var cheerio = require("gulp-cheerio");
-    var svgmin = require("gulp-svgmin");
-    var svgstore = require("gulp-svgstore");
+```
+var cheerio = require("gulp-cheerio");
+var svgmin = require("gulp-svgmin");
+var svgstore = require("gulp-svgstore");
 
-    gulp.task("svgstore", function () {
-      return gulp
-        .src("icons/\*.svg")
-        .pipe(svgmin())
-        .pipe(svgstore({ 
-          fileName: "sprite.svg", 
-          prefix: "icon-" }))
-        .pipe(cheerio({
-          run: function ($) {
-            $("\[fill\]").removeAttr("fill");
-          },
-          parserOptions: { xmlMode: true }
-        }))
-        .pipe(gulp.dest("includes/"));
-    });
+gulp.task("svgstore", function () {
+  return gulp
+    .src("icons/\*.svg")
+    .pipe(svgmin())
+    .pipe(svgstore({ 
+      fileName: "sprite.svg", 
+      prefix: "icon-" }))
+    .pipe(cheerio({
+      run: function ($) {
+        $("[fill]").removeAttr("fill");
+      },
+      parserOptions: { xmlMode: true }
+    }))
+    .pipe(gulp.dest("includes/"));
+});
+```
 
 Group hug.
 

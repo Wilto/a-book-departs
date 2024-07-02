@@ -6,11 +6,13 @@ title: Chapter 6. Sizing and Scaling SVG
 ---
 YOU’LL PROBABLY WANT to exert some sizing control over any graphic you put on a website. *Hey! You! Logo**! You should be this* *size:*
 
-    <img src="logo.png" class="logo" />
-    .logo {
-      width: 220px;
-      height: 80px;
-    }
+```
+<img src="logo.png" class="logo" />
+.logo {
+  width: 220px;
+  height: 80px;
+}
+```
 
  And so shall it be.
 
@@ -23,8 +25,10 @@ Keep these two concepts in mind when you’re working with the size of SVG image
 
 Say we’re working with some SVG like this:
 
-    <svg width="100" height="100" viewBox="0 0 100 100" ... >
-    <!-- alternatively: viewBox="0, 0 100, 100" -->
+```
+<svg width="100" height="100" viewBox="0 0 100 100" ... >
+<!-- alternatively: viewBox="0, 0 100, 100" -->
+```
 
 In this case, the viewport and `viewBox` are in perfect harmony (FIG 6.1). The SVG will be drawn in the exact area it visually occupies.
 
@@ -32,7 +36,7 @@ In this case, the viewport and `viewBox` are in perfect harmony (FIG 6.1). The S
 
 Now say we double the width and height, like this:
 
-    <svg width="200" height="200" viewBox="0 0 100 100" ... >
+<svg width="200" height="200" viewBox="0 0 100 100" ... >
 
 Will the `svg` just draw in a 100 by 100 space in the upper left side of the 200 by 200 element? Nope. Everything inside the `svg` will scale up perfectly to be drawn in the new, larger space (FIG 6.2).
 
@@ -42,7 +46,7 @@ The square aspect ratio still matches perfectly. That’s why it’s not particu
 
 What if the aspect ratios don’t match, though?
 
-    <svg width="300" height="75" viewBox="0 0 100 100" ... >
+<svg width="300" height="75" viewBox="0 0 100 100" ... >
 
 What happens now, by default, is that the SVG will draw itself as large as it can, centered along the longest dimension (FIG 6.3).
 
@@ -54,7 +58,7 @@ If you want to regain some control over this behavior, there’s an attribute fo
 
 It looks like this:
 
-    <svg preserveAspectRatio="xMaxYMax" ... >
+<svg preserveAspectRatio="xMaxYMax" ... >
 
 The `x` and `Y` parts of that value are followed by `Min`, `Mid`, or `Max`. The reason SVG normally centers in the viewport is because it has a default value of `xMidYMid`. If you change that to `xMaxYMax,` it tells the SVG: *Make sure you go horizontally as far to the* *right as you can, and vertically as far to the* *bottom as you can. Then be as big as you* *can be without cutting* *off*.
 
@@ -78,8 +82,7 @@ Remember: these aren’t interchangeable bits of code; they are just conceptuall
 
 What if you want to throw aspect ratio out the window and have SVG scale to the viewport, like a raster image would? Turn `preserveAspectRatio` off (FIG 6.7)!
 
-    <svg preserveAspectRatio="none" viewBox="0 0 100 100">
-![Figure](image/Screen_Shot_2016-01-23_at_1.05.45_PM.png "FIG 6.7: Example of preserveAspectRatio="none". Poor little buggers.")
+<svg preserveAspectRatio="none" viewBox="0 0 100 100">![Figure](image/Screen_Shot_2016-01-23_at_1.05.45_PM.png "FIG 6.7: Example of preserveAspectRatio="none". Poor little buggers.")
 
 Amelia Bellamy-Royds wrote a comprehensive article on scaling SVG, in which she covers things like the fact that `svg` can essentially contain other `svg` with different aspect ratios and behavior, so you can make some parts of an image scale and others not, which is pretty cool and unique to SVG ([http://bkaprt.com/psvg/06-03/](http://bkaprt.com/psvg/06-03/)).
 
@@ -95,18 +98,23 @@ Here’s a quick trick to get that artboard cropping in Illustrator: select the 
 
 The big advantage to this technique is alignment (FIG 6.10). If you want to align any edge of any of these icons to anything else, that’s easy to do. There is no mysterious space you need to contend with, or tweaky positional CSS.
 
-    .icon.nudge {
-      position: relative;
-      right: -2px; /\* UGHCKKADKDKJ \*/
-    }
+```
+.icon.nudge {
+  position: relative;
+  right: -2px; /\* UGHCKKADKDKJ \*/
+}
+```
+
 ![Figure](image/corner-positioning.png "FIG 6.10: Icons aligning to edges without little bits of extra space you have to account for.")
 
 The big disadvantage to the cropping technique is relative sizing. Imagine you take the practical step of sizing your icon’s width and height, like this:
 
-    .icon {
-      width: 1em;
-      height: 1em;
-    }
+```
+.icon {
+  width: 1em;
+  height: 1em;
+}
+```
 
 A tall, skinny icon will shrink to fit in that space and potentially appear awkwardly small. Or perhaps you’re trying to have an intentionally small star shape as an icon, except the star has a squarish aspect ratio and thus grows to fill the space, appearing bigger than you want it to.
 
@@ -143,18 +151,20 @@ On the web, we’ve always had the ability to swap out images with other ones. W
 
 Say we organize the SVG like so:
 
-    <svg class="disney-logo">
-      <g class="magic-castle">
-        <!-- paths, etc -->
-      </g>
-      <g class="walt">
-        <!-- paths, etc -->
-      </g>
-      <g class="disney">
-        <path class="d" />
-        <!-- paths, etc -->
-      </g>
-    </svg>
+```
+<svg class="disney-logo">
+  <g class="magic-castle">
+    <!-- paths, etc -->
+  </g>
+  <g class="walt">
+    <!-- paths, etc -->
+  </g>
+  <g class="disney">
+    <path class="d" />
+    <!-- paths, etc -->
+  </g>
+</svg>
+```
 
 This, by the way, is pretty easy to do in Illustrator (FIG 6.15). The groups and names you create there turn into IDs in the SVG output, and you can use those IDs to do the styling. Personally, though, I prefer using classes because they aren’t unique (so you don’t accidentally end up with multiple identical IDs on the page) and because classes have a lower and more manageable level of CSS specificity. It’s easy enough to change IDs to classes with a bit of find-and-replace maneuvering in a code editor.
 
@@ -162,21 +172,23 @@ This, by the way, is pretty easy to do in Illustrator (FIG 6.15). The groups and
 
 The corresponding CSS could be something like this:
 
-    @media (max-width: 1000px) {
-      .magic-castle {
-        display: none;
-      }
-    }
-    @media (max-width: 800px) {
-      .walt {
-        display: none;
-      }
-    }
-    @media (max-width: 600px) {
-      .disney > \*:not(.d) {
-        display: none;
-      }
-    }
+```
+@media (max-width: 1000px) {
+  .magic-castle {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .walt {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .disney > \*:not(.d) {
+    display: none;
+  }
+}
+```
 
 Mind you, this is a contrived example of hiding parts of the images at different breakpoints, but that’s exactly how you would do it, along with some likely sizing adjustments. Anything you can do with CSS is on the table here. Perhaps some animation is appropriate at some breakpoints but not at others. Perhaps you change stroke sizes to beef up or trim down icons at different sizes. Perhaps you change some fill colors to simplify adjacent shapes.
 
