@@ -6,15 +6,17 @@ media_folder: '../_src/chapter/image'
 public_folder: 'image'
 
 collections:
-  - name: 'home'
-    label: 'Homepage Blurb'
-    folder: '_src/'
-    create: false
-    editor:
-      preview: false
-    fields:
-      - { label: 'Heading', name: 'title', widget: 'string', required: false  }
-      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
+  - name: 'pages'
+    label: 'Pages'
+    files: 
+      - label: 'Homepage'
+        name: 'home'
+        file: '_src/index.md'
+        editor:
+          preview: false
+        fields:
+          - { label: 'Heading', name: 'title', widget: 'string', required: false  }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
   - name: 'chapter'
     label: 'Chapters'
     folder: '_src/chapter'
