@@ -6,6 +6,14 @@ media_folder: '../_src/chapter/image'
 public_folder: 'image'
 
 collections:
+  - file: "_src/index.md"
+    label: "Home"
+    name: "home"
+    editor:
+      preview: false
+    fields:
+      - { label: 'Heading', name: 'title', widget: 'string', required: false  }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
   - name: 'chapter'
     label: 'Chapters'
     folder: '_src/chapter'
