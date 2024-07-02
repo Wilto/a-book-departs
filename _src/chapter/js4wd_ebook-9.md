@@ -74,7 +74,7 @@ paragraphs[ 0 ];
 But DOM methods don’t give us arrays, strictly speaking. Methods like `getElementsByTagName` return “node lists,” which behave a lot like arrays. Each item in a `nodeList` refers to an individual node in the DOM—like a `p` or a `div`—and will come with a number of DOM-specific methods built in. For example, the `innerHTML` method will return any markup a node contains—elements, text, and so on—as a string:
 
 ```
-var paragraphs = document.getElementsByTagName( "p" ),lastIndex = paragraphs.length - 1, /\* Use the length of the \`paragraphs\` node list minus 1 (because of zero-indexing) to get the last paragraph on the page \*/
+var paragraphs = document.getElementsByTagName( "p" ),lastIndex = paragraphs.length - 1, /* Use the length of the \`paragraphs\` node list minus 1 (because of zero-indexing) to get the last paragraph on the page */
   lastParagraph = paragraphs[ lastIndex ]; 
 lastParagraph.innerHTML;
 And that’s how I spent my summer vacation.

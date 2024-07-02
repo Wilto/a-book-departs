@@ -291,10 +291,10 @@ The code above is really just another way of writing our first `for` loop. Inste
 This isn’t a common case for `while`, however—we could write this much more concisely using `for`, after all. We’ll use `while` when we *don’t* have any way of measuring the number of iterations necessary, and instead want to continue to run the loop until a certain condition is met. For example, the following snippet of code will continually generate a number between zero and nine, only stopping when that random number equals three:
 
 ```
-var random = Math.floor( Math.random() \* 10 );
+var random = Math.floor( Math.random() * 10 );
 while( random !== 3 ){
   console.log( "Nope, not " + random );
-  var random = Math.floor( Math.random() \* 10 );
+  var random = Math.floor( Math.random() * 10 );
 }
 console.log( "Got it!" );
 Nope, not 5
@@ -324,7 +324,7 @@ Instead of evaluating the condition then deciding whether or not to run the code
 
 ```
 do {
-  var random = Math.floor( Math.random() \* 10 );
+  var random = Math.floor( Math.random() * 10 );
   console.log( "Is it... " + random + "?" );
 } while( random !== 3 );
 console.log( "Got it!" );

@@ -35,9 +35,9 @@ A lot of these operators will be familiar, even to those of us that just *barely
 The mathematical Order of Operations applies here: any expressions wrapped in parentheses are evaluated first, followed by exponents, multiplication, division, addition, and subtraction. I bet you never thought you’d be hearing the phrase “Please Excuse My Dear Aunt Sally” again, but time and math make fools of us all.
 
 ```
-2\*2-2
+2*2-2
 2
-2\*(2-2)
+2*(2-2)
 0
 ```
 
@@ -149,7 +149,7 @@ We can even reassign a value to a variable using the variable itself:
 ```
 foo = 100;
 100
-foo = foo \* foo;
+foo = foo * foo;
 10000
 ```
 

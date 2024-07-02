@@ -47,7 +47,7 @@ Since `if` blindly evaluates the contents of the two parentheses that follow it 
 ```
 var foo = false;
 if( foo ) {
-  /\* Any code placed here will never execute, unless you change \`foo\` to \`true\` \*/
+  /* Any code placed here will never execute, unless you change `foo` to `true` */
 }
 ```
 
@@ -214,7 +214,7 @@ The same way `==` and `===` return a `true` value if the two values being compar
 ```
 var foo = 2;
 if( foo != 5 ) {
-  console.log( "\`foo\` is not equal to five" ); 
+  console.log( "`foo` is not equal to five" ); 
 }
 ```
 
@@ -451,7 +451,7 @@ function daysPassedThisWeek( numericDay ) {
       console.log( "Wait, that isn’t a numbered day       of the week." );
   }
 }
-daysPassedThisWeek( 3 ); /\* Today is the third day of the week. \*/
+daysPassedThisWeek( 3 ); /* Today is the third day of the week. */
 The following days have already happened this week:
 Tuesday
 Monday
@@ -495,7 +495,7 @@ function daysPassedThisWeek( numericDay ) {
       console.log( "Sunday" );
   }
 }
-daysPassedThisWeek( 5 ); /\* Today is the fifth day of the week. \*/
+daysPassedThisWeek( 5 ); /* Today is the fifth day of the week. */
 The following days have already happened this week:
 Thursday
 Wednesday
