@@ -6,8 +6,11 @@ media_folder: '../_src/chapter/image'
 public_folder: 'image'
 
 collections:
-  - file: "_src/index.md"
+  - files: '_src/index.md'
+    folder: '_src/'
     label: "Home"
+    create: false
+    delete: false
     name: "home"
     editor:
       preview: false
