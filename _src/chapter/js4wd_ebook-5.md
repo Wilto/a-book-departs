@@ -172,7 +172,7 @@ Fortunately, these methods have little place in production code—they’re real
 
 #### Working in the console
 
-Now, the JavaScript console is more than just a place to log messages—you likely noticed the blinking prompt below the logs earlier. This input is the REPL I mentioned earlier—the *read-eval\[uate\]-print* *loop*.
+Now, the JavaScript console is more than just a place to log messages—you likely noticed the blinking prompt below the logs earlier. This input is the REPL I mentioned earlier—the *read-eval[uate]-print* *loop*.
 
 This short explanation of the REPL is that it allows us to send things directly to the browser’s JavaScript parser, without needing to update our script file and reload the page. If you enter the same `console.log("Hello, World.");` in this space and hit return, it appears in the console.
 
@@ -215,20 +215,23 @@ Far more important than that, however, is keeping in mind that you won’t alway
 There are two flavors of comment native to JavaScript, one of which will be familiar to anyone who’s spent quality time with CSS. Multiline comments are handled using the same syntax as CSS comments:
 
 ```
-/\* This is a multi-line comment.
+/* This is a multi-line comment.
 Anything between these sets of characters will be
 ignored when the script is executed. This form of
-comment needs to be closed. \*/
+comment needs to be closed. */
 ```
 
 JavaScript also allows for single-line comments, which don’t need to be explicitly closed. Instead, they close as soon as you start a new line.
 
+```
 // This is a single-line comment.
+```
 
 Unexpectedly, single-line comments can wrap to as many lines as necessary in your *editor,* so long as they don’t contain a line break—as soon as you press Return to start a new line, the comment is closed, and you’re back into executable code. The wrapping that might be performed by your code editor—depending on the editor itself and your settings—is called “soft wrapping.” Single-line comments won’t be impacted by soft wrapping, since it’s strictly an editor-level convenience.
 
+```
 console.log("Hello, World."); // Note to self: should “World” be capitalized here?
-
+```
 ## WE’RE READY
 
 Now that we know the rules of the game and we’ve set up a couple of places to experiment, we’re ready to start learning about the building blocks that make up JavaScript. In terms of sitting down and writing a script from start to finish, they might not seem like they amount to much on their own—but the things we’re about to cover in the next chapter are critical to understanding how JavaScript treats data.
