@@ -180,14 +180,17 @@ figcaption {
 	color: #666;
 	font-family: "League Gothic", sans-serif;
 	font-weight: normal;
-	font-size: 1.25em;
+	font-size: 1.45em;
 	letter-spacing: .05em;
 	text-transform: uppercase;
 	margin: .25em 0 0 0;
 }
 .pub-info p {
-	font-size: .925em;
+	font-size: 1em;
 	line-height: 1.55;
+}
+.pub-info p code {
+	font-size: 1.2em;
 }
 .chapter-header {
 	display: flex;
