@@ -6,17 +6,6 @@ media_folder: '../_src/chapter/image'
 public_folder: 'image'
 
 collections:
-  - name: 'pages'
-    label: 'Pages'
-    files: 
-      - label: 'Homepage'
-        name: 'home'
-        file: '_src/index.md'
-        editor:
-          preview: false
-        fields:
-          - { label: 'Heading', name: 'title', widget: 'string', required: false  }
-          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
   - name: 'chapter'
     label: 'Chapters'
     folder: '_src/chapter'
@@ -31,3 +20,14 @@ collections:
       - { label: 'Chapter Title', name: 'title', widget: 'string' }
       - { label: 'Order', name: 'tocOrder', widget: 'number', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown', required: false }
+  - name: 'pages'
+    label: 'Pages'
+    files: 
+      - label: 'Homepage'
+        name: 'home'
+        file: '_src/index.md'
+        editor:
+          preview: false
+        fields:
+          - { label: 'Heading', name: 'title', widget: 'string', required: false  }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
