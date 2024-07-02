@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "ELEVENTY_ENV=development npx eleventy --serve",
-    "extract": "node ./util/processBook.mjs",
+    "extract": "rimraf chapter/*.md && node ./util/processBook.mjs",
     "production": "eleventy"
   },
   "engines": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Wilto/writing.git"
+    "url": "git@github.com:Wilto/a-book-departs.git"
   },
   "author": {
     "name": "Mat Marquis",
@@ -21,9 +21,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Wilto/writing/issues"
+    "url": "https://github.com/Wilto/a-book-departs/issues"
   },
-  "homepage": "https://github.com/Wilto/writing/",
+  "homepage": "https://github.com/Wilto/a-book-departs/",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0-alpha.13",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
@@ -41,6 +41,7 @@
     "@eatonfyi/dq": "github:eaton/dq",
     "@jamshop/eleventy-filter-dump": "^1.0.4",
     "@sveltia/cms": "^0.34.8",
-    "markdown-it-eleventy-img": "^0.10.2"
+    "markdown-it-eleventy-img": "^0.10.2",
+    "rimraf": "^5.0.7"
   }
 }
