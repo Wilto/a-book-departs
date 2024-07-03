@@ -34,7 +34,7 @@
 	background: #ccc;
 	padding-top: clamp(6.25em, 15vw, 12em);
 	.outer-wrap {
-		padding-bottom: 1.75%;
+		padding-bottom: 6.5vw;
 	}
 }
 .title-section h1 {
@@ -92,10 +92,6 @@ figure {
 }
 .book-body {
 	padding-top: 2.5%;
-}
-
-.pub-info > *:nth-of-type( even ) {
-	border-left: 1px solid #ccc;
 }
 
 .copyright p {

@@ -41,6 +41,7 @@
     "@eatonfyi/dq": "github:eaton/dq",
     "@jamshop/eleventy-filter-dump": "^1.0.4",
     "@sveltia/cms": "^0.34.8",
+    "@wilto/markdown-it-img-caption": "github:Wilto/markdown-it-img-caption",
     "markdown-it-eleventy-img": "^0.10.2",
     "rimraf": "^5.0.7"
   }

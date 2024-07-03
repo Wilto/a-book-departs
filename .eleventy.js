@@ -1,6 +1,6 @@
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 const markdownIt = require('markdown-it');
-const markdownItCaption = require('./util/caption');
+const markdownItCaption = require('@wilto/markdown-it-img-caption');
 const dumpFilter = require("@jamshop/eleventy-filter-dump");
 const path = require('path');
 const sass = require('sass');
