@@ -37,7 +37,7 @@ In 2013, Adaptive Path turned its expertise into a detailed guide, available fre
 
 Constructing a journey map usually starts, as so many UX processes do, with sticky notes. Working as a team, you map out a user’s journey over time, with the steps extending horizontally. Below each step, use a different-colored sticky note to document touchpoints and channels, as well as what a user is doing, thinking, and feeling. The result will be a big (and messy) grid with bands of color, stretching across the wall (FIG 7.1).
 
-![Figure](image/Fig7-1_journeymap.png "FIG. 7.1: A typical journey mapping activity, where participants use sticky notes to show a user progress through multiple stages and needs over time.")
+![Figure](../image/Fig7-1_journeymap.png "FIG. 7.1: A typical journey mapping activity, where participants use sticky notes to show a user progress through multiple stages and needs over time.")
 
 Journey mapping brims with benefits. It helps a team to better think from a user’s point of view when evaluating content, identify gaps or disconnects across touchpoints or channels, and provide a framework for making iterative improvements to a major system over time. But we’ve found this technique can also be a powerful window into identifying previously unrealized, or unexamined, stress cases—if you think carefully about whose journey you’re mapping.
 

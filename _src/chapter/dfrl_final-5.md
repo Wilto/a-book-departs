@@ -23,7 +23,7 @@ To see a clear picture of the designers’ intent, let’s break down Year in Re
 * The default status text: “I had a great year. Thanks for being a part of it!”
 * The project’s very nature: to collect and present memories from the past year.
 
-![Figure](image/Fig1-1_Year-in-review-ad.png "FIG 1.1: The module promoting Facebook’s Year in Review to Eric.")
+![Figure](../image/Fig1-1_Year-in-review-ad.png "FIG 1.1: The module promoting Facebook’s Year in Review to Eric.")
 
 Together, these point to a fundamental design direction, which we would articulate as something like:
 
@@ -118,7 +118,7 @@ Both On This Day and Year in Review 2015 show what it looks like when an organiz
 
 Here and elsewhere in this book, you’ll find that there’s a lot to learn from Facebook. With a core mission of connecting people and a massive user base, Facebook is often the first to stumble into these tricky subjects—because when something goes wrong for just 5% of users, it affects more than 50 million people. As we’ve seen already, those stumbles are often a trigger for designers to think through a wider range of human experiences and emotional contexts, and take compassionate steps forward.
 
-![Figure](image/Fig1-2.png "FIG 1.2: Facebook’s 2015 Year in Review ad defaults to neutral copy and avoids mixing users’ images with any celebratory design elements.")![Figure](image/Fig1-3_On-This-Day-copy.png "FIG 1.3: Facebook’s On This Day feature.")
+![Figure](../image/Fig1-2.png "FIG 1.2: Facebook’s 2015 Year in Review ad defaults to neutral copy and avoids mixing users’ images with any celebratory design elements.")![Figure](../image/Fig1-3_On-This-Day-copy.png "FIG 1.3: Facebook’s On This Day feature.")
 
 ## FIND FRACTURES
 
@@ -140,7 +140,7 @@ That use case, like Facebook’s, is full of assumptions:
 
 Let’s look at that third assumption more closely. The reality is, not everything people upload to Flickr is quite so easy to identify. Sometimes, people visit a concentration camp—or a “jungle gym,” as Flickr’s autotagging originally labeled photos of Dachau’s “Arbeit macht frei” gates. Another tag read “sport,” as if the prisoners were at some sort of athletic camp (FIG 1.4).
 
-![Figure](image/Fig1-4_Flickr-autotagging.png "FIG 1.4: Tags on an image of the concentration camp Dachau. Image from The Guardian, May 20, 2015 (http://bkaprt.com/dfrl/01-03/).")
+![Figure](../image/Fig1-4_Flickr-autotagging.png "FIG 1.4: Tags on an image of the concentration camp Dachau. Image from The Guardian, May 20, 2015 (http://bkaprt.com/dfrl/01-03/).")
 
 Other examples include a photo of a black man tagged with “ape”—something Google’s Photos app *also* did, two months later, when it labeled black people as “gorillas” ([http://bkaprt.com/dfrl/01-04/](http://bkaprt.com/dfrl/01-04/)).
 

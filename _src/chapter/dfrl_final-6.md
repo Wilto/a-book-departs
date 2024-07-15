@@ -38,7 +38,7 @@ We often assume something will be “simple” for a user: “This form field wi
 
 Take gender. We ask for it all the time: when we’re onboarding new users, signing them up for a newsletter, requesting their mailing address. Often, those interfaces offer only a binary choice between male and female (FIG 2.1)
 
-![](image/Fig2-1_Gender-selector.png "FIG 2.1: A binary gender selector leaves people out—and often isn’t even needed (http://bkaprt.com/dfrl/02-01/).")
+![](../image/Fig2-1_Gender-selector.png "FIG 2.1: A binary gender selector leaves people out—and often isn’t even needed (http://bkaprt.com/dfrl/02-01/).")
 
 But gender isn’t so simple. There are people who were born one gender but now identify as another. People who are in the process of transitioning between genders. People who are not—or prefer not to identify as—any specific gender. People who do identify with a gender, but prefer not to share that information. These are real people.
 
@@ -60,17 +60,17 @@ It might not be easy to convince your company to stop asking for unnecessary inf
 
 Removing gender doesn’t always make sense, though. Gender is often a big part of how people identify and represent themselves—which means that on social sites, many people will *want* to specify their gender. In these circumstances, we can take a cue from Facebook, which overhauled its gender settings in 2014 to better serve a range of identities. Now users can choose “Male,” “Female,” or “Custom” (FIG 2.2).
 
-![Figure](image/Fig2-2_Facebook-gender-select.png "FIG 2.2: Facebook’s gender selection menu gives users a chance to define themselves.")
+![Figure](../image/Fig2-2_Facebook-gender-select.png "FIG 2.2: Facebook’s gender selection menu gives users a chance to define themselves.")
 
 If a user chooses “Custom,” they can type whatever they want—but Facebook also offers a list of common choices  (FIG 2.3).
 
-![Figure](image/Fig2-3_Facebook-gender-custom.png "FIG 2.3: Common gender selections prepopulate a dropdown menu, but a user can type whatever they want. This is what’s available if you type a t.")
+![Figure](../image/Fig2-3_Facebook-gender-custom.png "FIG 2.3: Common gender selections prepopulate a dropdown menu, but a user can type whatever they want. This is what’s available if you type a t.")
 
 Facebook also allows users to choose the pronoun they’d like to use for their activity: female, male, or neutral (FIG 2.4).
 
 All this adds up to a flexible experience—one that gives users the space to define themselves, and accepts them for whatever that definition is.
 
-![Figure](image/Fig2-4_Facebook-pronoun.png "FIG 2.4: Facebook’s pronoun options include a neutral option for those who don’t identify as, or prefer not to be labeled as, he or she.")
+![Figure](../image/Fig2-4_Facebook-pronoun.png "FIG 2.4: Facebook’s pronoun options include a neutral option for those who don’t identify as, or prefer not to be labeled as, he or she.")
 
 ## ASK ONLY FOR WHAT YOU NEED
 
@@ -88,7 +88,7 @@ We can extend Mullican’s thinking beyond phone numbers and credit cards to any
 
 Gender is a common way this plays out, but it’s far from the only one. We’ve seen religion selectors that list only the most popular choices, or force you to select “none” if yours isn’t listed; nationality fields that use outdated or disputed country names; and race/ethnicity dropdown menus that can’t account for people who identify with multiple backgrounds (FIG 2.5). Whatever kind of information we ask users to provide, the more rigid we are about what we accept, the more people we leave out.
 
-![Figure](image/Fig2-5_Race-ethnicity-menu.png "FIG 2.5: A dropdown menu for race/ethnicity. Users who identify with multiple races must mark the generic “Multiracial” rather than report their actual identity.")
+![Figure](../image/Fig2-5_Race-ethnicity-menu.png "FIG 2.5: A dropdown menu for race/ethnicity. Users who identify with multiple races must mark the generic “Multiracial” rather than report their actual identity.")
 
 ## ACCEPT A BROADER RANGE OF ANSWERS
 
@@ -104,7 +104,7 @@ What does a “real” name look like? According to Facebook’s help content as
 
 Shane Creepingbear met this standard. So did Lance Browneyes, whose name Facebook shortened to Brown, even after he sent in proof of his legal name ([http://bkaprt.com/dfrl/02-07/](http://bkaprt.com/dfrl/02-07/)). So did Robin Kills the Enemy. So did Dana Lone Hill. Yet they were denied the ability to express their real names—something fundamental to their identities.
 
-![Figure](image/Fig2-6_Creepingbear.png "FIG 2.6: The tweet Shane Creepingbear posted when Facebook rejected his name  (http://bkaprt.com/dfrl/02-05/).")
+![Figure](../image/Fig2-6_Creepingbear.png "FIG 2.6: The tweet Shane Creepingbear posted when Facebook rejected his name  (http://bkaprt.com/dfrl/02-05/).")
 
 Why? Because Facebook’s perception of what’s “real” was too narrow to meet the needs of actual users. As a result, these users were left out: blocked, forced to change their names, or required—sometimes multiple times—to send in proof of identity.
 
@@ -132,7 +132,7 @@ Let’s take a step back and consider how Facebook could it have foreseen this �
 
 Even with this short list, we can more clearly see both the choices in front of us and the ramifications of those choices—giving us a better foundation from which to evaluate the most compassionate decisions for our users.
 
-![Figure](image/7.png "FIG 2.7: Outlining the reasons for, and implications of, requesting a piece of user data can help you make better choices.")
+![Figure](../image/7.png "FIG 2.7: Outlining the reasons for, and implications of, requesting a piece of user data can help you make better choices.")
 
 We’ll leave it to you as a reader to decide whether Facebook’s real-name policy makes sense, but let’s assume we’ve decided it should stay. That brings us to the second half of Postel’s statement: “Be liberal in what we accept from others.”
 
@@ -144,19 +144,19 @@ Let’s break down the actions that led to the rejection of Native users’ name
 
 Until December 2015, the process to report a name was straightforward: you went to the profile of the person you wanted to flag and selected “Report.” From there, you were asked to select a reason for the report (FIG 2.8).
 
-![Figure](image/Fig2-7_Facebook-account-report.png "FIG 2.8: Facebook’s account-reporting feature allows a user to report a name another profile is using as fake.")
+![Figure](../image/Fig2-7_Facebook-account-report.png "FIG 2.8: Facebook’s account-reporting feature allows a user to report a name another profile is using as fake.")
 
 After selecting a reason, you chose a next step: report the profile to Facebook administrators; unfriend, unfollow, or block the profile in question; or send the person a message (FIG 2.9). This ease of reporting makes sense: if Facebook’s aim is to connect people “authentically,” then giving users the power to report abuse or fakes is critical to their safety and trust.
 
 But when anyone can report anyone else at any time, some people will abuse the process. That’s what happened to the drag queens and kings in 2014: a group intent on attacking them systematically targeted their profiles. Creepingbear has said it’s also what happens to people like him, who openly discuss racism against Native Americans on Facebook pages.
 
-![Figure](image/Fig2-8_Facebook-abuse-reporting2.png "FIG 2.9: Until late 2015, the next step of the process allowed a user to select what they wanted to do about the issue: report the user’s name to Facebook, or take one of several other options that kept Facebook administrators out of it.")
+![Figure](../image/Fig2-8_Facebook-abuse-reporting2.png "FIG 2.9: Until late 2015, the next step of the process allowed a user to select what they wanted to do about the issue: report the user’s name to Facebook, or take one of several other options that kept Facebook administrators out of it.")
 
 If our goal is to be liberal in what we accept from users, then we want to allow the broadest range of real names on the site—which means we need to eliminate as many of these false reports as possible.
 
 In December 2015, Facebook announced it was rolling out updates designed to limit those false reports. The new system asks those reporting a false name to select a reason for the report, such as “This profile doesn’t represent a real person,” and then to provide additional details about the problem  (FIG 2.10).
 
-![Figure](image/Fig2-10.png "FIG 2.10: Facebook’s new process asks those reporting a name to provide specific details about the problem. Image courtesy Facebook (http://bkaprt.com/dfrl/02-09/).")
+![Figure](../image/Fig2-10.png "FIG 2.10: Facebook’s new process asks those reporting a name to provide specific details about the problem. Image courtesy Facebook (http://bkaprt.com/dfrl/02-09/).")
 
 Facebook has also been working on the communications a user receives when their profile is flagged. Here’s what it said back in 2014, when Creepingbear’s profile was targeted:
 
@@ -180,7 +180,7 @@ If you got this message, you still might not like scanning copies of your driver
 
 In December 2015, Facebook announced that it was testing a new tool for those who are confirming the authenticity of their names (FIG 2.11):
 
-![Figure](image/Fig2-11.png "FIG 2.11: In December 2015, Facebook unveiled this tool, which will allow users to verify their identities, or to explain why they are using a false name. Image courtesy Facebook (http://bkaprt.com/dfrl/02-09/).")
+![Figure](../image/Fig2-11.png "FIG 2.11: In December 2015, Facebook unveiled this tool, which will allow users to verify their identities, or to explain why they are using a false name. Image courtesy Facebook (http://bkaprt.com/dfrl/02-09/).")
 
 > People can let us know they have a special circumstance, and then give us more information about their unique situation. This additional information will help our review teams better understand the situation so they can provide more personalized support. ([http://bkaprt.com/dfrl/02-09/](http://bkaprt.com/dfrl/02-09/))
 
@@ -210,7 +210,7 @@ Take Glow, an app that calls itself “your best friend through multiple phases 
 
 First, during onboarding, she was asked to select her “journey” from three options, none of which applied to her: “avoiding pregnancy,” “trying to conceive,” or “fertility treatments” (FIG 2.12).
 
-![Figure](image/Fig2-9_Glow-home.png "FIG 2.12: The Glow period tracker’s welcome screen. These are the only three reasons Glow thinks you might use its product.")
+![Figure](../image/Fig2-9_Glow-home.png "FIG 2.12: The Glow period tracker’s welcome screen. These are the only three reasons Glow thinks you might use its product.")
 
 Then, the options for cycle length started at twenty-two days. Because Delano’s cycle is shorter than that, the app became essentially unusable. Finally, once she set up the app anyway, she was chided for not using birth control—even though, with a female partner, her odds of getting pregnant are, well, rather low. Her assessment: “In three screens and fifteen seconds, the app has made numerous assumptions about my identity and health.”
 
@@ -222,7 +222,7 @@ All said, Delano’s attempt to track her period was alienating: a series of het
 
 Glow could have skipped the assumptions about why women would track their periods and simply asked users what they wanted to track instead—something period-tracking app Clue does right during onboarding (FIG 2.13).
 
-![Figure](image/Fig2-10_Clue-screens.png "FIG 2.13: The Clue onboarding process allows you to choose what you want to track and be reminded of, without judgment.")
+![Figure](../image/Fig2-10_Clue-screens.png "FIG 2.13: The Clue onboarding process allows you to choose what you want to track and be reminded of, without judgment.")
 
 Rather than force-fit users into one set “journey,” Clue bills itself specifically as a period tracker that’s “made for you.” One headline even reads, “It's your fertility.” What Clue understands—and we could all stand to remember—is that whatever its users want to track, that’s their choice, not Clue’s. After all, for each person, only one use case matters: *theirs*.
 

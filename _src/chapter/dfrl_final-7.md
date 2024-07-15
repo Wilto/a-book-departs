@@ -44,11 +44,11 @@ All those headings left her overwhelmed—and even worse, as she skimmed, she co
 
 Even though this woman knew to go to the RAINN website, she couldn’t think critically about what she read. Her cognitive resources were so depleted by her experience and its aftermath that she “was not in the right state of mind” to realize that her assault *counted*. She felt ashamed and even more alone.
 
-![Figure](image/Fig3-1_RAINNold.png "FIG 3.1: Types of Sexual Violence page from RAINN, early 2015  (http://bkaprt.com/dfrl/03-02/).")
+![Figure](../image/Fig3-1_RAINNold.png "FIG 3.1: Types of Sexual Violence page from RAINN, early 2015  (http://bkaprt.com/dfrl/03-02/).")
 
 The good news is that RAINN has since clarified and shortened this page. As of September 2015, rather than listing a huge number of very specific types of assault, it displays a few broad, inclusive categories—so a user can immediately map almost any situation to one of them. Topics covering more specific types of abuse, such as military sexual assault, appear lower on the page, with less visual priority. The result is a page that’s easier for any user to skim, understand, and see oneself in (FIG 3.2).
 
-![Figure](image/Fig3-2_RAINNnew.png "FIG 3.2: Types of Sexual Violence page from RAINN, September 2015  (http://bkaprt.com/dfrl/03-03/).")
+![Figure](../image/Fig3-2_RAINNnew.png "FIG 3.2: Types of Sexual Violence page from RAINN, September 2015  (http://bkaprt.com/dfrl/03-03/).")
 
 ## EVERYDAY STRESS CASES
 
@@ -79,7 +79,7 @@ Before we can address these scenarios, however, we need to imagine users who are
 
 Personas—fictional, archetypal characters that represent the users of a site or product—help us see a design from new perspectives, make decisions, and uncover blind spots. But personas often have their own blind spots, obscured by the bright light of a thousand happy stock photos (FIG 3.3).
 
-![Figure](image/Fig3-3_Persona-doc.png "FIG 3.3: Many persona documents look like this: smiling people leading ideal lives, rather than real people with real stresses.")
+![Figure](../image/Fig3-3_Persona-doc.png "FIG 3.3: Many persona documents look like this: smiling people leading ideal lives, rather than real people with real stresses.")
 
 For all our efforts to concoct diverse background stories and reasons for using our designs, we frequently only create idealized personas: attractive people happily interacting with our products and completing tasks. We feel better just by looking at them.
 
@@ -141,7 +141,7 @@ Some personas may not even appear in some contexts. At the children’s hospital
 
 Let’s play this out. Take three personas and their scenarios: a patient coming for a routine checkup, someone visiting a sick relative, and the parent of a child brought in by life-flight helicopter. Now look at three times of day—morning, late afternoon, and midnight. By slotting each persona into each context, we have nine potential combinations, but only seven realistic scenarios (FIG 3.4).
 
-![Figure](image/Fig3-4_Persona-context-grid.png "FIG 3.4: Placing personas within different potential contexts—here, varying times of day—can help you identify stress cases.")
+![Figure](../image/Fig3-4_Persona-context-grid.png "FIG 3.4: Placing personas within different potential contexts—here, varying times of day—can help you identify stress cases.")
 
 What we can see is that two of the three personas won’t even be in the hospital at midnight: there are no routine appointments, and visiting hours are long over. The only persona who might experience that context is the one in crisis.
 

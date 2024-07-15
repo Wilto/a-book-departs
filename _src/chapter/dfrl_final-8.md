@@ -81,7 +81,7 @@ That copy provides crucial context for people who are changing their gender iden
 
 Another example of communicating the implications of a user’s action is on the card-blocking screen of the Simple mobile banking app. This is where a user goes to deactivate a lost or stolen bank card (FIG 4.2).
 
-![Figure](image/Fig4-1_Facebook-gender-pronoun.png "FIG 4.1: If a user changes the pronoun they want to go by on Facebook, they’re warned that their preferred pronoun will be public, before the change is published.")![Figure](image/Fig4-2_security-for-your-swipes-sc-2-608cf8f8.png "FIG 4.2: Simple’s card-blocking feature makes it clear that if you place a block on your account, you can undo it later (http://bkaprt.com/dfrl/04-04/).")
+![Figure](../image/Fig4-1_Facebook-gender-pronoun.png "FIG 4.1: If a user changes the pronoun they want to go by on Facebook, they’re warned that their preferred pronoun will be public, before the change is published.")![Figure](../image/Fig4-2_security-for-your-swipes-sc-2-608cf8f8.png "FIG 4.2: Simple’s card-blocking feature makes it clear that if you place a block on your account, you can undo it later (http://bkaprt.com/dfrl/04-04/).")
 
 Notice the text at the top of the screen: “This is a reversible process.” More information follows, but that simple sentence makes it instantly clear that if you’re not sure where your card went, you can block it without worrying that you’re about to lock yourself out of your account until a new one arrives.
 

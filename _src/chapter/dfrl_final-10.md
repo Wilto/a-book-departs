@@ -148,7 +148,7 @@ We’ve found interviews to be potent tools for understanding a broader range of
 
 According to Soucy, collaging can either supplement or replace traditional interviews. To do it, Soucy recommends gathering a random set of 150–200 stock photos and magazine cutouts depicting things like nature scenes, people, and everyday objects. From there, you’ll need just a few crafting supplies: paper, scissors, glue or tape, and pens.
 
-![Figure](image/Fig6-1_Collaging-Soucy.png "FIG 6: An example from a collaging session led by Kyle Soucy. Participants select images around a given prompt, then explain why they chose each one. Photograph courtesy Kyle Soucy.")
+![Figure](../image/Fig6-1_Collaging-Soucy.png "FIG 6: An example from a collaging session led by Kyle Soucy. Participants select images around a given prompt, then explain why they chose each one. Photograph courtesy Kyle Soucy.")
 
 To create the collage, give the participant a specific prompt, such as, “Describe what your commute is like,” or “Tell a story about what it’s like to manage your condition.” Then have them compile their collage by selecting from the collection of images. For each image, ask them to write a caption that explains why they chose it. Once they’re finished, have the participant walk you through their collage, and ask deeper questions as they describe each part of it.
 
