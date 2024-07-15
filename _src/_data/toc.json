@@ -1,86 +1,116 @@
 [
   {
-    "id": "navpoint14",
-    "playOrder": 14,
+    "id": "navpoint19",
+    "playOrder": 19,
     "navLabel": "Cover",
     "content": "cover.xhtml"
   },
   {
     "id": "navpoint1",
     "playOrder": 1,
-    "navLabel": "Introduction",
-    "content": "js4wd_ebook-4.xhtml"
+    "navLabel": "More From A Book Apart",
+    "content": "dfrl_final.xhtml"
   },
   {
     "id": "navpoint2",
     "playOrder": 2,
-    "navLabel": "Chapter 1. Getting Set Up",
-    "content": "js4wd_ebook-5.xhtml"
+    "navLabel": "Foreword",
+    "content": "dfrl_final-3.xhtml"
   },
   {
     "id": "navpoint3",
     "playOrder": 3,
-    "navLabel": "Chapter 2. Understanding Data Types",
-    "content": "js4wd_ebook-6.xhtml"
+    "navLabel": "Introduction",
+    "content": "dfrl_final-4.xhtml"
   },
   {
     "id": "navpoint4",
     "playOrder": 4,
-    "navLabel": "Chapter 3. Conditional Statements",
-    "content": "js4wd_ebook-7.xhtml"
+    "navLabel": "Chapter 1. Challenge Your Vision",
+    "content": "dfrl_final-5.xhtml"
   },
   {
     "id": "navpoint5",
     "playOrder": 5,
-    "navLabel": "Chapter 4. Loops",
-    "content": "js4wd_ebook-8.xhtml"
+    "navLabel": "Chapter 2. Make Space for Real People",
+    "content": "dfrl_final-6.xhtml"
   },
   {
     "id": "navpoint6",
     "playOrder": 6,
-    "navLabel": "Chapter 5. DOM Scripting",
-    "content": "js4wd_ebook-9.xhtml"
+    "navLabel": "Chapter 3. Incorporate Stress Cases",
+    "content": "dfrl_final-7.xhtml"
   },
   {
     "id": "navpoint7",
     "playOrder": 7,
-    "navLabel": "Conclusion",
-    "content": "js4wd_ebook-10.xhtml"
+    "navLabel": "Chapter 4. Communicate Context and Intent",
+    "content": "dfrl_final-8.xhtml"
   },
   {
     "id": "navpoint8",
     "playOrder": 8,
-    "navLabel": "Resources",
-    "content": "js4wd_ebook-11.xhtml"
+    "navLabel": "Chapter 5. Cultivate Compassion",
+    "content": "dfrl_final-9.xhtml"
   },
   {
     "id": "navpoint9",
     "playOrder": 9,
-    "navLabel": "Acknowledgments",
-    "content": "js4wd_ebook-12.xhtml"
+    "navLabel": "Chapter 6. Learn From Users",
+    "content": "dfrl_final-10.xhtml"
   },
   {
     "id": "navpoint10",
     "playOrder": 10,
-    "navLabel": "References",
-    "content": "js4wd_ebook-13.xhtml"
+    "navLabel": "Chapter 7. Humanize Your Process",
+    "content": "dfrl_final-11.xhtml"
   },
   {
     "id": "navpoint11",
     "playOrder": 11,
-    "navLabel": "Index",
-    "content": "js4wd_ebook-14.xhtml"
+    "navLabel": "Chapter 8. Make the Case",
+    "content": "dfrl_final-12.xhtml"
   },
   {
     "id": "navpoint12",
     "playOrder": 12,
-    "navLabel": "About the Author",
-    "content": "js4wd_ebook-15.xhtml"
+    "navLabel": "Conclusion",
+    "content": "dfrl_final-13.xhtml"
   },
   {
     "id": "navpoint13",
     "playOrder": 13,
+    "navLabel": "Resources",
+    "content": "dfrl_final-14.xhtml"
+  },
+  {
+    "id": "navpoint14",
+    "playOrder": 14,
+    "navLabel": "Acknowledgments",
+    "content": "dfrl_final-15.xhtml"
+  },
+  {
+    "id": "navpoint15",
+    "playOrder": 15,
+    "navLabel": "References",
+    "content": "dfrl_final-16.xhtml"
+  },
+  {
+    "id": "navpoint16",
+    "playOrder": 16,
+    "navLabel": "Index",
+    "content": "dfrl_final-17.xhtml"
+  },
+  {
+    "id": "navpoint17",
+    "playOrder": 17,
     "navLabel": "About A Book Apart",
-    "content": "js4wd_ebook-16.xhtml"
+    "content": "dfrl_final-18.xhtml"
+  },
+  {
+    "id": "navpoint18",
+    "playOrder": 18,
+    "navLabel": "About the Authors",
+    "content": "dfrl_final-19.xhtml"
   }
 ]
