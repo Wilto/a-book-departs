@@ -97,6 +97,11 @@
 		font-size: 1.1em;
 		font-weight: bold;
 	}
+	& > ul,
+	& > ol {
+		margin-top: 1.5em;
+		margin-bottom: 1.8em;
+	}
 	li,
 	p {
 		font-family: "Lora", serif;
@@ -106,12 +111,21 @@
 		margin: .625em 0;
 	}
 	li {
+		font-size: clamp( .9rem, 1.5vw, 1.25rem );
 		line-height: 1.4;
+		margin: .25em 0;
 	}
 
 	p + p {
 		padding: 0;
 		margin: 1.25em 0;
+	}
+	blockquote {
+		margin: 1.75em 0 2.2em 2vw;
+	}
+	blockquote p {
+		font-style: italic;
+		color: #666;
 	}
 }
 code {
