@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: dfrl
 
-media_folder: '../_src/image'
-public_folder: 'image'
+media_folder: '/_src/image'
+public_folder: '/image'
 
 collections:
   - name: 'pages'
