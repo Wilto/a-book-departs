@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<meta property="og:site_name" content="{{ data.title }}">
-		<link rel="canonical" href="{{ data.url }}">
+		<link rel="canonical" href="{{ meta.url }}">
 
 		<title>{{ data.title }}</title>
 		<meta name="description" content="{{ data.description }}">
@@ -27,21 +27,21 @@
 		<script type="application/ld+json">
 			{
 				"@context": "http://schema.org",
-				"@type": "Organization",
-				"url": "{{ data.url }}",
-				"title": "{{ bookMeta.title }}",
-				"author_name": "{{ bookMeta.creator }}",
-				"logo": "{{ data.url }}/_assets/img/card.gif"
+				"@type": "Book",
+				"isbn": "{{ meta.identifier}}",
+				"url": "{{ meta.url }}",
+				"name": "{{ meta.title }}",
+				"publisher": "{{ meta.creator }}"
 			}
 		</script>
 
-		<meta property="og:site_name" content="{{ bookMeta.title }}">
-		<meta property="og:title" content="{{ data.title }}">
-		<meta property="og:url" content="{{ data.url }}">
-		<meta property="og:image" content="{{ data.url }}/_assets/img/card.gif">
+		<meta property="og:site_name" content="{{ meta.title }}">
+		<meta property="og:title" content="{{ meta.title }}">
+		<meta property="og:url" content="{{ meta.url }}">
+		<meta property="og:image" content="{{ meta.url }}/_assets/img/card.png">
 		<meta property="og:image:alt" content="{{ data.description }}">
 
-		<meta name="author" content="{{ output-directory.data.meta.creator }}">
+		<meta name="author" content="{{ meta.creator }}">
 		{% set css %}
 			{% include "../_assets/css/globals.scss" %}
 			{% include "../_assets/css/layout.scss" %}
