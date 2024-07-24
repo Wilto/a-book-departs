@@ -30,6 +30,7 @@ module.exports = function(eleventyConfig) {
 		},
 	});
 
+	eleventyConfig.addPassthroughCopy("_src/image/");
 	eleventyConfig.addPassthroughCopy("_src/_assets/");
 	eleventyConfig.addFilter(
 		'cssmin',
