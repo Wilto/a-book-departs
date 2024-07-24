@@ -3,7 +3,7 @@ backend:
   branch: dfrl
 
 media_folder: '/_src/image'
-public_folder: '/image'
+public_folder: '../image'
 
 collections:
   - name: 'pages'
