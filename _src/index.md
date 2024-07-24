@@ -3,4 +3,6 @@ title: About this Book
 layout: home.njk
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+You can't always predict who will use your products, or what emotional state they'll be in when they do. But by identifying stress cases and designing with compassion, you'll create experiences that support more of your users, more of the time.
+
+Join Sara Wachter-Boettcher and Eric Meyer as they turn examples from more than a dozen sites and services into a set of principles you can apply right now. Whether you're a designer, developer, content strategist, or anyone who creates user experiences, you'll gain the practical knowledge to test where your designs might fail (before you ship!), vet new features or interactions against more realistic scenarios, and build a business case for making decisions through a lens of kindness. You can't know every user, but you can develop inclusive practices that support a wider range of people. This book will show you how.
