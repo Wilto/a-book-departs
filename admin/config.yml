@@ -23,6 +23,7 @@ collections:
         editor:
           preview: false
         fields:
+          - { label: 'URL', name: 'url', widget: 'string' }
           - { label: 'Color', name: 'color', widget: 'string' }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Author(s)', name: 'creator', widget: 'string' }
