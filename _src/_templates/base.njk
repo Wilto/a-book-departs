@@ -62,6 +62,11 @@
 			}
 			</style>
 
+			{% if page.url == '/' %}
+			<script>
+				if(location.hash) window.location = `/admin/#${location.href.split("#").pop()}`
+			</script>
+			{% endif %}
 			<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 	</head>
 	<body>

@@ -6,9 +6,9 @@ media_folder: '/_src/image'
 public_folder: '../image'
 
 collections:
-  - name: 'pages'
-    label: 'Website'
-    files: 
+  - name: 'settings'
+    label: 'Settings'
+    files:
       - label: 'Homepage'
         name: 'home'
         file: '_src/index.md'
@@ -29,7 +29,16 @@ collections:
           - { label: 'Author(s)', name: 'creator', widget: 'string' }
           - { label: 'Rights', name: 'rights', widget: 'string' }
           - { label: 'ISBN', name: 'identifier', widget: 'string' }
-
+  - name: 'pages'
+    label: 'Pages'
+    folder: '_src'
+    create: true
+    path: '{{title}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
   - name: 'chapter'
     label: 'Book Content'
     folder: '_src/chapter'

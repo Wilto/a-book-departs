@@ -7,5 +7,9 @@
   "rights": "Copyright © 2016 Eric Meyer and Sara Wachter-Boettcher",
   "language": "en-US",
   "identifier": "isbn:978-1-937557-41-6",
-  "date": "2016-02-27T04:19:17Z"
+  "date": "2016-02-27T04:19:17Z",
+  "ctas": [{
+    "url" : "/chapter/dfrl_final-3/",
+    "copy" : "Read it Free"
+  }]
 }

@@ -11,7 +11,9 @@ layout: base.njk
 			</div>
 		</div>
 		<div class="ctas">
-			<a href="{{ collections.sortedChapters[0].page.url }}" class="btn-cta">Read for Free</a>
+			{% for cta in meta.ctas %}
+			<a href="{{ cta.url }}" class="btn-cta">{{ cta.copy }}</a>
+			{% endfor %}
 		</div>
 	</div>
 </main>
