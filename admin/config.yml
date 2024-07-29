@@ -31,9 +31,9 @@ collections:
           - { label: 'ISBN', name: 'identifier', widget: 'string' }
   - name: 'pages'
     label: 'Pages'
-    folder: '_src'
+    folder: '_src/page'
+    slug: "{{slug}}"
     create: true
-    path: '{{title}}'
     editor:
       preview: false
     fields:
