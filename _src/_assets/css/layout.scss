@@ -1,15 +1,12 @@
 .masthead {
-	display: flex;
 	border-bottom: 1px solid rgba(0,0,0,.1);
-	flex-direction: row;
-	gap: 5%;
-	align-items: center;
-	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
 	z-index: 2;
+	padding-bottom: .425em;
 	background: #fefefe;
+	position: fixed;
 }
 .outer-wrap {
 	padding: 0 1em 6.5em 1em;
@@ -20,19 +17,51 @@
 	width: 45rem;
 }
 .mast-wrap {
-	padding: 0 5vw;
+	display: flex;
+	flex-direction: row;
+	padding: .35em 1em 0 1em;
 	margin: auto;
 	max-width: 100%;
-	width: 60rem;
+	gap: 5%;
+	align-items: flex-end;
 }
 .logo {
 	margin: 0;
-	padding: .55em 0 .5em 0;
+	padding: .15em 0 .125em 0;
 }
+.mininav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+.subnav {
+	max-width: 100%;
+}
+@media(max-width: 30em) {
+	.subnav {
+		width: 100%;
+	}
+}
+.header-nav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	gap: 2.5%;
+	margin-right: 1.5em;
+	align-items: center;
+
+	a {
+		display: block;
+		white-space: nowrap;
+	}
+}
+
 
 .cover {
 	background: #ccc;
-	padding-top: clamp(6.25em, 15vw, 12em);
+	padding-top: clamp(8.5em, 20vw, 15em);
 	.outer-wrap {
 		padding-bottom: 6.5vw;
 	}
@@ -93,7 +122,7 @@ figure {
 	justify-content: space-between;
 }
 .book-body {
-	padding-top: 2.5%;
+	padding-top: 5em;
 }
 
 .copyright p {
@@ -106,10 +135,13 @@ figure {
 }
 
 .skiplink {
-	position: relative;
-	z-index: 3;
+	top: 0;
+	z-index: 5;
+	min-width: 20em;
+	left: 50%;
+	text-align: center;
+	margin-left: -10em;
 }
-
 
 @keyframes nav-in {
 	from {
@@ -153,9 +185,6 @@ figure {
 	}
 }
 
-.mininav {
-	display: flex;
-}
 .toc-btn {
 	display: flex;
 	align-items: center;
@@ -186,6 +215,7 @@ figure {
 	top: 0;
 	right: 1em;
 	cursor: pointer;
+	z-index: 2;
 	&:after {
 		content: "×";
 		color: rgba(255,255,255,.7);
