@@ -8,7 +8,7 @@ Join Sara Wachter-Boettcher and Eric Meyer as they turn examples from more than 
 
 ### About the authors
 
-![Headshot of Eric Meyer, a white man with light hair and glasses wearing a blue shirt and dark grey blazer.](../image/author-eric-meyer-1608310581224.jpg)
+![Headshot of Eric Meyer, a white man with light hair and glasses wearing a blue shirt and dark grey blazer.](../image/author-eric-meyer-1608310581224.jpg "Eric A. Meyer started working on the web in late 1993. Since then, he’s been a college webmaster, one of the original CSS Samurai, a standards evangelist at Netscape, the author of many books and online resources, an occasional code artist, the technical lead at Rebecca’s Gift, and a cofounder of An Event Apart. He lives with his family in Cleveland.")
 
 **[Eric A. Meyer](https://meyerweb.com/)** started working on the web in late 1993. Since then, he’s been a college webmaster, one of the original CSS Samurai, a standards evangelist at Netscape, the author of many books and online resources, an occasional code artist, the technical lead at [Rebecca’s Gift](http://rebeccasgift.org/), and a cofounder of An Event Apart. He lives with his family in Cleveland.
 
