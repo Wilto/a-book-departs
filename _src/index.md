@@ -1,5 +1,5 @@
 ---
-title: About this Book
+title: About Design for Real Life
 layout: home.njk
 ---
 
