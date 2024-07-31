@@ -17,6 +17,14 @@ collections:
         fields:
           - { label: 'Heading', name: 'title', widget: 'string', required: false  }
           - { label: 'Body', name: 'body', widget: 'markdown', required: false }
+          - label: "CTA Buttons"
+            name: "ctas"
+            widget: "list"
+            allow_add: true
+            summary: '{{fields.copy}}'
+            fields:
+              - { label: "Button Text", name: copy, widget: "string" }
+              - { label: "URL", name: url, widget: "string" }
       - label: 'Settings'
         name: 'settings'
         file: '_src/_data/meta.json'

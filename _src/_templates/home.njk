@@ -11,7 +11,7 @@ layout: base.njk
 			</div>
 		</div>
 		<div class="ctas">
-			{% for cta in meta.ctas %}
+			{% for cta in ctas %}
 			<a href="{{ cta.url }}" class="btn-cta">{{ cta.copy }}</a>
 			{% endfor %}
 		</div>
