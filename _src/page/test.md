@@ -1,4 +1,3 @@
 ---
-title: Test
+title: Buy the book
 ---
-lorem
