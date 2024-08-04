@@ -1,3 +1,0 @@
----
-title: Buy the book
----
