@@ -11,13 +11,3 @@ These are the kinds of questions that Eric and Sara raise, and begin to answer, 
 All of us who create technology have a wonderful, challenging obligation to ensure that our work makes lives better for everyone it touches. *Design for Real Life* gives you the tools to start making sure the technology you create is as kind and humane as your intentions.
 
 **—Anil** **Dash**
-
-To my mother, Rebekka, who taught me to be brave.
-
-—Sara
-
-To the stars by which I steer: Kat, Carolyn, Rebecca, and Joshua.
-
-—Eric
-
-#663399becca
