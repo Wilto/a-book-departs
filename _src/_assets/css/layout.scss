@@ -184,6 +184,7 @@ figure {
 	top: 0;
 	right: 1em;
 	cursor: pointer;
+	z-index: 1;
 	&:after {
 		content: "×";
 		color: rgba(255,255,255,.7);
