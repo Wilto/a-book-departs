@@ -5,7 +5,7 @@ title: Buy the book
 
 ![Mockup of Design for Real Life print edition with the new 2024 cover](../image/dfrl-new-cover.png "Design for Real Life")
 
-Our original publisher, A Book Apart, has shut down—but you can now get a print or ebook copy of *Design for Real Life* republished by Eric and Sara. Here's where to buy: 
+A Book Apart is no longer selling books, but you can now get a print or ebook copy of *Design for Real Life* republished by Eric and Sara. Here's where to buy: 
 
 * USA: Bookshop.org, Barnes & Noble, Walmart.com
 * Canada: Chapters / Indigo 
