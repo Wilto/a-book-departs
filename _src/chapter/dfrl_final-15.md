@@ -2,7 +2,7 @@
 title: ACKNOWLEDGMENTS
 tocOrder: 14
 ---
-Thank you to our friends at A Book Apart: Tina Lee, who both called us on our bullshit and kindly smoothed out our rough edges; Katel LeDû, who cheered us on and kept things in motion; Jason Santa Maria and Jeffrey Zeldman, whose enthusiasm for our project means the world to us; and to the rest of the staff, whose talent and precision kept us from spending a single second worrying whether the details would come out right.
+Thank you to the folks who originally published this book through A Book Apart: Tina Lee, who both called us on our bullshit and kindly smoothed out our rough edges; Katel LeDû, who cheered us on and kept things in motion; Jason Santa Maria and Jeffrey Zeldman, whose enthusiasm for our project means the world to us; and to the rest of the staff, whose talent and precision kept us from spending a single second worrying whether the details would come out right.
 
 You know it’s a sign o’ the times when Anil Dash starts writing about a topic. Anil, some might say you’re just too demanding, but we think your call for humane tech is exactly what our industry needs. We’re incredibly thankful to count you as an advocate and friend. We owe you diamonds and pearls, starfish and coffee, and maybe even a little red Corvette. You’re one of the beautiful ones.
 
