@@ -33,7 +33,7 @@ But not everyone had a great year.
 
 One man had his Year in Review ad prefilled with a picture of his apartment on fire. Another got a picture of the urn containing his father’s ashes. A couple saw the sonogram of their third child, a pregnancy that later ended in miscarriage. Someone else got a photo of a friend’s gravestone, memorializing their death in the 9/11 attacks.
 
-For every one of those people, it’s a safe bet that hundreds of thousands or even millions more—given Facebook’s 1.5 billion monthly active users in 2015 ([http://bkaprt.com/dfrl/01-01/](http://bkaprt.com/dfrl/01-01/))—were confronted with similar experiences.
+For every one of those people, it’s a safe bet that hundreds of thousands or even millions more—given Facebook’s 1.5 billion monthly active users in 2015 ([http://newsroom.fb.com/company-info/](http://bkaprt.com/dfrl/01-01/))—were confronted with similar experiences.
 
 Year in Review imagined users who wanted to look back at their year and share the result with their friends, and assumed this experience would bring them a nostalgic smile. Everything about Year in Review, and, more crucially, about the extra prominence of a timeline ad, was perfectly tuned to that use case. For anyone who fit that idealized persona, the experience probably worked just as intended. By every common measure, the designers at Facebook succeeded.
 
@@ -78,15 +78,19 @@ Moreover, whenever you tell yourself nobody would ever act a certain way or come
 Once you have a list of potential user scenarios, look at the ways you might categorize or arrange those contexts, and see what each reveals about the design. For example, if you were working on Year in Review, you might organize users by whether they’re interested in sharing, and some reasons why they might feel as they do:
 
 * People who want to share
-    * Had a great year
-    * Had a horrible year
+
+  * Had a great year
+  * Had a horrible year
 * People who don’t want to share
-    * But want to relive it
-        * Great year
-        * Horrible year
-    * And don’t want to relive it
-        * Great year
-        * Horrible year
+
+  * But want to relive it
+
+    * Great year
+    * Horrible year
+  * And don’t want to relive it
+
+    * Great year
+    * Horrible year
 
 What do people who want to share have in common? How do they differ? You can repeat the process through other lenses, like whether they had a great year, and then whether they want to share those experiences. The more you look at your use cases in new ways, the easier it becomes to think differently about the possible outcomes.
 
@@ -111,7 +115,7 @@ This change of approach came from the feedback that Facebook received after Year
 Note how, as with Year in Review 2015, both the visual elements and the content are neutral, instead of assuming a memory will be positive. Facebook also makes clear that it might be wrong about what people want to relive: if someone clicks the dropdown in the top right, they can choose to never see that memory again. When they do, Facebook responds with:
 
 > We’re sorry, we know we don’t always get it right.
-
+>
 > We’ve hidden this memory so you shouldn’t see it in On This Day again.
 
 Both On This Day and Year in Review 2015 show what it looks like when an organization embeds caring into its product, and is willing to own up to mistakes. While both products could still trigger painful memories, these tonal shifts make those scenarios less jarring.
@@ -128,7 +132,7 @@ Take Flickr. In mid-2015, the photo-sharing service unveiled extensive updates t
 
 According to Flickr’s official help thread on the topic, autotags were designed to keep up with the ways digital photography has changed:
 
-> As we’ve redesigned Flickr, we’ve tried to make it the one place where you upload every photo and video you take, and then easily find, organize, edit, and share them. This requires powerful image search, and to deliver that, we need to be able to identify the content in each photo, whether you add tags and descriptive titles or not. ([http://bkaprt.com/dfrl/01-02/](http://bkaprt.com/dfrl/01-02/))
+> As we’ve redesigned Flickr, we’ve tried to make it the one place where you upload every photo and video you take, and then easily find, organize, edit, and share them. This requires powerful image search, and to deliver that, we need to be able to identify the content in each photo, whether you add tags and descriptive titles or not. ([https://www.flickr.com/help/forum/en-us/72157652019487118/](http://bkaprt.com/dfrl/01-02/))
 
 In other words, Flickr designed this feature around the use case of a person snapping shots left and right on their smartphone, and uploading every one of them to the site.
 
@@ -140,9 +144,9 @@ That use case, like Facebook’s, is full of assumptions:
 
 Let’s look at that third assumption more closely. The reality is, not everything people upload to Flickr is quite so easy to identify. Sometimes, people visit a concentration camp—or a “jungle gym,” as Flickr’s autotagging originally labeled photos of Dachau’s “Arbeit macht frei” gates. Another tag read “sport,” as if the prisoners were at some sort of athletic camp (FIG 1.4).
 
-![Figure](../image/Fig1-4_Flickr-autotagging.png "FIG 1.4: Tags on an image of the concentration camp Dachau. Image from The Guardian, May 20, 2015 (http://bkaprt.com/dfrl/01-03/).")
+![Figure](../image/Fig1-4_Flickr-autotagging.png "FIG 1.4: Tags on an image of the concentration camp Dachau. Image from The Guardian, May 20, 2015 (http://www.theguardian.com/technology/2015/may/20/flickr-complaints-offensive-auto-tagging-photos).")
 
-Other examples include a photo of a black man tagged with “ape”—something Google’s Photos app *also* did, two months later, when it labeled black people as “gorillas” ([http://bkaprt.com/dfrl/01-04/](http://bkaprt.com/dfrl/01-04/)).
+Other examples include a photo of a black man tagged with “ape”—something Google’s Photos app *also* did, two months later, when it labeled black people as “gorillas” ([http://www.theverge.com/2015/7/1/8880363/google-apologizes-photos-app-tags-two-black-people-gorillas](http://bkaprt.com/dfrl/01-04/)).
 
 Individually, we might write these anecdotes off as the sort of unthinking mistake a computer might make. But given the history of words like *ape* and *gorilla* used as racial slurs, that kind of error carries real weight.
 
@@ -164,7 +168,7 @@ In theory, autotagging images should save users time—but in reality, the featu
 
 Every time an autotag is incorrect, a user has to manually remove the tag. Manual untagging helps the system learn, but it’s also a burden to place on a user—particularly those loyal users who already invest time in adding metadata. As one user said:
 
-> \[I\]t is rather aggravating when Flickr then goes through adding wrong tags to your long list of correct tags, and then asks us to go through them individually deleting the wrong ones. In my case, assuming thirty seconds per photo, they effectively want me to do three months' full time work for nothing to fix their mistakes. ([http://bkaprt.com/dfrl/01-05/](http://bkaprt.com/dfrl/01-05/))
+> \[I]t is rather aggravating when Flickr then goes through adding wrong tags to your long list of correct tags, and then asks us to go through them individually deleting the wrong ones. In my case, assuming thirty seconds per photo, they effectively want me to do three months' full time work for nothing to fix their mistakes. ([https://www.flickr.com/help/forum/en-us/72157652019487118/page7/#reply72157650200555104](http://bkaprt.com/dfrl/01-05/))
 
 To help this problem, Flickr introduced batch editing for autotags—so, for example, if a whole photoset of your prize-winning berry tarts got mistagged as “cookies,” you could remove that tag from all the photos at once. But even with this change, Flickr is still taking something that’s meant to be seamless and turning it into extra work.
 
