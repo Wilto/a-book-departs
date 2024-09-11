@@ -28,7 +28,7 @@ Real life is complicated. It’s full of joy and excitement, sure, but also stre
 
 None of these circumstances is ideal, but all of them are part of life—and, odds are, your site or product has plenty of users in these moments, whether you’ve ever thought about them or not.
 
-Our industry tends to call these *edge cases*—things that affect an insignificant number of users. But the term itself is telling, as information designer and programmer Evan Hensleigh puts it: “Edge cases define the boundaries of who \[and\] what you care about” ([http://bkaprt.com/dfrl/00-01/](http://bkaprt.com/dfrl/00-01/)). They demarcate the border between the people you’re willing to help and the ones you’re comfortable marginalizing.
+Our industry tends to call these *edge cases*—things that affect an insignificant number of users. But the term itself is telling, as information designer and programmer Evan Hensleigh puts it: “Edge cases define the boundaries of who \[and] what you care about” ([https://twitter.com/futuraprime/status/580810337391345664](http://bkaprt.com/dfrl/00-01/)). They demarcate the border between the people you’re willing to help and the ones you’re comfortable marginalizing.
 
 That’s why we’ve chosen to look at these not as edge cases, but as stress cases: the moments that put our design and content choices to the test of real life.
 
@@ -52,11 +52,11 @@ Instead of treating stress situations as fringe concerns, it’s time we move th
 
 It’s also critical we do this now, as writer and programmer Paul Ford explains:
 
-> The things that you build in the next decade are going to cost people, likely millions of people, maybe a billion people depending on the networks where you hitch your respective wagons, they are going to cost a lot of people a lot of time. Trillions of heartbeats spent in interaction. \[…\]
-
+> The things that you build in the next decade are going to cost people, likely millions of people, maybe a billion people depending on the networks where you hitch your respective wagons, they are going to cost a lot of people a lot of time. Trillions of heartbeats spent in interaction. \[…]
+>
 > I want you to ask yourself when you make things, when you prototype interactions, am I thinking about my own clock, or the user’s?
 
-—PAUL FORD, “10 TIMEFRAMES” ([http://bkaprt.com/dfrl/00-02/](http://bkaprt.com/dfrl/00-02/))
+—PAUL FORD, “10 TIMEFRAMES” ([http://contentsmagazine.com/articles/10-timeframes/](http://bkaprt.com/dfrl/00-02/))
 
 Digital products touch every aspect of our lives: friendships, relationships, work, finances, health, grief, you name it. They’re how we share, how we express our thoughts and feelings.
 
