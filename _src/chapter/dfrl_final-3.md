@@ -1,6 +1,6 @@
 ---
 title: FOREWORD
-tocOrder: 1
+tocOrder: 2
 ---
 I’VE SPENT MY entire adult life surrounded by people who create digital experiences—from the era of desktop software to the birth and blossoming of modern websites all the way to today’s social networks and mobile apps. Two billion people now have some kind of access to internet technologies, and almost all of them are spending more and more time with their thumbs flicking across their phones. And the technology they’re using has a real impact on their lives. They don’t use an app to “share photos”; they use it to maintain a relationship with distant family. They don’t need to do “online banking”; they need to lend a friend money to help them out of a jam. Nobody wants to learn a complicated set of privacy controls; they just want to be able to express themselves without antagonizing bosses or in-laws.
 
