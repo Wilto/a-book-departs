@@ -1,6 +1,7 @@
 ---
 title: Humanize Your Process
 headerImage: image/14.png
+permalink: chapter7.html
 chapterNumber: 7
 tocOrder: 10
 ---
