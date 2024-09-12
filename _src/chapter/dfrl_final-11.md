@@ -26,7 +26,7 @@ As you write your personas and scenarios, don’t drain the life from them: be r
 
 In Chapter 3, we mentioned a technique Sara used with a home-improvement chain: user-journey mapping. Also referred to as customer-experience mapping, this technique is well established in many design practices, such as Adaptive Path, the San Francisco-based design consultancy (recently acquired by Capital One).
 
-In 2013, Adaptive Path turned its expertise into a detailed guide, available free at [mappingexperiences.com](http://mappingexperiences.com/). The guide focuses on how to research the customer experience, facilitate a mapping workshop, and apply your insights. The process includes documenting:
+In 2013, Adaptive Path turned its expertise into a detailed guide, available free at <http://mappingexperiences.com/>. The guide focuses on how to research the customer experience, facilitate a mapping workshop, and apply your insights. The process includes documenting:
 
 * **The lens:** which persona(s) you’re mapping, and what their scenario is
 * **Touchpoints:** moments where your user interacts with your organization
