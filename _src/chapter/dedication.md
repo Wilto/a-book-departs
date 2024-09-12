@@ -1,5 +1,5 @@
 ---
-permalink: ""
+permalink: dedication.html
 title: Dedication
 tocOrder: 1
 ---
