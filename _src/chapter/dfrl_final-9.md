@@ -27,7 +27,7 @@ Once the team realized that clinical vectors didn’t tell the whole story, they
 
 First, the design team acknowledged that a person’s health goes beyond symptoms and medications to include their identity and feelings, too. “We explicitly asked people to describe, ‘What would a patient like *you* be?’” Brigham says. Many responded that they wanted to meet people of their same age and gender—because they felt like those users would best understand their lives. The team also found that users were connecting around shared interests and values, like religion or children. PatientsLikeMe then made these interests part of users’ profiles—both in what you can tell people about yourself, and in the filters you can use to find other patients, well, like you (FIG 5.1).
 
-![Figure](../image/Fig5-1_PLM-interests.png "FIG 5.1: PatientsLikeMe profiles include fields that reflect the interests users told them mattered, not just their health conditions.  ")
+![Figure](/image/Fig5-1_PLM-interests.png "FIG 5.1: PatientsLikeMe profiles include fields that reflect the interests users told them mattered, not just their health conditions.  ")
 
 ## MAKE SPACE FOR REAL PEOPLE
 
@@ -53,7 +53,7 @@ Unlike many other sites, PatientsLikeMe first asks users their sex: which reprod
 
 Other questions that have proven tricky include ethnicity, race, and education level. Users initially weren’t sure why the site wanted this information, and weren’t always keen to provide it. But by explaining these factors’ connection to disease and research, PatientsLikeMe provides users with context about why this information is relevant, and how it might be used (FIG 5.2).
 
-![Figure](../image/Fig5-2_PLM-demo-data-req.png "FIG 5.2: PatientsLikeMe is clear about how information in a user’s profile will—and, just as critically, will not—be used.  ")
+![Figure](/image/Fig5-2_PLM-demo-data-req.png "FIG 5.2: PatientsLikeMe is clear about how information in a user’s profile will—and, just as critically, will not—be used.  ")
 
 As we mentioned earlier, PatientsLikeMe never pushes users to fill out more fields than they’re comfortable with. Instead, it allows people to leave almost all fields incomplete, even if it means the resulting data doesn’t meet the requirements of partner companies.
 

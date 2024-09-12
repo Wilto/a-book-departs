@@ -3,7 +3,7 @@ permalink: about-the-authors.html
 title: About the Authors
 tocOrder: 18
 ---
-![](../image/eric-meyer.png)**Eric A. Meyer** started working on the web in late 1993. Since then, he’s been a college webmaster, one of the original CSS Samurai, a standards evangelist at Netscape, the author of many books and online resources, an occasional code artist, a speaker at many conferences, and a Developer Advocate at Igalia. He lives with his family in Cleveland, Ohio, which is a much nicer city than you’ve been led to believe.
+![](/image/eric-meyer.png)**Eric A. Meyer** started working on the web in late 1993. Since then, he’s been a college webmaster, one of the original CSS Samurai, a standards evangelist at Netscape, the author of many books and online resources, an occasional code artist, a speaker at many conferences, and a Developer Advocate at Igalia. He lives with his family in Cleveland, Ohio, which is a much nicer city than you’ve been led to believe.
 
 *Photograph by Jeffrey* *Zeldman*
 

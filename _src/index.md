@@ -3,7 +3,7 @@ title: About Design for Real Life
 layout: home.njk
 ctas:
   - copy: Read for free
-    url: /chapter/dfrl_final-3/
+    url: /dedication/
   - copy: Buy the book
     url: /page/buy-the-book/
 ---
