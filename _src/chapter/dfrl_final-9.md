@@ -1,6 +1,7 @@
 ---
 title: Cultivate Compassion
 headerImage: image/11.png
+permalink: chapter5.html
 chapterNumber: 5
 tocOrder: 8
 ---
