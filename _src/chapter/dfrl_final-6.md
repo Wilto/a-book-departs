@@ -1,7 +1,7 @@
 ---
 title: Make Space for Real People
 headerImage: image/3.png
-chapterNumber: 3
+chapterNumber: 2
 tocOrder: 5
 ---
 OUR USERS AREN’T US. *Our users aren’t us*. We hear this constantly—but as we’ve seen already, we’re not always great at living it out.
