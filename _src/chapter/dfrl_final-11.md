@@ -70,8 +70,8 @@ In many cases, the easiest way to stress-test any design decision is to ask, “
 Kate Kiefer Lee of MailChimp recommends this for all copy, regardless of where and how it’s used, because it can help you catch errors, improve your flow, and soften your sentences. She says:
 
 > As you read aloud, pretend you're talking to a real person and ask yourself "Would I say this to someone in real life?" Sometimes our writing makes us sound stodgier or colder than we'd like.
-
-> Next time you publish something, take the time to read it out loud. It's also helpful to hear someone else read your work out loud. You can ask a friend or coworker to read it to you, or even use a text-to-speech tool. ([http://bkaprt.com/dfrl/07-01/](http://bkaprt.com/dfrl/07-01/))
+>
+> Next time you publish something, take the time to read it out loud. It's also helpful to hear someone else read your work out loud. You can ask a friend or coworker to read it to you, or even use a text-to-speech tool. ([https://web.archive.org/web/20160503084344/http://katekieferlee.com/blog/2014/5/4/my-favorite-editing-tip](http://bkaprt.com/dfrl/07-01/))
 
 That last point is an excellent tip as well, because you’ll gain a better sense of how your content might sound to a user who doesn’t have the benefit of hearing you speak. If a synthesized voice makes the words fall flat or says something that makes you wince, you’ll know you have more work to do to make your content come to life on the screen.
 
@@ -82,8 +82,8 @@ In design, we create biases toward our imagined outcomes: increased registration
 One way to outsmart those biases early on is to hold a project *premortem*. As the name suggests, a premortem evaluates the project *before* it happens—when it “can be improved rather than autopsied,” says Gary Klein, who first wrote about them in 2007 in *Harvard Business Review:*
 
 > The leader starts the exercise by informing everyone that the project has failed spectacularly. Over the next few minutes those in the room independently write down every reason they can think of for the failure.
-
-> ([http://bkaprt.com/dfrl/07-02/](http://bkaprt.com/dfrl/07-02/))
+>
+> ([https://hbr.org/2007/09/performing-a-project-premortem](http://bkaprt.com/dfrl/07-02/))
 
 According to Klein, this process works because it creates “prospective hindsight”—a term researchers from Wharton, Cornell, and the University of Colorado used in a 1989 study, where they found that imagining “an event has already occurred increases a team’s ability to correctly identify reasons for future outcomes by 30%.”
 
@@ -101,10 +101,10 @@ Another technique for your toolkit is Caroline Jarrett’s question protocol, wh
 You can’t just create a protocol, though—you need to bring it to life within your organization. For example, Jarrett has worked the approach into the standard practices of the UK’s Government Digital Service. GDS then used its answers to create granular, tactical guidelines for designers and writers to use while embedded in a project—such as this advice for titles:
 
 > We recommend against asking for people’s title.
-
+>
 > It’s extra work for users and you’re forcing them to potentially reveal their gender and marital status, which they may not want to do. There are appropriate ways of addressing people in correspondence without using titles.
-
-> If you have to implement a title field, make it an optional free-text field, not a drop-down list. Predicting the range of titles your users will have is impossible, and you’ll always end up upsetting someone. ([http://bkaprt.com/dfrl/07-03/](http://bkaprt.com/dfrl/07-03/))
+>
+> If you have to implement a title field, make it an optional free-text field, not a drop-down list. Predicting the range of titles your users will have is impossible, and you’ll always end up upsetting someone. ([https://www.gov.uk/service-manual/user-centred-design/resources/patterns/names.html](http://bkaprt.com/dfrl/07-03/))
 
 By making recommendations explicit—and explaining *why* GDS recommends against asking for titles—this guide puts teams on the right path from the start.
 
@@ -131,7 +131,7 @@ Every project gets a new Dissenter, until everyone’s had a turn at it. When a 
 
 The goal of all these techniques is to create what bias researchers Jack B. Soll, Katherine L. Milkman, and John W. Payne call an “outside view,” which has tremendous benefits:
 
-> An outside view also prevents the “planning fallacy”—spinning a narrative of total success and managing for that, even though your odds of failure are actually pretty high. ([http://bkaprt.com/dfrl/07-04/](http://bkaprt.com/dfrl/07-04/))
+> An outside view also prevents the “planning fallacy”—spinning a narrative of total success and managing for that, even though your odds of failure are actually pretty high. ([https://hbr.org/2015/05/outsmart-your-own-biases](http://bkaprt.com/dfrl/07-04/))
 
 Our narratives are usually about total success—indeed, that’s the whole point of a design process. But that very aim makes us more likely to fall victim to planning fallacies in which we *only* envision the ideal case, and thus disregard other possibilities.
 
