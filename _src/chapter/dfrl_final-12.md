@@ -1,6 +1,7 @@
 ---
 title: Make the Case
 headerImage: image/15.png
+permalink: chapter8.html
 chapterNumber: 8
 tocOrder: 11
 ---
