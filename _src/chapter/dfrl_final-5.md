@@ -1,7 +1,7 @@
 ---
 title: Challenge Your Vision
 headerImage: image/2.png
-permalink: ""
+permalink: chapter1.html
 chapterNumber: 1
 tocOrder: 4
 ---
