@@ -1,6 +1,7 @@
 ---
 title: Communicate Context and Intent
 headerImage: image/9.png
+permalink: chapter4.html
 chapterNumber: 4
 tocOrder: 7
 ---
