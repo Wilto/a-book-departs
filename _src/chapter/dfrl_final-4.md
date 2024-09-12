@@ -56,7 +56,7 @@ It’s also critical we do this now, as writer and programmer Paul Ford explains
 >
 > I want you to ask yourself when you make things, when you prototype interactions, am I thinking about my own clock, or the user’s?
 
-—PAUL FORD, “10 TIMEFRAMES” ([http://contentsmagazine.com/articles/10-timeframes/](http://bkaprt.com/dfrl/00-02/))
+—PAUL FORD, “10 TIMEFRAMES” ([](http://bkaprt.com/dfrl/00-02/))
 
 Digital products touch every aspect of our lives: friendships, relationships, work, finances, health, grief, you name it. They’re how we share, how we express our thoughts and feelings.
 
