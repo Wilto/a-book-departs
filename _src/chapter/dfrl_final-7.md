@@ -1,7 +1,7 @@
 ---
 title: Incorporate Stress Cases
 headerImage: image/8.png
-chapterNumber: 4
+chapterNumber: 3
 tocOrder: 6
 ---
 *My wife, Kat, and I sat stunned and frightened in the back of a stranger’s car, barreling up the Garden State Parkway at 11 p.m., racing to reach the hospital where our daughter Rebecca was being life-flighted. All we knew was that a mass in the center of her brain had very nearly killed her that evening, and it might still.*
@@ -30,7 +30,7 @@ Steve Krug famously said, “Don’t make me think!” But when users are under 
 
 Research has consistently found that cognitive resources are finite: if you expend them on one thing, you have fewer left for other things. One experiment, which Kathy Sierra talks about in her book *Badass: Making Users Awesome*, presented testers with one of two tasks: to memorize a sequence of either two numbers or seven numbers. Afterward, the testers were offered a choice of snack: cake or fruit.
 
-The subjects who had the harder task were far more likely to pick the cake, because they’d expended their cognitive resources, and had fewer resources left to exert willpower or evaluate nutritional choices. (See more on this study in Baba Shiv and Alexander Fedorikhin’s “Heart and Mind in Conflict: The Interplay of Affect and Cognition in Consumer Decision Making” [[https://web.archive.org/web/20190428130649/https://www.jstor.org/stable/10.1086/209563](http://bkaprt.com/dfrl/03-01/), PDF].)
+The subjects who had the harder task were far more likely to pick the cake, because they’d expended their cognitive resources, and had fewer resources left to exert willpower or evaluate nutritional choices. (See more on this study in Baba Shiv and Alexander Fedorikhin’s “Heart and Mind in Conflict: The Interplay of Affect and Cognition in Consumer Decision Making” [<https://web.archive.org/web/20190428130649/https://www.jstor.org/stable/10.1086/209563>, PDF].)
 
 When a user is in crisis, nearly all their cognitive resources are consumed by that crisis. Worrying over a loved one, or what the future holds, or any number of other things severely reduces the processing power they can devote to your site (or to anything else).
 
@@ -44,11 +44,11 @@ All those headings left her overwhelmed—and even worse, as she skimmed, she co
 
 Even though this woman knew to go to the RAINN website, she couldn’t think critically about what she read. Her cognitive resources were so depleted by her experience and its aftermath that she “was not in the right state of mind” to realize that her assault *counted*. She felt ashamed and even more alone.
 
-![Figure](../image/Fig3-1_RAINNold.png "FIG 3.1: Types of Sexual Violence page from RAINN, early 2015  (http://bkaprt.com/dfrl/03-02/).")
+![Figure](../image/Fig3-1_RAINNold.png "FIG 3.1: Types of Sexual Violence page from RAINN, early 2015  (<https://rainn.org/>).")
 
 The good news is that RAINN has since clarified and shortened this page. As of September 2015, rather than listing a huge number of very specific types of assault, it displays a few broad, inclusive categories—so a user can immediately map almost any situation to one of them. Topics covering more specific types of abuse, such as military sexual assault, appear lower on the page, with less visual priority. The result is a page that’s easier for any user to skim, understand, and see oneself in (FIG 3.2).
 
-![Figure](../image/Fig3-2_RAINNnew.png "FIG 3.2: Types of Sexual Violence page from RAINN, September 2015  (http://bkaprt.com/dfrl/03-03/).")
+![Figure](../image/Fig3-2_RAINNnew.png "FIG 3.2: Types of Sexual Violence page from RAINN, September 2015  (<https://rainn.org/get-information/types-of-sexual-assault>).")
 
 ## EVERYDAY STRESS CASES
 
@@ -67,7 +67,7 @@ Nobody on the team is in danger of injury or death—though in some work environ
 
 Contextual crises come in all shapes: a parent who realizes their child’s birthday is a couple days away, and the very special present they ordered hasn’t arrived yet. A woman whose sister gave birth a week earlier than expected, and needs to book flights right away to meet her brand-new baby nephew. An incoming university student who realizes the financial aid application deadline is sooner than they thought, and is trying to find out what they need to do next.
 
-Another form of contextual crisis is one we’re all too familiar with: a technical failure. This can be anything from a missing or disabled plugin to severely limited bandwidth—things that frequently prevent JavaScript from loading, for example. (See Stuart Langridge’s “Everyone has JavaScript, right?” for more \[https://kryogenix.org/code/browser/everyonehasjs.html].)
+Another form of contextual crisis is one we’re all too familiar with: a technical failure. This can be anything from a missing or disabled plugin to severely limited bandwidth—things that frequently prevent JavaScript from loading, for example. (See Stuart Langridge’s “Everyone has JavaScript, right?” for more [<https://kryogenix.org/code/browser/everyonehasjs.html>].)
 
 Maybe the user is in a public library with archaic PCs running Internet Explorer 6. Maybe they’re one of the almost 60% of mobile web users around the world who are on EDGE networks. (That was the network speed before 3G, you may recall.) Maybe the battery on their device is almost drained, so their time is extremely limited. Maybe the CDN provider had an interruption of service, causing half the page’s external resources not to load.
 
