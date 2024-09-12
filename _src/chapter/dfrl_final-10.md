@@ -1,7 +1,7 @@
 ---
 title: Learn From Users
 headerImage: image/13.png
-chapterNumber: 7
+chapterNumber: 6
 tocOrder: 9
 ---
 “If you want your users to fall in love with your design, fall in love with your users.”
@@ -154,7 +154,7 @@ To create the collage, give the participant a specific prompt, such as, “Descr
 
 The benefit of this technique, Soucy says, is that it opens up space for unknowns: the things you’d never think to ask, and your participant might never think to explain, but are crucial to delivering a more compassionate user experience. In a 2012 *Smashing Magazine* article, she writes:
 
-> Sometimes the most valuable answer is not in response to a direct question, but one that’s elicited. An image can be a powerful stimulus that evokes a strong response, triggers a memory, and draws out feelings that exist below a person’s own level of awareness. ([http://www.smashingmagazine.com/2012/02/collaging-getting-answers-questions-you-dont-know-ask/](http://bkaprt.com/dfrl/06-01/))
+> Sometimes the most valuable answer is not in response to a direct question, but one that’s elicited. An image can be a powerful stimulus that evokes a strong response, triggers a memory, and draws out feelings that exist below a person’s own level of awareness. (<http://www.smashingmagazine.com/2012/02/collaging-getting-answers-questions-you-dont-know-ask/>)
 
 For example, Soucy once visited a woman’s home while researching a medical device. In addition to having the condition the device was designed to help, the woman was depressed and seemed to be hoarding. When she shared her collage with Soucy, she began crying—because the collage had allowed her, finally, to describe not only her condition, but also her life, and what was going on in her day. None of these topics would have come up in a traditional interview, but they all played a role in Soucy’s recommendations.
 
