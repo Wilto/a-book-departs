@@ -10,7 +10,7 @@ In this chapter, we’ll see what happens when an organization brings all those 
 
 ## PUTTING PRINCIPLES INTO PRACTICE
 
-PatientsLikeMe ([http://bkaprt.com/dfrl/05-01/](http://bkaprt.com/dfrl/05-01/)) is a social network centered on something many people never thought they’d be social about: their health. Users can meet others with similar medical issues, compare symptoms and treatments, discuss how their conditions affect their lives, and track their health over time. Founded by MIT engineers in 2004, the site now serves more than 380,000 members with 2,500 different conditions, using a unique business model: instead of selling advertising, PatientsLikeMe explicitly, and transparently, partners with researchers, pharmaceutical companies, regulators, providers, and nonprofits, giving them access to real-world data that clinical trials can’t provide.
+PatientsLikeMe ([https://www.patientslikeme.com](http://bkaprt.com/dfrl/05-01/)) is a social network centered on something many people never thought they’d be social about: their health. Users can meet others with similar medical issues, compare symptoms and treatments, discuss how their conditions affect their lives, and track their health over time. Founded by MIT engineers in 2004, the site now serves more than 380,000 members with 2,500 different conditions, using a unique business model: instead of selling advertising, PatientsLikeMe explicitly, and transparently, partners with researchers, pharmaceutical companies, regulators, providers, and nonprofits, giving them access to real-world data that clinical trials can’t provide.
 
 PatientsLikeMe began when the brother of two of its founders was diagnosed with amyotrophic lateral sclerosis (ALS), and they wanted to find ways to help him live a better life. At first, the site focused on connecting people who were clinically similar: users with the same condition, in the same stage of illness, experiencing the same symptoms, and undergoing similar treatment plans. The goal was to help users connect around not just illness type, but specific issues like shopping for assistive devices or managing side effects of medication—creating space for conversations like, How did you pick a wheelchair? or, How are you modifying your home so you can keep living there?
 
@@ -47,7 +47,7 @@ PatientsLikeMe’s business model is based entirely on data: it de-identifies an
 Unlike many other sites, PatientsLikeMe first asks users their sex: which reproductive system they were born with. Then, as an additional option, users may select a gender: the social label they identify with. Sex has only two options, while gender gets a range of choices. Here’s how the site explains it:  
 
 > We offer more options for gender identity because male and female labels don’t feel right to everyone. We ask for sex assigned at birth because that’s a key piece of information used by medical researchers to inform new discoveries.
-
+>
 > The impact of gender identity on specific health conditions is still poorly understood; collecting information about it will help us look for patterns by gender as well as sex in the future.
 
 Other questions that have proven tricky include ethnicity, race, and education level. Users initially weren’t sure why the site wanted this information, and weren’t always keen to provide it. But by explaining these factors’ connection to disease and research, PatientsLikeMe provides users with context about why this information is relevant, and how it might be used (FIG 5.2).
@@ -67,8 +67,8 @@ When we look at PatientsLikeMe—and everything we’ve covered so far—we star
 Our industry talks a lot about empathy, but when we say compassion, we’re talking about something deeper. Perhaps content and user-experience expert Karen McGrane said it best in her 2013 Information Architecture Summit closing plenary:
 
 > We’re pretty good at being able to kind of get inside somebody else’s head and sort of model their task, model how they are thinking about a problem. But that cognitive empathy, that’s actually just one level of empathy.
-
-> There’s actually a much deeper level of it that you would call compassion. What that means is that you have genuine emotional feeling for the struggles that someone is going through and you are spontaneously moved to help them because you feel them. ([http://bkaprt.com/dfrl/05-02/](http://bkaprt.com/dfrl/05-02/))
+>
+> There’s actually a much deeper level of it that you would call compassion. What that means is that you have genuine emotional feeling for the struggles that someone is going through and you are spontaneously moved to help them because you feel them. ([https://web.archive.org/web/20160328073936/http://library.iasummit.org/podcasts/closing-plenary-2/](http://bkaprt.com/dfrl/05-02/))
 
 Compassion is more than being nice. It’s accepting people as they come—in all their pain, with all their challenges—and not just feeling empathy toward them, but doing something with that empathy. It’s recognizing that users facing stress and crisis need more than our sympathy. They need our help.
 
@@ -102,17 +102,17 @@ And yet, submissions were always slower than anyone would have liked.
 Finally, Sara started looking closely at the message *ALA* was sending. Here’s what she found on the About page:
 
 > MAYBE YOU CAN BE ONE OF US...
-
+>
 > ...the few, the proud, the *ALA* contributing authors.
 
 And on the Contribute page:
 
 > So you want to write for *A List Apart* Magazine.
-
+>
 > What we’re looking for
-
+>
 > We want to change the way our readers work, whether that means introducing a revolutionary CSS technique with dozens of potential applications, challenging the design community to ditch bad practices, or refuting common wisdom about, say, screen readers.
-
+>
 > If your article can do that, we want to see it.
 
 *ALA* wanted to elevate its authors—to make them feel special, to know that writing for *ALA* mattered to the web industry and the world. It told potential writers their writing would *challenge*, *refute*, and *revolutionize*. That seemed like a nice idea...until the people Sara hoped would submit their work told her another story about *ALA:*
@@ -140,7 +140,7 @@ Approaching our work with a spirit of generosity is difficult, because we have t
 But to reach more prospective authors, *ALA* had to set that fear aside, and communicate from a compassionate place instead. As of this writing, here’s the revised Contribute copy:
 
 > Write for Us
-
+>
 > Yes, you. We’re always looking for new authors. If you’ve got an idea that will challenge our readers and move our industry forward, we want to hear about it. But you don’t need to wait for an idea that will redefine web design. Just aim to bring readers a fresh perspective on a topic that’s keeping you up at night.
 
 *Yes, you*. It’s almost nothing—two tiny words. Yet they speak directly to that doubter, that person who’s thinking, *Maybe I’m not good enough*. The words reach out and give them a hand up, right when they need it.
