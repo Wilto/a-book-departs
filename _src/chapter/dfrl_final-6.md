@@ -76,7 +76,7 @@ All this adds up to a flexible experience—one that gives users the space to de
 
 In 1980, computer scientist Jon Postel created the early specification for the Transmission Control Protocol (the TCP in TCP/IP, the internet’s most basic communication language). In that specification, he shared what he called the Robustness Principle for transmitting data:
 
-> Be conservative in what you do, be liberal in what you accept from others. ([http://tools.ietf.org/html/rfc761](http://bkaprt.com/dfrl/02-02/), section 2.10)
+> Be conservative in what you do, be liberal in what you accept from others. (<http://tools.ietf.org/html/rfc761>, section 2.10)
 
 Postel meant that our programs should carefully follow specifications in the way they format and send data to other programs or machines, but when other programs send them non-conformant data, our programs should be robust enough to accept and parse it as is.
 
