@@ -1,5 +1,5 @@
 ---
-permalink: foreword
+permalink: foreword.html
 title: FOREWORD
 tocOrder: 2
 ---
