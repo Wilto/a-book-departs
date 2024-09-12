@@ -24,7 +24,7 @@ To see a clear picture of the designers’ intent, let’s break down Year in Re
 * The default status text: “I had a great year. Thanks for being a part of it!”
 * The project’s very nature: to collect and present memories from the past year.
 
-![Figure](../image/Fig1-1_Year-in-review-ad.png "FIG 1.1: The module promoting Facebook’s Year in Review to Eric.")
+![Figure](/image/Fig1-1_Year-in-review-ad.png "FIG 1.1: The module promoting Facebook’s Year in Review to Eric.")
 
 Together, these point to a fundamental design direction, which we would articulate as something like:
 
