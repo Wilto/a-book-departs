@@ -1,6 +1,6 @@
 ---
 permalink: conculsion.html
-title: CONCLUSION
+title: Conclusion
 tocOrder: 12
 ---
 “The only unit of time that matters is heartbeats.”
