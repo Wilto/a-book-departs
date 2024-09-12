@@ -1,7 +1,7 @@
 ---
 permalink: ""
 title: Dedication
-tocOrder: 2
+tocOrder: 1
 ---
 To my mother, Rebekka, who taught me to be brave.
 
