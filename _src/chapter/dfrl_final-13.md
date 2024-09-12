@@ -1,4 +1,5 @@
 ---
+permalink: conculsion.html
 title: CONCLUSION
 tocOrder: 12
 ---
