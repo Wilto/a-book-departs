@@ -1,7 +1,7 @@
 ---
 title: Make the Case
 headerImage: image/15.png
-chapterNumber: 9
+chapterNumber: 8
 tocOrder: 11
 ---
 IT’S ONE THING to believe in doing right by users, but quite another to get people with fancy titles to draw connections between compassionate design and successful business. No matter how much you want to build the practices and principles we’ve covered into your work, you may still need to get the support of bosses, clients, or executives to make it real.
@@ -71,13 +71,13 @@ Let’s walk through a few potential business cases, and consider how we could u
 
 ### We’ll stand out from competitors
 
-A faster website, a smoother purchase flow, and a superior customer support system are all ways to differentiate a business from its competitors. So, too, is a more human and compassionate design. Tell your stakeholders to look at Slack—the messaging application that, in early 2015, shot to a $2.8 billion valuation after only a little over a year on the market ([http://blogs.wsj.com/digits/2015/03/26/slacks-valuation-more-than-doubles-to-2-8-billion-in-five-months/](http://bkaprt.com/dfrl/08-02/)).
+A faster website, a smoother purchase flow, and a superior customer support system are all ways to differentiate a business from its competitors. So, too, is a more human and compassionate design. Tell your stakeholders to look at Slack—the messaging application that, in early 2015, shot to a $2.8 billion valuation after only a little over a year on the market (<http://blogs.wsj.com/digits/2015/03/26/slacks-valuation-more-than-doubles-to-2-8-billion-in-five-months/>).
 
 Slack is winning out over competitors like HipChat and Yammer, in part, by being more empathetic in its design and operation. Slack makes it simple to get support or report an issue, and it relentlessly scours that feedback, looking for trends in feature requests or challenges users are having. It’s easy for users to customize settings, notifications, and even the skin color of their emoji. At every turn, Slack focuses on including all kinds of users.
 
 In an interview with the *New York Times,* founder Stewart Butterfield explains why:  
 
-> One way that empathy manifests itself is courtesy… It’s not just about having a veneer of politeness, but actually trying to anticipate someone else’s needs and meeting them in advance. ([http://www.nytimes.com/2015/07/12/business/stewart-butterfield-of-slack-experience-with-empathy-required.html](http://bkaprt.com/dfrl/08-03/))
+> One way that empathy manifests itself is courtesy… It’s not just about having a veneer of politeness, but actually trying to anticipate someone else’s needs and meeting them in advance. (<http://www.nytimes.com/2015/07/12/business/stewart-butterfield-of-slack-experience-with-empathy-required.html>)
 
 Sound familiar? It should, because this idea of courtesy is uncannily similar to the concept of compassion we discussed in Chapter 5: going beyond simply *feeling* for others, and making it your purpose to *make things easier* for them. That message—and the story of Slack’s success—is one that will both resonate with those seeking a competitive advantage, and create space for work that plans for stress cases and communicates compassionately.
 
@@ -95,7 +95,7 @@ To get buy-in for this change, you could look at the percentage of users who dow
 
 If a process is leading to lots of user frustration, then chances are it’s costing money in the form of increased support emails or call-center hours. That was the case at the Government Digital Service, the folks behind GOV.UK, which we talked about in Chapter 7.
 
-According to its own research, as of 2011, the UK government was receiving 150 million avoidable calls a year—meaning an online service existed, but people were phoning in anyway ([https://www.gov.uk/government/publications/government-digital-strategy/government-digital-strategy#what-we-have-already-done](http://bkaprt.com/dfrl/08-04/)). The constituents making those calls were often already upset and frustrated from trying to navigate the outdated, inefficient, and confusing network of government services. Across the board, non-digital transactions were costing the UK government around £4 billion per year.
+According to its own research, as of 2011, the UK government was receiving 150 million avoidable calls a year—meaning an online service existed, but people were phoning in anyway (<https://www.gov.uk/government/publications/government-digital-strategy/government-digital-strategy#what-we-have-already-done>). The constituents making those calls were often already upset and frustrated from trying to navigate the outdated, inefficient, and confusing network of government services. Across the board, non-digital transactions were costing the UK government around £4 billion per year.
 
 As GDS releases more and more digital tools that are designed compassionately based on user needs, they’ve estimated that an annual savings of £1.7 to £1.8 billion is possible. Its approach is to focus on high-volume transactions—areas where GDS could see the most impact the fastest, which would help it gain both governmental and public trust.
 
@@ -103,7 +103,7 @@ If you’re in an organization where customer service or support costs are high,
 
 ### We can increase retention, rather than invest in finding new users
 
-Depending on which study you read—and plenty exist—it’s anywhere from five to twenty-five times more expensive to find a new customer than to retain an existing one ([https://hbr.org/2014/10/the-value-of-keeping-the-right-customers/](http://bkaprt.com/dfrl/08-05/)). If your product relies on repeat visitors, you can make a case that more compassionate design will keep people engaged in your product longer (and maybe even persuade them to recommend it).
+Depending on which study you read—and plenty exist—it’s anywhere from five to twenty-five times more expensive to find a new customer than to retain an existing one (<https://hbr.org/2014/10/the-value-of-keeping-the-right-customers/>). If your product relies on repeat visitors, you can make a case that more compassionate design will keep people engaged in your product longer (and maybe even persuade them to recommend it).
 
 For example, Dan Hon, the content director at Code for America and a former interactive creative director at Wieden+Kennedy, told us about his experience using activity trackers after being diagnosed with Type II diabetes. He started monitoring his blood glucose levels, tracking his weight, and documenting his food intake. What he realized is that many trackers don’t work for people with chronic conditions like his, because goals are tied to individual days and tend to focus on unbroken streaks or continuous repetition—rather than making a user feel successful for sustaining changes *over time*. He says:
 
