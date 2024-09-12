@@ -4,7 +4,7 @@ tocOrder: 12
 ---
 “The only unit of time that matters is heartbeats.”
 
-—PAUL FORD, *“10 Timeframes”* ([http://contentsmagazine.com/articles/10-timeframes/](http://bkaprt.com/dfrl/09-01/))
+—PAUL FORD, *“10 Timeframes”* (<http://contentsmagazine.com/articles/10-timeframes/>)
 
 THE HEARTBEATS OUR WORK affects belong to people—people who have painful experiences and imperfections and subjects they’d rather not have dredged up every time they use the web.
 
