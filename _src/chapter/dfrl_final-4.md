@@ -28,7 +28,7 @@ Real life is complicated. It’s full of joy and excitement, sure, but also stre
 
 None of these circumstances is ideal, but all of them are part of life—and, odds are, your site or product has plenty of users in these moments, whether you’ve ever thought about them or not.
 
-Our industry tends to call these *edge cases*—things that affect an insignificant number of users. But the term itself is telling, as information designer and programmer Evan Hensleigh puts it: “Edge cases define the boundaries of who \[and] what you care about” ([https://twitter.com/futuraprime/status/580810337391345664](http://bkaprt.com/dfrl/00-01/)). They demarcate the border between the people you’re willing to help and the ones you’re comfortable marginalizing.
+Our industry tends to call these *edge cases*—things that affect an insignificant number of users. But the term itself is telling, as information designer and programmer Evan Hensleigh puts it: “Edge cases define the boundaries of who \[and] what you care about” (<https://twitter.com/futuraprime/status/580810337391345664>). They demarcate the border between the people you’re willing to help and the ones you’re comfortable marginalizing.
 
 That’s why we’ve chosen to look at these not as edge cases, but as stress cases: the moments that put our design and content choices to the test of real life.
 
