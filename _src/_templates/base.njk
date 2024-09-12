@@ -2,8 +2,12 @@
 <html lang="en" class="fonts">
 	<head>
 		<meta charset="utf-8">
-
-		<title>{{ meta.title }}</title>
+		{% if tags == "chapter" %}
+		{% set pagetitle = meta.title + ' - ' + title %}
+		{% else %}
+		{% set pagetitle = meta.title %}
+		{% endif %}
+		<title>{{ pagetitle }}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<meta property="og:site_name" content="{{ data.title }}">
