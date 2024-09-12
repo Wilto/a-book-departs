@@ -1,4 +1,5 @@
 ---
+permalink: acknowledgements.html
 title: ACKNOWLEDGMENTS
 tocOrder: 14
 ---
