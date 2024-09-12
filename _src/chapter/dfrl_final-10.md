@@ -97,10 +97,10 @@ That’s why “tell me more about that” is such a magical phrase. It doesn’
 For example, Sara recently interviewed young women about their involvement in and opinions about gender equality issues. Here’s an excerpt from one conversation:
 
 > Interviewee: We need to look at women’s issues as all women’s issues, not this one group of women and how we can help them. We need to change the framework of what a woman voter is, and there’s a lot of ways to break that down. We have to speak to them. > Sara: You mentioned “changing the framework of what a woman voter is.” Can you tell me more about that?
-
+>
 > Interviewee: Right now it is segmented two ways: the married woman with kids who is voting based on different issues than the single woman who is in her twenties or thirties. That person is portrayed as a white, straight, middle-class woman...
-
-> The Hillary \[Clinton\] campaign video was a good way to change how we see what a voter looks like. They present all of these different groups… If we are looking at what a woman voter looks like, it isn’t capture-able by one person anymore.
+>
+> The Hillary \[Clinton] campaign video was a good way to change how we see what a voter looks like. They present all of these different groups… If we are looking at what a woman voter looks like, it isn’t capture-able by one person anymore.
 
 The interviewee hadn’t planned on explaining what she meant about women voters. But Sara could tell by the urgency in her voice, the call for change, that she was frustrated by this “framework.” So instead of moving on, Sara asked for more. And she got it: a clear description of the limited way the interviewee sees women voters being categorized now, and a specific example of a more inclusive way of looking at them.
 
@@ -154,7 +154,7 @@ To create the collage, give the participant a specific prompt, such as, “Descr
 
 The benefit of this technique, Soucy says, is that it opens up space for unknowns: the things you’d never think to ask, and your participant might never think to explain, but are crucial to delivering a more compassionate user experience. In a 2012 *Smashing Magazine* article, she writes:
 
-> Sometimes the most valuable answer is not in response to a direct question, but one that’s elicited. An image can be a powerful stimulus that evokes a strong response, triggers a memory, and draws out feelings that exist below a person’s own level of awareness. ([http://bkaprt.com/dfrl/06-01/](http://bkaprt.com/dfrl/06-01/))
+> Sometimes the most valuable answer is not in response to a direct question, but one that’s elicited. An image can be a powerful stimulus that evokes a strong response, triggers a memory, and draws out feelings that exist below a person’s own level of awareness. ([http://www.smashingmagazine.com/2012/02/collaging-getting-answers-questions-you-dont-know-ask/](http://bkaprt.com/dfrl/06-01/))
 
 For example, Soucy once visited a woman’s home while researching a medical device. In addition to having the condition the device was designed to help, the woman was depressed and seemed to be hoarding. When she shared her collage with Soucy, she began crying—because the collage had allowed her, finally, to describe not only her condition, but also her life, and what was going on in her day. None of these topics would have come up in a traditional interview, but they all played a role in Soucy’s recommendations.
 
