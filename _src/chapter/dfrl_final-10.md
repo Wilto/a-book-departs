@@ -1,6 +1,7 @@
 ---
 title: Learn From Users
 headerImage: image/13.png
+permalink: chapter6.html
 chapterNumber: 6
 tocOrder: 9
 ---
