@@ -53,7 +53,7 @@ This insight gave the design team an inroad: they could then relate users’ exp
 
 Next, you need to articulate the business benefit to your work. While “it’s the right thing to do” might be enough for some stakeholders, others will ask you to speak in terms of business opportunities and financial return. For those people, you’ll be best served by preparing a more formal business case.
 
-Accessibility consultant Karl Groves has argued that there are really only three business cases for anything ([https://hbr.org/2015/05/outsmart-your-own-biases)](http://www.karlgroves.com/2012/01/27/chasing-the-accessibility-business-case-conclusion/):
+Accessibility consultant Karl Groves has argued that there are really only three business cases for anything (<https://hbr.org/2015/05/outsmart-your-own-biases>):
 
 * It will make money.
 * It will save money.
