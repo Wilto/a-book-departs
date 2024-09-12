@@ -1,16 +1,16 @@
 ---
 title: Communicate Context and Intent
 headerImage: image/9.png
-chapterNumber: 5
+chapterNumber: 4
 tocOrder: 7
 ---
 *I was filling out a new-patient form online for* *my doctor’s office when I saw it, sandwiched somewhere* *between “Do you smoke? and “Has anyone in your family* *had a stroke?”:*
 
-*Have you ever been sexually abused or* <span class="NoBreak"><em class="Emphasis"> </em></span>*assaulted?*
+*Have you ever been sexually abused or assaulted?*
 
 *Yes __ No* *__*
 
-*That was it: no context, no explanation,* *no box to tick for, “Well, yes, actually, but it’\*\*s a long story from a long time ago, and* *it’s not why I’m here.” Just a tidy* *little binary for something that didn’t feel tidy at* <span class="NoBreak"><em class="Emphasis"> </em></span>*all.*
+*That was it: no context, no explanation,* *no box to tick for, “Well, yes, actually, but it’\*\*s a long story from a long time ago, and* *it’s not why I’m here.” Just a tidy* *little binary for something that didn’t feel tidy at all.*
 
 *“So, you were sexually assaulted,” my doctor said partway* *through our appointment. It wasn’t a question, but she* *paused* *expectantly.*
 
@@ -28,7 +28,7 @@ WHEN WE ASK USERS to share information, we’re asking for their trust. But it�
 
 In Sara’s case, someone probably had good intentions when they added that question to the intake screener: they may have wanted to provide better medical care, statistics, or support. But they didn’t communicate what those intentions were. The result was a form that left her feeling uneasy and exposed—her history in a database and out of her control.
 
-That loss of control can have major emotional consequences for users, particularly when personal information is unexpectedly made public. That’s what happened in 2012 to University of Texas college students Bobbi Duncan and Taylor McCormick. The students, both gay, had used Facebook’s privacy settings to conceal their orientation from their parents, but it didn’t matter: Facebook posted an update to their profiles saying they’d joined the Queer Chorus, without them or the choir director who invited them intending it to appear. Duncan’s father was furious, and threatened to sever ties with her ([http://www.wsj.com/articles/SB10000872396390444165804578008740578200224](http://bkaprt.com/dfrl/04-01/)).
+That loss of control can have major emotional consequences for users, particularly when personal information is unexpectedly made public. That’s what happened in 2012 to University of Texas college students Bobbi Duncan and Taylor McCormick. The students, both gay, had used Facebook’s privacy settings to conceal their orientation from their parents, but it didn’t matter: Facebook posted an update to their profiles saying they’d joined the Queer Chorus, without them or the choir director who invited them intending it to appear. Duncan’s father was furious, and threatened to sever ties with her (<http://www.wsj.com/articles/SB10000872396390444165804578008740578200224>).
 
 We can’t know precisely which information is sensitive for any given user. What we *can* do is be honest about our intentions. We can ask users only for what we truly need, and be clear about what we’ll do with what they give us. And we can provide context, explaining why we want information and disclosing when and how a user’s actions affect what happens next.
 
@@ -46,7 +46,7 @@ What’s missing is *intention*: making a specific, purposeful choice about what
 * Creates more space for the user to start asking *why* we want that information. This erodes trust, which can also lead to them abandoning the process.
 * Increases the chance of things going wrong, because every new bit of information we request creates new opportunities for error.
 
-Let’s examine one common form field: salutation. Typically, this is handled via a dropdown of “Mr.,” “Mrs.,” “Dr.,” and so on. In early 2015, a pediatrician in Cambridge, England, discovered that the security system at her gym refused to let her into the women’s locker room—because the third-party system was programmed to treat anyone with a title of “Doctor” as male ([https://web.archive.org/web/20150502125153/http://www.cambridge-news.co.uk/Cambridge-paediatrician-8217-s-outrage-Pure-Gym/story-26188693-detail/story.html](http://bkaprt.com/dfrl/04-02/)).
+Let’s examine one common form field: salutation. Typically, this is handled via a dropdown of “Mr.,” “Mrs.,” “Dr.,” and so on. In early 2015, a pediatrician in Cambridge, England, discovered that the security system at her gym refused to let her into the women’s locker room—because the third-party system was programmed to treat anyone with a title of “Doctor” as male (<https://web.archive.org/web/20150502125153/http://www.cambridge-news.co.uk/Cambridge-paediatrician-8217-s-outrage-Pure-Gym/story-26188693-detail/story.html>).
 
 Of course this is ridiculous. The firm that created the system should have caught the error before it shipped—in fact, it should have recognized the bias in that spec before a line of code was written. And of course nobody who worked at the gym meant to create even the appearance of insult; they had no idea the flaw was in the system until their customer ran into it.
 
@@ -54,7 +54,7 @@ The problem is that the salutation this doctor provided on her membership form w
 
 How many of us have set up a form without really thinking about what’s on it, or what will be done with the data once it has been captured? Being as intentional as possible is the best tool we have to prevent errors and biases.
 
-Form and survey specialist Caroline Jarrett, coauthor of *Forms that Work:* *Designing Web Forms for Usability,* recommends building intentionality into our work through a *question protocol* ([http://www.uxmatters.com/mt/archives/2010/06/the-question-protocol-how-to-make-sure-every-form-field-is-necessary.php#sthash.GGxLSg84.dpuf](http://bkaprt.com/dfrl/04-03/)). The protocol is a tool for systematically evaluating each question you want to include, asking:
+Form and survey specialist Caroline Jarrett, coauthor of *Forms that Work:* *Designing Web Forms for Usability,* recommends building intentionality into our work through a *question protocol* (<http://www.uxmatters.com/mt/archives/2010/06/the-question-protocol-how-to-make-sure-every-form-field-is-necessary.php#sthash.GGxLSg84.dpuf>). The protocol is a tool for systematically evaluating each question you want to include, asking:
 
 * Who within your organization uses the answer
 * What they use them for
@@ -81,7 +81,7 @@ That copy provides crucial context for people who are changing their gender iden
 
 Another example of communicating the implications of a user’s action is on the card-blocking screen of the Simple mobile banking app. This is where a user goes to deactivate a lost or stolen bank card (FIG 4.2).
 
-![Figure](../image/Fig4-1_Facebook-gender-pronoun.png "FIG 4.1: If a user changes the pronoun they want to go by on Facebook, they’re warned that their preferred pronoun will be public, before the change is published.")![Figure](../image/Fig4-2_security-for-your-swipes-sc-2-608cf8f8.png "FIG 4.2: Simple’s card-blocking feature makes it clear that if you place a block on your account, you can undo it later (https://web.archive.org/web/20160305004229/https://www.simple.com/company/security-for-your-swipes).")
+![Figure](../image/Fig4-1_Facebook-gender-pronoun.png "FIG 4.1: If a user changes the pronoun they want to go by on Facebook, they’re warned that their preferred pronoun will be public, before the change is published.")![Figure](../image/Fig4-2_security-for-your-swipes-sc-2-608cf8f8.png "FIG 4.2: Simple’s card-blocking feature makes it clear that if you place a block on your account, you can undo it later (<https://web.archive.org/web/20160305004229/https://www.simple.com/company/security-for-your-swipes>).")
 
 Notice the text at the top of the screen: “This is a reversible process.” More information follows, but that simple sentence makes it instantly clear that if you’re not sure where your card went, you can block it without worrying that you’re about to lock yourself out of your account until a new one arrives.
 
@@ -115,7 +115,7 @@ That’s…quite a lot. It fulfills the need to be transparent, but even with al
 
 Being intentional is always important, but as we’ve seen, there are times when a lack of sensitivity and transparency has particularly emotional effects on our users. How we walk matters a lot more on a high wire than a sidewalk.
 
-Kate Kiefer Lee, MailChimp’s communications director and coauthor of *Nicely Said: Writing for the Web* *With Style and Purpose,* has talked about “touchy subjects”—things that are likely to cause stress or make a reader uncomfortable. In her article “Don’t Poke the Bear,” she writes that touchy subjects “aren’t limited to the obvious offenders like money, religion, and politics. They’re not limited to highly visible crisis-management messages crafted by professional writers, either” ([http://alistapart.com/article/dont-poke-the-bear-creating-content-for-sensitive-situations](http://bkaprt.com/dfrl/04-05/)). Instead, she has found that common touchy subjects include:
+Kate Kiefer Lee, MailChimp’s communications director and coauthor of *Nicely Said: Writing for the Web* *With Style and Purpose,* has talked about “touchy subjects”—things that are likely to cause stress or make a reader uncomfortable. In her article “Don’t Poke the Bear,” she writes that touchy subjects “aren’t limited to the obvious offenders like money, religion, and politics. They’re not limited to highly visible crisis-management messages crafted by professional writers, either” (<http://alistapart.com/article/dont-poke-the-bear-creating-content-for-sensitive-situations>). Instead, she has found that common touchy subjects include:
 
 * Error messages
 * Warnings
@@ -145,7 +145,7 @@ As author Roxane Gay has written about the trend in “trigger warnings”—edi
 
 > When I see men who look like him or his friends. When I smell beer on a man’s breath. When I smell Polo cologne...
 >
-> This is the uncomfortable truth—everything is a trigger for someone. ([http://therumpus.net/2012/08/the-illusion-of-safetythe-safety-of-illusion/)](http://bkaprt.com/dfrl/04-06/)
+> This is the uncomfortable truth—everything is a trigger for someone. (<http://therumpus.net/2012/08/the-illusion-of-safetythe-safety-of-illusion/>)
 
 Gay was sexually assaulted as a teen, but it’s not necessarily, or only, images of assault that she finds triggering. It’s a nuanced, hyper-specific set of experiences: smells, sounds, facial features.
 
