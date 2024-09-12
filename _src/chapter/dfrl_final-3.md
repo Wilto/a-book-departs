@@ -1,4 +1,5 @@
 ---
+permalink: foreword
 title: FOREWORD
 tocOrder: 2
 ---
