@@ -82,7 +82,7 @@ Postel meant that our programs should carefully follow specifications in the way
 
 Lyle Mullican argues that we can apply Postel’s law to user experience design. Humans and machines parse information in fundamentally different ways, he writes. But machines can, and should, be robust enough to accept human information, make sense of it, and make it conform to their more programmatic standards:
 
-> When you buy something over the phone, the person taking your order never has to say, “Please give me your credit card number using only digits, with no spaces or dashes.” She is not confused if you pause while speaking or include a few “umms.” She knows a number when she hears one. But such prompts commonly litter web forms, instructing users to cater to the computer’s needs. Wouldn’t it be nice if the computer could cater to the person’s needs instead? ([http://alistapart.com/article/your-website-has-two-faces](http://bkaprt.com/dfrl/02-03/))
+> When you buy something over the phone, the person taking your order never has to say, “Please give me your credit card number using only digits, with no spaces or dashes.” She is not confused if you pause while speaking or include a few “umms.” She knows a number when she hears one. But such prompts commonly litter web forms, instructing users to cater to the computer’s needs. Wouldn’t it be nice if the computer could cater to the person’s needs instead? (<http://alistapart.com/article/your-website-has-two-faces>)
 
 We can extend Mullican’s thinking beyond phone numbers and credit cards to any time we interact with our users: we should be conservative in what we ask of them, only requesting the fields we actually need. But we should be liberal in what we accept from our users, rather than forcing them into our predefined categories.
 
@@ -96,13 +96,13 @@ Names are another area where expectations of normal often go awry. Sara has felt
 
 But you know what has never happened to Sara? She has never been told her name isn’t real.
 
-Shane Creepingbear has (FIG 2.6). A member of the Kiowa Tribe of Oklahoma, Creepingbear had his last name questioned by Facebook more than once in 2014 ([http://www.washingtonpost.com/news/morning-mix/wp/2015/02/10/online-authenticity-and-how-facebooks-real-name-policy-hurts-native-americans/](http://bkaprt.com/dfrl/02-04/)). He even had to send in documentation proving that Creepingbear is, indeed, his legal name, because the Facebook employee who reviewed his profile thought his name didn’t “seem real.”
+Shane Creepingbear has (FIG 2.6). A member of the Kiowa Tribe of Oklahoma, Creepingbear had his last name questioned by Facebook more than once in 2014 (<http://www.washingtonpost.com/news/morning-mix/wp/2015/02/10/online-authenticity-and-how-facebooks-real-name-policy-hurts-native-americans/>). He even had to send in documentation proving that Creepingbear is, indeed, his legal name, because the Facebook employee who reviewed his profile thought his name didn’t “seem real.”
 
 What does a “real” name look like? According to Facebook’s help content as of fall 2015:
 
-> The name you use should be your authentic identity; as your friends call you in real life and as our acceptable identification forms would show ([https://www.facebook.com/help/112146705538576#What-names-are-allowed-on-Facebook](http://bkaprt.com/dfrl/02-06/)).
+> The name you use should be your authentic identity; as your friends call you in real life and as our acceptable identification forms would show (<https://www.facebook.com/help/112146705538576#What-names-are-allowed-on-Facebook>).
 
-Shane Creepingbear met this standard. So did Lance Browneyes, whose name Facebook shortened to Brown, even after he sent in proof of his legal name ([http://www.bbc.com/news/blogs-trending-31699618](http://bkaprt.com/dfrl/02-07/)). So did Robin Kills the Enemy. So did Dana Lone Hill. Yet they were denied the ability to express their real names—something fundamental to their identities.
+Shane Creepingbear met this standard. So did Lance Browneyes, whose name Facebook shortened to Brown, even after he sent in proof of his legal name (<http://www.bbc.com/news/blogs-trending-31699618>). So did Robin Kills the Enemy. So did Dana Lone Hill. Yet they were denied the ability to express their real names—something fundamental to their identities.
 
 ![Figure](../image/Fig2-6_Creepingbear.png "FIG 2.6: The tweet Shane Creepingbear posted when Facebook rejected his name  (http://bkaprt.com/dfrl/02-05/).")
 
@@ -110,7 +110,7 @@ Why? Because Facebook’s perception of what’s “real” was too narrow to me
 
 To make matters worse, that marginalization doesn’t exist in a vacuum; it exists within a society that has long discriminated against Native people. As Creepingbear put it:
 
-> There’s been a long history of Native erasure and while Facebook might not be enacting it with that intention, it’s still a part of that long history of people erasing native names. ([http://www.washingtonpost.com/news/morning-mix/wp/2015/02/10/online-authenticity-and-how-facebooks-real-name-policy-hurts-native-americans/](http://bkaprt.com/dfrl/02-04/))
+> There’s been a long history of Native erasure and while Facebook might not be enacting it with that intention, it’s still a part of that long history of people erasing native names. (<http://www.washingtonpost.com/news/morning-mix/wp/2015/02/10/online-authenticity-and-how-facebooks-real-name-policy-hurts-native-americans/>)
 
 ## DOCUMENT THE IMPLICATIONS
 
@@ -126,7 +126,7 @@ As a result, Facebook changed its policy—or at least clarified it, as Chris Co
 
 > In the two weeks since the real-name policy issues surfaced, we’ve had the chance to hear from many of you in these communities and understand the policy more clearly as you experience it. We’ve also come to understand how painful this has been…
 >
-> Our policy has never been to require everyone on Facebook to use their legal name. The spirit of our policy is that everyone on Facebook uses the authentic name they use in real life. For Sister Roma, that’s Sister Roma. For Lil Miss Hot Mess, that’s Lil Miss Hot Mess. ([https://www.facebook.com/chris.cox/posts/10101301777354543](http://bkaprt.com/dfrl/02-08/))
+> Our policy has never been to require everyone on Facebook to use their legal name. The spirit of our policy is that everyone on Facebook uses the authentic name they use in real life. For Sister Roma, that’s Sister Roma. For Lil Miss Hot Mess, that’s Lil Miss Hot Mess. (<https://www.facebook.com/chris.cox/posts/10101301777354543>)
 
 Let’s take a step back and consider how Facebook could it have foreseen this “painful” outcome. One way would have been to simply make a list of the reasons for real names—or any personal data you’re considering requiring—and weigh those reasons against the implications of that decision (FIG 2.7).
 
@@ -182,7 +182,7 @@ In December 2015, Facebook announced that it was testing a new tool for those wh
 
 ![Figure](../image/Fig2-11.png "FIG 2.11: In December 2015, Facebook unveiled this tool, which will allow users to verify their identities, or to explain why they are using a false name. Image courtesy Facebook (http://bkaprt.com/dfrl/02-09/).")
 
-> People can let us know they have a special circumstance, and then give us more information about their unique situation. This additional information will help our review teams better understand the situation so they can provide more personalized support. ([http://newsroom.fb.com/news/2015/12/community-support-fyi-improving-the-names-process-on-facebook/](http://bkaprt.com/dfrl/02-09/))
+> People can let us know they have a special circumstance, and then give us more information about their unique situation. This additional information will help our review teams better understand the situation so they can provide more personalized support. (<http://newsroom.fb.com/news/2015/12/community-support-fyi-improving-the-names-process-on-facebook/>)
 
 This new process helps Facebook minimize one drawback of its real-name policy we identified earlier in this chapter: that it might turn away those who want or need to remain anonymous for safety reasons.
 
@@ -194,11 +194,11 @@ Making space for real people also means making sure the features we build match 
 
 Take period tracking. Women typically have periods, and the earth has, at last count, lots of women. Women have been tracking their periods for centuries, for all kinds of reasons. Some want to find or avoid fertile windows, while others simply want to know when to expect their next period. Some women track their moods or energy levels. Still others use it to monitor other health issues, since irregular periods can point to issues like stress or hormone imbalances.
 
-And yet, Apple Health—the forcibly installed, impossible-to-delete iOS app that claims to be the place to track your “health data”—didn’t track periods when it launched in 2014. You could track your sleep quality, blood pressure, resting heart rate, steps walked, body measurements, chromium intake, and dozens of other data points. As Craig Federighi, the senior vice president of software engineering who announced the app, put it: “All of your metrics that you’re most interested in” ([http://www.theatlantic.com/technology/archive/2014/12/how-self-tracking-apps-exclude-women/383673/](http://bkaprt.com/dfrl/02-10/)).
+And yet, Apple Health—the forcibly installed, impossible-to-delete iOS app that claims to be the place to track your “health data”—didn’t track periods when it launched in 2014. You could track your sleep quality, blood pressure, resting heart rate, steps walked, body measurements, chromium intake, and dozens of other data points. As Craig Federighi, the senior vice president of software engineering who announced the app, put it: “All of your metrics that you’re most interested in” (<http://www.theatlantic.com/technology/archive/2014/12/how-self-tracking-apps-exclude-women/383673/>).
 
 Unless, of course, you’re interested in your menstrual cycle.
 
-It wasn’t until June 2015, a year (and more than a few critical articles) after Health’s debut, that Apple added a period-tracking feature ([http://techcrunch.com/2015/06/09/apple-stops-ignoring-womens-health-with-ios-9-healthkit-update-now-featuring-period-tracking/](http://bkaprt.com/dfrl/02-11/)).
+It wasn’t until June 2015, a year (and more than a few critical articles) after Health’s debut, that Apple added a period-tracking feature (<http://techcrunch.com/2015/06/09/apple-stops-ignoring-womens-health-with-ios-9-healthkit-update-now-featuring-period-tracking/>).
 
 Why was such a basic health feature—one that’s relevant to half of all users between puberty and menopause—left out of such an otherwise comprehensive list? We can’t say for sure, but we suspect it’s because Apple didn’t challenge its vision of what “health data” included for real people. Either period tracking never came up during product-development discussions, or it did come up, but the team decided it wasn’t important enough to pursue.
 
@@ -206,7 +206,7 @@ Why was such a basic health feature—one that’s relevant to half of all users
 
 Of course, Apple’s not the only app-maker around. Many menstrual cycle-tracking apps do exist—for some users, at least.
 
-Take Glow, an app that calls itself “your best friend through multiple phases of your life.” But it didn’t live up to that claim for Maggie Delano, a doctoral student in electrical engineering at MIT. She wrote about her experience “as a queer woman not interested in having children” attempting to use Glow and other period-tracking apps on Medium ([https://medium.com/@maggied/i-tried-tracking-my-period-and-it-was-even-worse-than-i-could-have-imagined-bb46f869f45](http://bkaprt.com/dfrl/02-12/)).
+Take Glow, an app that calls itself “your best friend through multiple phases of your life.” But it didn’t live up to that claim for Maggie Delano, a doctoral student in electrical engineering at MIT. She wrote about her experience “as a queer woman not interested in having children” attempting to use Glow and other period-tracking apps on Medium (<https://medium.com/@maggied/i-tried-tracking-my-period-and-it-was-even-worse-than-i-could-have-imagined-bb46f869f45>).
 
 First, during onboarding, she was asked to select her “journey” from three options, none of which applied to her: “avoiding pregnancy,” “trying to conceive,” or “fertility treatments” (FIG 2.12).
 
