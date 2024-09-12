@@ -1,6 +1,7 @@
 ---
 title: Incorporate Stress Cases
 headerImage: image/8.png
+permalink: chapter3.html
 chapterNumber: 3
 tocOrder: 6
 ---
