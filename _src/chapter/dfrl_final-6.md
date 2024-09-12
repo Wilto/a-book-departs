@@ -1,6 +1,7 @@
 ---
 title: Make Space for Real People
 headerImage: image/3.png
+permalink: chapter2.html
 chapterNumber: 2
 tocOrder: 5
 ---
