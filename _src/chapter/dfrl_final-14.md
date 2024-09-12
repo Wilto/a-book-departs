@@ -1,4 +1,5 @@
 ---
+permalink: resources.html
 title: RESOURCES
 tocOrder: 13
 ---
