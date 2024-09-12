@@ -1,7 +1,7 @@
 ---
 title: Challenge Your Vision
 headerImage: image/2.png
-chapterNumber: 2
+chapterNumber: 1
 tocOrder: 4
 ---
 *On Christmas Eve 2014,* *I went to Facebook and was greeted by an ad promoting Year in Review, a feature I had been deliberately avoiding.*
