@@ -19,7 +19,7 @@ In situations like these, we often hear, “We’re designing for the 90%, not t
 To see what we mean, consider how these sound:
 
 > “Someone trying to shut down their account in a hurry is an edge case.”
-
+>
 > “Someone trying to shut down their account in a hurry is a stress case.”
 
 The first feels like we can ignore it for now—and we all know how often “for now” becomes “forever” on a busy web team. The second, by contrast, feels urgent: it implies that the user has an important reason to act fast. That triggers our empathy and makes us want to help them, not ignore them.
@@ -30,16 +30,16 @@ Steve Krug famously said, “Don’t make me think!” But when users are under 
 
 Research has consistently found that cognitive resources are finite: if you expend them on one thing, you have fewer left for other things. One experiment, which Kathy Sierra talks about in her book *Badass: Making Users Awesome*, presented testers with one of two tasks: to memorize a sequence of either two numbers or seven numbers. Afterward, the testers were offered a choice of snack: cake or fruit.
 
-The subjects who had the harder task were far more likely to pick the cake, because they’d expended their cognitive resources, and had fewer resources left to exert willpower or evaluate nutritional choices. (See more on this study in Baba Shiv and Alexander Fedorikhin’s “Heart and Mind in Conflict: The Interplay of Affect and Cognition in Consumer Decision Making” \[[http://bkaprt.com/dfrl/03-01/](http://bkaprt.com/dfrl/03-01/), PDF\].)
+The subjects who had the harder task were far more likely to pick the cake, because they’d expended their cognitive resources, and had fewer resources left to exert willpower or evaluate nutritional choices. (See more on this study in Baba Shiv and Alexander Fedorikhin’s “Heart and Mind in Conflict: The Interplay of Affect and Cognition in Consumer Decision Making” [[https://web.archive.org/web/20190428130649/https://www.jstor.org/stable/10.1086/209563](http://bkaprt.com/dfrl/03-01/), PDF].)
 
 When a user is in crisis, nearly all their cognitive resources are consumed by that crisis. Worrying over a loved one, or what the future holds, or any number of other things severely reduces the processing power they can devote to your site (or to anything else).
 
-For example, we talked with a woman who was assaulted by an acquaintance. Afterward, she says, “I wasn't thinking quite right, so I was looking at websites to help me understand if I had in fact been sexually assaulted.” She went to the Rape, Abuse, & Incest National Network (RAINN) website ([https://rainn.org/](https://rainn.org/)), where she found a link that said, “Was I Sexually Assaulted?” It seemed like exactly what she needed—until the page loaded (FIG 3.1).
+For example, we talked with a woman who was assaulted by an acquaintance. Afterward, she says, “I wasn't thinking quite right, so I was looking at websites to help me understand if I had in fact been sexually assaulted.” She went to the Rape, Abuse, & Incest National Network (RAINN) website (<https://rainn.org/>), where she found a link that said, “Was I Sexually Assaulted?” It seemed like exactly what she needed—until the page loaded (FIG 3.1).
 
 All those headings left her overwhelmed—and even worse, as she skimmed, she couldn’t quite see herself in any of them. She hadn’t been raped, she thought. It wasn’t stalking, or abuse, or any of the other categories she saw. She says:
 
 > I must have reread that page ten times. And in that moment, I felt like…well maybe this doesn’t fit. Maybe this isn’t really assault and it’s my fault.
-
+>
 > I know that seems crazy. Looking back, it was very clearly assault. But I was not in the right state of mind. I realize now that the page says sexual assault comes in different forms, but the way it’s designed, you kind of skim over that, and there’s nothing after the “types” to help people who don’t identify with the listed situations know what to do next.
 
 Even though this woman knew to go to the RAINN website, she couldn’t think critically about what she read. Her cognitive resources were so depleted by her experience and its aftermath that she “was not in the right state of mind” to realize that her assault *counted*. She felt ashamed and even more alone.
@@ -67,7 +67,7 @@ Nobody on the team is in danger of injury or death—though in some work environ
 
 Contextual crises come in all shapes: a parent who realizes their child’s birthday is a couple days away, and the very special present they ordered hasn’t arrived yet. A woman whose sister gave birth a week earlier than expected, and needs to book flights right away to meet her brand-new baby nephew. An incoming university student who realizes the financial aid application deadline is sooner than they thought, and is trying to find out what they need to do next.
 
-Another form of contextual crisis is one we’re all too familiar with: a technical failure. This can be anything from a missing or disabled plugin to severely limited bandwidth—things that frequently prevent JavaScript from loading, for example. (See Stuart Langridge’s “Everyone has JavaScript, right?” for more \[[http://bkaprt.com/dfrl/03-04/](http://bkaprt.com/dfrl/03-04/)\].)
+Another form of contextual crisis is one we’re all too familiar with: a technical failure. This can be anything from a missing or disabled plugin to severely limited bandwidth—things that frequently prevent JavaScript from loading, for example. (See Stuart Langridge’s “Everyone has JavaScript, right?” for more \[https://kryogenix.org/code/browser/everyonehasjs.html].)
 
 Maybe the user is in a public library with archaic PCs running Internet Explorer 6. Maybe they’re one of the almost 60% of mobile web users around the world who are on EDGE networks. (That was the network speed before 3G, you may recall.) Maybe the battery on their device is almost drained, so their time is extremely limited. Maybe the CDN provider had an interruption of service, causing half the page’s external resources not to load.
 
