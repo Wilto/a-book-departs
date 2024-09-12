@@ -1,7 +1,7 @@
 ---
 title: Cultivate Compassion
 headerImage: image/11.png
-chapterNumber: 6
+chapterNumber: 5
 tocOrder: 8
 ---
 WE’VE SPENT the last four chapters sharing story after story of organizations struggling—and sometimes succeeding—in their efforts to support real people. Along the way, we’ve learned some things: how to reflect on our biases, find the fractures in our work, be intentional in what we ask, avoid alienating or traumatizing, and, ultimately, meet the needs of more users, more often.
@@ -10,7 +10,7 @@ In this chapter, we’ll see what happens when an organization brings all those 
 
 ## PUTTING PRINCIPLES INTO PRACTICE
 
-PatientsLikeMe ([https://www.patientslikeme.com](http://bkaprt.com/dfrl/05-01/)) is a social network centered on something many people never thought they’d be social about: their health. Users can meet others with similar medical issues, compare symptoms and treatments, discuss how their conditions affect their lives, and track their health over time. Founded by MIT engineers in 2004, the site now serves more than 380,000 members with 2,500 different conditions, using a unique business model: instead of selling advertising, PatientsLikeMe explicitly, and transparently, partners with researchers, pharmaceutical companies, regulators, providers, and nonprofits, giving them access to real-world data that clinical trials can’t provide.
+PatientsLikeMe (<https://www.patientslikeme.com>) is a social network centered on something many people never thought they’d be social about: their health. Users can meet others with similar medical issues, compare symptoms and treatments, discuss how their conditions affect their lives, and track their health over time. Founded by MIT engineers in 2004, the site now serves more than 380,000 members with 2,500 different conditions, using a unique business model: instead of selling advertising, PatientsLikeMe explicitly, and transparently, partners with researchers, pharmaceutical companies, regulators, providers, and nonprofits, giving them access to real-world data that clinical trials can’t provide.
 
 PatientsLikeMe began when the brother of two of its founders was diagnosed with amyotrophic lateral sclerosis (ALS), and they wanted to find ways to help him live a better life. At first, the site focused on connecting people who were clinically similar: users with the same condition, in the same stage of illness, experiencing the same symptoms, and undergoing similar treatment plans. The goal was to help users connect around not just illness type, but specific issues like shopping for assistive devices or managing side effects of medication—creating space for conversations like, How did you pick a wheelchair? or, How are you modifying your home so you can keep living there?
 
@@ -68,7 +68,7 @@ Our industry talks a lot about empathy, but when we say compassion, we’re talk
 
 > We’re pretty good at being able to kind of get inside somebody else’s head and sort of model their task, model how they are thinking about a problem. But that cognitive empathy, that’s actually just one level of empathy.
 >
-> There’s actually a much deeper level of it that you would call compassion. What that means is that you have genuine emotional feeling for the struggles that someone is going through and you are spontaneously moved to help them because you feel them. ([https://web.archive.org/web/20160328073936/http://library.iasummit.org/podcasts/closing-plenary-2/](http://bkaprt.com/dfrl/05-02/))
+> There’s actually a much deeper level of it that you would call compassion. What that means is that you have genuine emotional feeling for the struggles that someone is going through and you are spontaneously moved to help them because you feel them. (<https://web.archive.org/web/20160328073936/http://library.iasummit.org/podcasts/closing-plenary-2/>)
 
 Compassion is more than being nice. It’s accepting people as they come—in all their pain, with all their challenges—and not just feeling empathy toward them, but doing something with that empathy. It’s recognizing that users facing stress and crisis need more than our sympathy. They need our help.
 
@@ -95,7 +95,7 @@ That’s why we like to think of compassion as a spirit of generosity: assuming 
 
 Many people associate “compassion” with industries like healthcare or social services—the “caring” professions. But every company can benefit from compassionate design. As MailChimp’s Kate Kiefer Lee says, “We don’t know what our readers and customers are going through. And our readers and customers are people. They could be in an emergency and they still have to use the internet.”
 
-For an example of compassion at work, let’s revisit *A List Apart* ([alistapart.com](http://alistapart.com)), where Sara was the editor in chief from 2012 to 2015. The magazine has always worked hard to attract new writers—it’s tough to find people prepared to invest time in crafting thoughtful, deeply edited essays. Editors reach out to people who give talks at conferences or post smart stuff on their blogs. They eye Twitter conversations that cover the magazine’s topics. They email past authors encouraging future submissions.
+For an example of compassion at work, let’s revisit *A List Apart* (<alistapart.com>), where Sara was the editor in chief from 2012 to 2015. The magazine has always worked hard to attract new writers—it’s tough to find people prepared to invest time in crafting thoughtful, deeply edited essays. Editors reach out to people who give talks at conferences or post smart stuff on their blogs. They eye Twitter conversations that cover the magazine’s topics. They email past authors encouraging future submissions.
 
 And yet, submissions were always slower than anyone would have liked.
 
