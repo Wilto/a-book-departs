@@ -37,7 +37,7 @@ It’s a test we haven’t passed yet. When faced with users in distress or cris
 
 Sometimes, it’s a bit of microcopy that’s meant to be cute and playful—until it’s placed next to something that’s anything but, like this Medium post our friend Kevin Hoffman wrote mourning his friend’s death (FIG 1).
 
-![Figure](../image/Fig0-1_Medium.png "FIG 1: Rather than feeling playful, Medium’s “fun fact” is jarring when juxtaposed with a post about a friend’s death.")
+![Figure](/image/Fig0-1_Medium.png "FIG 1: Rather than feeling playful, Medium’s “fun fact” is jarring when juxtaposed with a post about a friend’s death.")
 
 Medium clearly wanted users who only receive a few likes on a new post to feel more comfortable. But some moments simply aren’t right for “fun facts.” In fact, when Medium heard about this problem in late 2015, they told us they would remove the snippets immediately.
 
