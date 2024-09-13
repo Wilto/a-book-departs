@@ -50,6 +50,7 @@ We can’t always predict who will need to use our products, and what their back
 
 If we want our work to stand up to stress cases, then we need to design interfaces that are human, kind, and resilient to all kinds of fractures. These resources will get you thinking about what that means for your copy, form fields, and technical infrastructure.   
 
+* “Designing for Crisis,” Eric Meyer. Recorded at An Event Apart Austin in October 2015, Eric explores the idea that making interfaces that people in crisis can understand makes better interfaces for everyone (<https://www.youtube.com/watch?v=qyZq6v3vZqo>).
 * “Don’t Poke the Bear: Creating Content for Sensitive Situations,” Kate Kiefer Lee. Kiefer Lee walks through common touchy subjects like financial disclosures and error messages and helps you create copy that’s helpful, clear, and kind (<http://alistapart.com/article/dont-poke-the-bear-creating-content-for-sensitive-situations>).
 * “Everyone Has JavaScript, Right?,” Stuart Langridge. A helpful visualization of the many reasons JavaScript might fail (<http://kryogenix.org/code/browser/everyonehasjs.html>).
 * *Forms That Work: Designing Web Forms for Usability,* Caroline Jarrett and Gerry Gaffney. A detailed guide to determining what to ask (and what to skip), and how to help your users be successful completing web forms (<https://web.archive.org/web/20160316062826/http://www.formsthatwork.com/>).
