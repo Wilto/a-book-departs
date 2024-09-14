@@ -1,6 +1,6 @@
 ---
 permalink: resources.html
-title: RESOURCES
+title: Resources
 tocOrder: 13
 ---
 ### Putting people first
