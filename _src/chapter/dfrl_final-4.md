@@ -1,6 +1,6 @@
 ---
 permalink: introduction.html
-title: INTRODUCTION
+title: Introduction
 tocOrder: 3
 ---
 “IT IS NICE TO BE NICE.”
