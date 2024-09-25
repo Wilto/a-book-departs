@@ -7,7 +7,7 @@ title: Buy the book
 
 A Book Apart is no longer selling books, but you can now get a print or ebook copy of *Design for Real Life* republished by Eric and Sara. Here's where to buy: 
 
-* USA: Ingram, Bookshop.org, Barnes & Noble, Walmart.com
+* USA: [Ingram](https://shop.ingramspark.com/b/084?HHYRFAS2fpsQTmJs078KvE4NHIwFbK4azj6RKw1ndex), Bookshop.org, Barnes & Noble, Walmart.com
 * Canada: Chapters / Indigo 
 * Sweden: Adlibris
 * UK: Foyles, Waterstones, Blackwell’s
