@@ -1,116 +1,86 @@
 [
   {
-    "id": "navpoint19",
-    "playOrder": 19,
+    "id": "navpoint14",
+    "playOrder": 14,
     "navLabel": "Cover",
     "content": "cover.xhtml"
   },
   {
     "id": "navpoint1",
     "playOrder": 1,
-    "navLabel": "More From A Book Apart",
-    "content": "dfrl_final.xhtml"
+    "navLabel": "Foreword",
+    "content": "b12_ccd_draft-2-4.xhtml"
   },
   {
     "id": "navpoint2",
     "playOrder": 2,
-    "navLabel": "Foreword",
-    "content": "dfrl_final-3.xhtml"
+    "navLabel": "Introduction",
+    "content": "b12_ccd_draft-2-5.xhtml"
   },
   {
     "id": "navpoint3",
     "playOrder": 3,
-    "navLabel": "Introduction",
-    "content": "dfrl_final-4.xhtml"
+    "navLabel": "Chapter 1. Full-Stack Content Design",
+    "content": "b12_ccd_draft-2-6.xhtml"
   },
   {
     "id": "navpoint4",
     "playOrder": 4,
-    "navLabel": "Chapter 1. Challenge Your Vision",
-    "content": "dfrl_final-5.xhtml"
+    "navLabel": "Chapter 2. Sing Out Loud",
+    "content": "b12_ccd_draft-2-7.xhtml"
   },
   {
     "id": "navpoint5",
     "playOrder": 5,
-    "navLabel": "Chapter 2. Make Space for Real People",
-    "content": "dfrl_final-6.xhtml"
+    "navLabel": "Chapter 3. Workshops That Work",
+    "content": "b12_ccd_draft-2-8.xhtml"
   },
   {
     "id": "navpoint6",
     "playOrder": 6,
-    "navLabel": "Chapter 3. Incorporate Stress Cases",
-    "content": "dfrl_final-7.xhtml"
+    "navLabel": "Chapter 4. Content at Scale",
+    "content": "b12_ccd_draft-2-9.xhtml"
   },
   {
     "id": "navpoint7",
     "playOrder": 7,
-    "navLabel": "Chapter 4. Communicate Context and Intent",
-    "content": "dfrl_final-8.xhtml"
+    "navLabel": "Conclusion",
+    "content": "b12_ccd_draft-2-10.xhtml"
   },
   {
     "id": "navpoint8",
     "playOrder": 8,
-    "navLabel": "Chapter 5. Cultivate Compassion",
-    "content": "dfrl_final-9.xhtml"
+    "navLabel": "Acknowledgments",
+    "content": "b12_ccd_draft-2-11.xhtml"
   },
   {
     "id": "navpoint9",
     "playOrder": 9,
-    "navLabel": "Chapter 6. Learn From Users",
-    "content": "dfrl_final-10.xhtml"
+    "navLabel": "Resources",
+    "content": "b12_ccd_draft-2-12.xhtml"
   },
   {
     "id": "navpoint10",
     "playOrder": 10,
-    "navLabel": "Chapter 7. Humanize Your Process",
-    "content": "dfrl_final-11.xhtml"
+    "navLabel": "References",
+    "content": "b12_ccd_draft-2-13.xhtml"
   },
   {
     "id": "navpoint11",
     "playOrder": 11,
-    "navLabel": "Chapter 8. Make the Case",
-    "content": "dfrl_final-12.xhtml"
+    "navLabel": "Index",
+    "content": "b12_ccd_draft-2-14.xhtml"
   },
   {
     "id": "navpoint12",
     "playOrder": 12,
-    "navLabel": "Conclusion",
-    "content": "dfrl_final-13.xhtml"
+    "navLabel": "About A Book Apart",
+    "content": "b12_ccd_draft-2-15.xhtml"
   },
   {
     "id": "navpoint13",
     "playOrder": 13,
-    "navLabel": "Resources",
-    "content": "dfrl_final-14.xhtml"
-  },
-  {
-    "id": "navpoint14",
-    "playOrder": 14,
-    "navLabel": "Acknowledgments",
-    "content": "dfrl_final-15.xhtml"
-  },
-  {
-    "id": "navpoint15",
-    "playOrder": 15,
-    "navLabel": "References",
-    "content": "dfrl_final-16.xhtml"
-  },
-  {
-    "id": "navpoint16",
-    "playOrder": 16,
-    "navLabel": "Index",
-    "content": "dfrl_final-17.xhtml"
-  },
-  {
-    "id": "navpoint17",
-    "playOrder": 17,
-    "navLabel": "About A Book Apart",
-    "content": "dfrl_final-18.xhtml"
-  },
-  {
-    "id": "navpoint18",
-    "playOrder": 18,
-    "navLabel": "About the Authors",
-    "content": "dfrl_final-19.xhtml"
+    "navLabel": "About the Author",
+    "content": "b12_ccd_draft-2-16.xhtml"
   }
 ]
