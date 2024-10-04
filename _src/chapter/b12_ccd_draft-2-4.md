@@ -30,4 +30,4 @@ In my own work, I seek to empower content creators and strategists to do work th
 
 Now you can have your cake. And everyone else gets to eat it, too.
 
-**—A****nn** **Handley**
+**—Ann Handley**
