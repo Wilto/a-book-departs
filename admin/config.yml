@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: dfrl
+  branch: ccd
 
 media_folder: '/_src/image'
 public_folder: '../image'
