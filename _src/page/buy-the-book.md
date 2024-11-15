@@ -7,7 +7,7 @@ title: Buy the book
 
 A Book Apart is no longer selling books, but you can now get a print or ebook copy of *Design for Real Life* republished by Eric and Sara. Here's where to buy: 
 
-* USA: [Ingram](https://shop.ingramspark.com/b/084?HHYRFAS2fpsQTmJs078KvE4NHIwFbK4azj6RKw1ndex), [Bookshop.org](https://bookshop.org/p/books/design-for-real-life-sara-wachter-boettcher/21862215?ean=9798218503741), [Barnes & Noble](https://www.barnesandnoble.com/w/design-for-real-life-eric-a-meyer/1134389584)
+* USA: [Ingram](https://shop.ingramspark.com/b/084?params=PdJPriqL5KiAu3rkd8zMox8yo5C9q6T428nnvDBAs5H), [Bookshop.org](https://bookshop.org/p/books/design-for-real-life-sara-wachter-boettcher/21862215?ean=9798218503741), [Barnes & Noble](https://www.barnesandnoble.com/w/design-for-real-life-eric-a-meyer/1134389584)
 * Canada: [Chapters / Indigo](https://www.indigo.ca/en-ca/design-for-real-life/95f275c4-ef59-3d1b-ab3a-5e3cc64a383c.html) 
 * Germany: [Thalia.de](https://www.thalia.de/shop/home/artikeldetails/A1073171914)
 * Ebook: [Apple](https://books.apple.com/us/book/design-for-real-life/id6680155442), [Barnes & Noble Nook](https://www.barnesandnoble.com/w/design-for-real-life-eric-a-meyer/1134389584?ean=9798218503758), [Kobo](https://www.kobo.com/us/en/ebook/design-for-real-life-1)
