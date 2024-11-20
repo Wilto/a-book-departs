@@ -97,6 +97,11 @@
 		font-size: 1.1em;
 		font-weight: bold;
 	}
+	& > ul,
+	& > ol {
+		margin-top: 1.5em;
+		margin-bottom: 1.8em;
+	}
 	li,
 	p {
 		font-family: "Lora", serif;
@@ -106,12 +111,21 @@
 		margin: .625em 0;
 	}
 	li {
+		font-size: clamp( .9rem, 1.5vw, 1.25rem );
 		line-height: 1.4;
+		margin: .25em 0;
 	}
 
 	p + p {
 		padding: 0;
 		margin: 1.25em 0;
+	}
+	blockquote {
+		margin: 1.75em 0 2.2em 2vw;
+	}
+	blockquote p {
+		font-style: italic;
+		color: #666;
 	}
 }
 code {
@@ -206,11 +220,12 @@ figcaption {
 	line-height: .85;
 	margin: 0;
 	padding: 0;
+	text-shadow: 0 0 1em #FFF5;
 }
 .chapter-num {
 	font-family: "League Gothic", sans-serif;
 	font-size: 15em;
-	line-height: .55;
+	line-height: .6;
 	color: #fff;
 	padding-right: .125em;
 }
@@ -241,6 +256,12 @@ figcaption {
 	font-family: "Open Sans", sans-serif;
 	color: #444;
 	font-size: .925em;
+}
+
+.header-nav a {
+	font-family: "Open Sans", sans-serif;
+	font-weight: bold;
+	font-size: .9em;
 }
 
 .modal {

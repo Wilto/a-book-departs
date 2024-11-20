@@ -25,6 +25,7 @@ layout: base.njk
         <h1>{{title}}</h1>
       {% endif %}
       {{ content | safe }}
+      {% if "page" not in tags %}
       <nav class="inner-nav repel">
         <span>
         {% if prev %}
@@ -43,6 +44,7 @@ layout: base.njk
         {% endif %}
         </span>
       </nav>
+      {% endif %}
     </div>
   </div>
 </main>
