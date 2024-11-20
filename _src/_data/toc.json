@@ -8,79 +8,79 @@
   {
     "id": "navpoint1",
     "playOrder": 1,
-    "navLabel": "Foreword",
-    "content": "b12_ccd_draft-2-4.xhtml"
+    "navLabel": "Introduction",
+    "content": "js4wd_ebook-4.xhtml"
   },
   {
     "id": "navpoint2",
     "playOrder": 2,
-    "navLabel": "Introduction",
-    "content": "b12_ccd_draft-2-5.xhtml"
+    "navLabel": "Chapter 1. Getting Set Up",
+    "content": "js4wd_ebook-5.xhtml"
   },
   {
     "id": "navpoint3",
     "playOrder": 3,
-    "navLabel": "Chapter 1. Full-Stack Content Design",
-    "content": "b12_ccd_draft-2-6.xhtml"
+    "navLabel": "Chapter 2. Understanding Data Types",
+    "content": "js4wd_ebook-6.xhtml"
   },
   {
     "id": "navpoint4",
     "playOrder": 4,
-    "navLabel": "Chapter 2. Sing Out Loud",
-    "content": "b12_ccd_draft-2-7.xhtml"
+    "navLabel": "Chapter 3. Conditional Statements",
+    "content": "js4wd_ebook-7.xhtml"
   },
   {
     "id": "navpoint5",
     "playOrder": 5,
-    "navLabel": "Chapter 3. Workshops That Work",
-    "content": "b12_ccd_draft-2-8.xhtml"
+    "navLabel": "Chapter 4. Loops",
+    "content": "js4wd_ebook-8.xhtml"
   },
   {
     "id": "navpoint6",
     "playOrder": 6,
-    "navLabel": "Chapter 4. Content at Scale",
-    "content": "b12_ccd_draft-2-9.xhtml"
+    "navLabel": "Chapter 5. DOM Scripting",
+    "content": "js4wd_ebook-9.xhtml"
   },
   {
     "id": "navpoint7",
     "playOrder": 7,
     "navLabel": "Conclusion",
-    "content": "b12_ccd_draft-2-10.xhtml"
+    "content": "js4wd_ebook-10.xhtml"
   },
   {
     "id": "navpoint8",
     "playOrder": 8,
-    "navLabel": "Acknowledgments",
-    "content": "b12_ccd_draft-2-11.xhtml"
+    "navLabel": "Resources",
+    "content": "js4wd_ebook-11.xhtml"
   },
   {
     "id": "navpoint9",
     "playOrder": 9,
-    "navLabel": "Resources",
-    "content": "b12_ccd_draft-2-12.xhtml"
+    "navLabel": "Acknowledgments",
+    "content": "js4wd_ebook-12.xhtml"
   },
   {
     "id": "navpoint10",
     "playOrder": 10,
     "navLabel": "References",
-    "content": "b12_ccd_draft-2-13.xhtml"
+    "content": "js4wd_ebook-13.xhtml"
   },
   {
     "id": "navpoint11",
     "playOrder": 11,
     "navLabel": "Index",
-    "content": "b12_ccd_draft-2-14.xhtml"
+    "content": "js4wd_ebook-14.xhtml"
   },
   {
     "id": "navpoint12",
     "playOrder": 12,
-    "navLabel": "About A Book Apart",
-    "content": "b12_ccd_draft-2-15.xhtml"
+    "navLabel": "About the Author",
+    "content": "js4wd_ebook-15.xhtml"
   },
   {
     "id": "navpoint13",
     "playOrder": 13,
-    "navLabel": "About the Author",
-    "content": "b12_ccd_draft-2-16.xhtml"
+    "navLabel": "About A Book Apart",
+    "content": "js4wd_ebook-16.xhtml"
   }
 ]
